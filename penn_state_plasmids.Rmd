@@ -1,0 +1,265 @@
+---
+title: "Sinorhizobium Plasmids Clustering"
+author: "jp2992"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    code_folding: hide
+    code_download: true
+    collapsed: yes
+    highlight: tango
+    number_sections: no
+    theme: yeti
+    toc: yes
+    toc_float: yes
+fontsize: 25pt
+---
+
+In this document I present the comparison about the clustering of plasmids of Sinorhizobium using only the ones available in the PLSDB and using the plasmids in the PLSDB plus the putative plasmids retrieved from the collaborator at Penn State University (HiFi).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+```{r, message=FALSE, echo=FALSE}
+library(insight)
+library(reticulate)
+library(dplyr)
+
+use_condaenv("general",conda = "/home/jp2992/miniforge3/bin/conda")
+
+```
+
+```{python, echo=FALSE}
+import pandas as pd
+import seaborn as sns 
+import matplotlib.pyplot as plt
+import plotly.express as px
+
+```
+
+## Plasmid Redundancy Filtering (MMSeqs2)
+
+----
+
+### Rationale
+
+> Collaborator's plasmids were predicted using **RFPlasmid** trained on *Sinorhizobium meliloti*. To ensure a non-redundant set for downstream analysis, we applied a strict filtering step using MMSeqs2. However, both cases are presented (before and after redundancy filtering).
+
+### Filtering Criteria and Command
+
+Redundant sequences were removed using the following conservative thresholds, where coverage applies to both sequences:
+
+-   **Coverage:** $\ge 95\%$
+-   **Sequence Identity:** $\ge 99\%$
+
+```         
+mmseqs easy-cluster -s 7.5  -c 0.95 --min-seq-id 0.99 predicted_pls.fasta redundant_predicted_pls tmp
+```
+
+### Filter Results
+
+| file                                  | format | type | num_seqs |  sum_len | min_len |  avg_len | max_len |
+|:--------|:--------|:--------|--------:|--------:|--------:|--------:|--------:|
+| predicted_pls.fasta                   | FASTA  | DNA  |  **213** | 34334785 |   48218 | 161196.2 |  338440 |
+| redundant_predicted_pls_rep_seq.fasta | FASTA  | DNA  |  **148** | 25067583 |   48218 | 169375.6 |  338440 |
+
+
+## Clustring Plasmids in Sinorhizobium {.tabset .tabset-pills}
+
+------------------------------------------------------------------------
+
+Plasmid sequences were clustered using MGE-Cluster.
+
+We can observed the clustering *before* and *after* including the Collaborator data as well as a tab with all the parameters tested to cluster the plasmids. As the purpose is to conserve high level of local similarity a Perplexity between 5-10 and min_cluster of 3 is my preference. However, higher values can help us visualize the stability, for example, of the new cluster formed by the new plasmids.
+
+The new plasmids represented an increment in data as well as in diversity. We can observe some new clusters formed only with the new plasmids.
+
+
+### All Clusters
+
+```{python}
+import sys
+import os
+sys.path.append(os.path.abspath("/n/projects/jp2992/MOLNG4331/code/"))
+from utils import parse_multiple_mge_output,scatterplot_multiple_mge_output
+
+
+perplexity_targets=[5,10,15]
+min_cluster_targets=[3,5,15]
+path_to_mgemodels="/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/plasmidome/clustering_collab_pls_w_sinorhizobium_plsdb_no_redundant"
+mge_all_trial_df=parse_multiple_mge_output(path_to_mgemodels,perplexity_targets,min_cluster_targets)
+scatterplot_multiple_mge_output(mge_all_trial_df,perplexity_targets,min_cluster_targets)
+```
+
+### Before New plasmids
+
+Clustering using **only** the Sinorhizobium plasmids from the PLSDB.
+
+* Top graph presents the clusters colored by Genus
+
+* Bottom graph represents the clusters colored by the unique clusters established by MGE-Cluster. Colors might be repeated due to the amount of clusters.
+
+```{python}
+
+from utils import parse_single_mge_output
+
+perplexity=5
+min_cluster=3
+mge_output_to_parse=f"/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/plasmidome/clustering_sinorhizobium/mge_out_{perplexity}_{min_cluster}/{perplexity}_{min_cluster}_model_results.csv"
+mge_one_trial_df=parse_single_mge_output(mge_output_to_parse,perplexity,min_cluster)
+
+# Scatter Plot
+fig,ax=plt.subplots(2,1, figsize=(15,8))
+df=mge_one_trial_df.set_index(["perplexity","min_cluster"])
+
+df=df.loc[("5","3")]
+
+# Remove unclassified
+df=df[df["Standard_Cluster"] != "-1"]
+
+sns.scatterplot(df, x="tsne1D", y="tsne2D",
+                hue="genus",
+                style="interval",
+                s=100,
+                palette=px.colors.qualitative.Light24 + px.colors.qualitative.Dark24,
+                legend=True,
+                ax=ax[0]
+                )
+
+sns.lineplot(df, x="tsne1D", y="tsne2D",
+                hue="Standard_Cluster",
+                style="interval",
+                markers='o',
+                palette=px.colors.qualitative.Light24 + px.colors.qualitative.Dark24,
+                legend=False,
+                ax=ax[1]
+                )
+
+
+plt.suptitle(f"Perplexity 5, Min_cluster 3")
+
+ax[0].legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+
+plt.tight_layout()
+plt.show()
+
+
+```
+
+### After New plasmids (non-redundant)
+
+Clustering Sinorhizobium plasmids from the PLSDB and the new **non-redundant** plasmids from collaborator data included.
+
+-   Top graph presents the clusters colored by Genus, where **NEW** represents Penn State collaborator data.
+
+-   Bottom graph represents the clusters colored by the unique clusters established by MGE-Cluster. Colors might be repeated due to the amount of clusters.
+
+```{python}
+
+fig,ax=plt.subplots(2,1, figsize=(15,8))
+df=mge_all_trial_df.set_index(["perplexity","min_cluster"])
+df=df.loc[("5","3")]
+
+# Remove unclassified
+df=df[df["Standard_Cluster"] != "-1"]
+
+sns.scatterplot(df, x="tsne1D", y="tsne2D",
+                hue="genus",
+                style="interval",
+                s=100,
+                palette=px.colors.qualitative.Light24 + px.colors.qualitative.Dark24,
+                legend=True,
+                ax=ax[0]
+                )
+
+sns.lineplot(df, x="tsne1D", y="tsne2D",
+                hue="Standard_Cluster",
+                style="interval",
+                markers='o',
+                palette=px.colors.qualitative.Light24 + px.colors.qualitative.Dark24,
+                legend=False,
+                ax=ax[1]
+                )
+
+
+plt.suptitle(f"Perplexity 5, Min_cluster 3")
+
+ax[0].legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+
+plt.tight_layout()
+plt.show()
+```
+
+### After New plasmids (redundant)
+
+Clustering Sinorhizobium plasmids from the PLSDB and **all** the **putative** new plasmids from collaborator data included.
+
+-   Top graph presents the clusters colored by Genus, where **NEW** represents Penn State collaborator data.
+
+-   Bottom graph represents the clusters colored by the unique clusters established by MGE-Cluster. Colors might be repeated due to the amount of clusters.
+
+```{python}
+
+from utils import parse_single_mge_output
+
+perplexity=5
+min_cluster=3
+mge_output_to_parse=f"/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/plasmidome/clustering_collab_pls_w_sinorhizobium_plsdb/mge_out_{perplexity}_{min_cluster}/{perplexity}_{min_cluster}_model_results.csv"
+
+custom_metadata="Yes"
+mge_one_trial_df=parse_single_mge_output(mge_output_to_parse,perplexity,min_cluster,custom_metadata)
+
+# Scatter Plot
+fig,ax=plt.subplots(2,1, figsize=(15,8))
+df=mge_one_trial_df.set_index(["perplexity","min_cluster"])
+
+df=df.loc[("5","3")]
+
+# Remove unclassified
+df=df[df["Standard_Cluster"] != "-1"]
+
+sns.scatterplot(df, x="tsne1D", y="tsne2D",
+                hue="genus",
+                style="interval",
+                s=100,
+                palette=px.colors.qualitative.Light24 + px.colors.qualitative.Dark24,
+                legend=True,
+                ax=ax[0]
+                )
+
+sns.lineplot(df, x="tsne1D", y="tsne2D",
+                hue="Standard_Cluster",
+                style="interval",
+                markers='o',
+                palette=px.colors.qualitative.Light24 + px.colors.qualitative.Dark24,
+                legend=False,
+                ax=ax[1]
+                )
+
+
+plt.suptitle(f"Perplexity 5, Min_cluster 3")
+
+ax[0].legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+
+plt.tight_layout()
+plt.show()
+
+```
+
+## Number of MPF
+
+The plasmids typing was done with MOB-Typer on the non-redundant dataset from the Collaborator at Penn State University.
+
+```{r, message=FALSE}
+
+df=readr::read_tsv("/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/rfplasmid_pred_flye/pred_nonredundant_pls_mobtyper_results.tsv")
+
+number_pls_MPF <- paste0("Number of plasmids with MPF: ", nrow(df[df$mpf_type != "-",]))
+print_color(number_pls_MPF, color = "blue")
+
+```
+
+## Session info
+
+Because `session_info` is `TRUE`, the rendered result includes session info, even though no such code is included here in the source document.

@@ -1,0 +1,2436 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="template.css" /> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" />
+
+    <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+    <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+    <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+    <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+  
+    <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        
+  
+    <!-- <script src="script.js"></script> -->
+  
+    <!-- <script src="jquery.sticky-kit.js "></script> -->
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+    <link href="https://webfs/n/projects/jp2992/stowers-notes/easy-pandoc-templates/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" />
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script>
+    <meta name="generator" content="pandoc" />
+  <title>Project-report-cbio.mm2883.102</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="https://webfs/n/projects/jp2992/stowers-notes/easy-pandoc-templates/css/elegant_bootstrap.css" />
+</head>
+<body>
+
+    
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">Project-report-cbio.mm2883.102</span>
+        <ul class="nav pull-right doc-info">
+                            </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div id="TOC" class="span3">
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#sinorhizobium-meliloti-assembly"
+        id="toc-sinorhizobium-meliloti-assembly">Sinorhizobium meliloti
+        assembly</a></li>
+        <li><a href="#objective" id="toc-objective">Objective</a></li>
+        <li><a href="#data-description" id="toc-data-description">Data
+        description</a></li>
+        <li><a href="#assembly-assessment"
+        id="toc-assembly-assessment">Assembly assessment</a>
+        <ul>
+        <li><a href="#visualization"
+        id="toc-visualization">Visualization</a></li>
+        <li><a href="#descriptive-stats"
+        id="toc-descriptive-stats">Descriptive stats</a></li>
+        <li><a href="#coverage" id="toc-coverage">Coverage</a></li>
+        <li><a href="#completeness"
+        id="toc-completeness">Completeness</a></li>
+        </ul></li>
+        <li><a href="#genome-annotation"
+        id="toc-genome-annotation">Genome annotation</a></li>
+        <li><a href="#genome-synteny" id="toc-genome-synteny">Genome
+        synteny</a>
+        <ul>
+        <li><a href="#all-vs-mag215" id="toc-all-vs-mag215">All vs
+        MAG215</a></li>
+        <li><a href="#mag215-vs-rm1021" id="toc-mag215-vs-rm1021">MAG215
+        vs Rm1021</a></li>
+        </ul></li>
+        <li><a href="#pan-genome-analysis"
+        id="toc-pan-genome-analysis">Pan-genome analysis</a></li>
+        <li><a href="#plasmids-information"
+        id="toc-plasmids-information">Plasmids information</a>
+        <ul>
+        <li><a href="#plasmid-typing" id="toc-plasmid-typing">Plasmid
+        typing</a></li>
+        <li><a href="#plasmid-annotation"
+        id="toc-plasmid-annotation">Plasmid annotation</a></li>
+        <li><a href="#plasmid-homology"
+        id="toc-plasmid-homology">Plasmid homology</a></li>
+        <li><a href="#plasmid-copy-number"
+        id="toc-plasmid-copy-number">Plasmid copy number</a></li>
+        <li><a href="#plasmidome"
+        id="toc-plasmidome">Plasmidome</a></li>
+        </ul></li>
+        <li><a href="#variant-calling-using-core-genome"
+        id="toc-variant-calling-using-core-genome">Variant calling using
+        core genome</a></li>
+        <li><a href="#putative-plasmid-analysis-pmag215"
+        id="toc-putative-plasmid-analysis-pmag215">Putative plasmid
+        analysis (pMAG215)</a></li>
+        <li><a href="#collaborator-s.-meliloti-genome-assembly"
+        id="toc-collaborator-s.-meliloti-genome-assembly">Collaborator
+        <em>S. meliloti</em> genome assembly</a>
+        <ul>
+        <li><a href="#data" id="toc-data">Data</a></li>
+        <li><a href="#reads-quality" id="toc-reads-quality">Reads
+        quality</a></li>
+        <li><a href="#genome-assembly" id="toc-genome-assembly">Genome
+        assembly</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+      </div>
+            <div class="span9">
+
+      
+      <h1 id="sinorhizobium-meliloti-assembly">Sinorhizobium meliloti
+assembly</h1>
+<hr />
+<p><strong>Authors:</strong> Andrew Price and Juan Jose Picon Cossio</p>
+<h1 id="objective">Objective</h1>
+<p>Assemble 9 Smeliloti strain genomes (it was supposed to be 10, but
+the demultiplexing for one of the samples failed) for the Sankari
+lab.</p>
+<p><strong>To start,</strong> they’re interested in their lab-version of
+the RM1021 (B02) reference strain and the MAG215 (H01) strain that Madi
+is working with.</p>
+<h1 id="data-description">Data description</h1>
+<ul>
+<li>Reads location: <a
+href="https://webfs/n/analysis/Sankari/mm2883/MOLNG-4331/EA156900/LongPlex/longplex_output/MOLNG4331/merged_fastq/">MOLNG4331</a></li>
+<li><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/merged_fastq/QC/multiqc_report.html">multiqc_report.html</a>
+Quality report.</li>
+<li>Reads are from different <em>S. meliloti</em> strains, except one
+which was a pseudomonas.</li>
+<li><strong>Reads H01 and B02 corresponding to strains MAG215 and RM1021
+(reference), respectively.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Library Name</th>
+<th>Adapter Type</th>
+<th>Index Label</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rm1021</td>
+<td>PacBio</td>
+<td>B02</td>
+<td>1</td>
+</tr>
+<tr>
+<td>KH46</td>
+<td>PacBio</td>
+<td>A02</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MAG215</td>
+<td>PacBio</td>
+<td>H01</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MAG177</td>
+<td>PacBio</td>
+<td>G01</td>
+<td>4</td>
+</tr>
+<tr>
+<td>MAG176-B</td>
+<td>PacBio</td>
+<td>F01</td>
+<td>5</td>
+</tr>
+<tr>
+<td>MAG154*</td>
+<td>PacBio</td>
+<td>E01</td>
+<td>6</td>
+</tr>
+<tr>
+<td>MAG121</td>
+<td>PacBio</td>
+<td>D01</td>
+<td>7</td>
+</tr>
+<tr>
+<td>MAG62</td>
+<td>PacBio</td>
+<td>C01</td>
+<td>8</td>
+</tr>
+<tr>
+<td>MAG31**</td>
+<td>PacBio</td>
+<td>B01</td>
+<td>9</td>
+</tr>
+<tr>
+<td>MAG18</td>
+<td>PacBio</td>
+<td>A01</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>* Pseudomonas contamination. ** No sequencing available. Library
+prep-related problems.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/resistant_strains.xlsx">resistant_strains.xlsx</a>
+contains the resistant and susceptible strains. Pink and Green cells
+will be ignored. <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/genomes/MAG_genomes/susceptible_mag_codes.txt">susceptible_mag_codes.txt</a></p>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>MAG5</td>
+<td>MAG10</td>
+<td>MAG16</td>
+<td>MAG21</td>
+<td>MAG24</td>
+<td>MAG27</td>
+<td>MAG73</td>
+<td>MAG88</td>
+</tr>
+<tr>
+<td>2</td>
+<td>MAG97</td>
+<td>MAG121</td>
+<td>MAG123</td>
+<td>MAG41</td>
+<td>MAG42</td>
+<td>MAG48</td>
+<td>MAG145</td>
+<td>MAG157</td>
+</tr>
+<tr>
+<td>3</td>
+<td>MAG169</td>
+<td>MAG182</td>
+<td>MAG183</td>
+<td>MAG191</td>
+<td>MAG199</td>
+<td>MAG200</td>
+<td>MAG201</td>
+<td>MAG220</td>
+</tr>
+<tr>
+<td>4</td>
+<td>MAG221</td>
+<td>MAG225</td>
+<td>MAG230</td>
+<td>MAG242</td>
+<td>MAG245</td>
+<td>MAG258</td>
+<td>MAG259</td>
+<td>MAG278</td>
+</tr>
+<tr>
+<td>5</td>
+<td>MAG282</td>
+<td>MAG286</td>
+<td>MAG313</td>
+<td>MAG320</td>
+<td>MAG322</td>
+<td>MAG325</td>
+<td>MAG342</td>
+<td>MAG358</td>
+</tr>
+<tr>
+<td>6</td>
+<td>MAG373</td>
+<td>MAG384</td>
+<td>MAG386</td>
+<td>MAG406</td>
+<td>MAG417</td>
+<td>MAG420</td>
+<td>MAG513</td>
+<td>MAG514</td>
+</tr>
+<tr>
+<td>7</td>
+<td>MAG523</td>
+<td>MAG530</td>
+<td>MAG533</td>
+<td>MAG539</td>
+<td>MAG540</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="assembly-assessment">Assembly assessment</h1>
+<hr />
+<p>Everything related with the assembly of <em>S. meliloti</em></p>
+<h2 id="visualization">Visualization</h2>
+<p>This first analysis was done using the two strains Siva and Madi were
+interested in the beginning. It helped us visualize differences between
+<strong><em>Hifiasm</em></strong> and <strong><em>Flye</em></strong> for
+this bacteria.</p>
+<ul>
+<li><strong>1a</strong> and <strong>1b</strong> are Hifiasm for H01 and
+B02, respectively.</li>
+<li><strong>2a</strong> and <strong>2b</strong> are Flye for H01 and
+B02, respectively.</li>
+</ul>
+<p>As expected, genomes for both strain are at chromosome level. We can
+see a concordance between both tools during genome assembly of B02
+(RM1021) with both of them presenting 3 big contigs. Hifiasm and Flye
+presented comparable contig sizes for both strains. However,
+<strong>MAG215 (H01) presents and extra short contig circularized in
+Flye</strong> (2a, short green line), but not in Hifiasm (1a, short
+purple line with blue edges) suggesting a possible extra plasmid.</p>
+<p>The extra contig size was significantly different between Flye and
+Hifiasm, with Hifiasm having 40kb more than Flye’s. See <a
+href="https://webfs/n/projects/jp2992/stowers-notes/Project-report-cbio.mm2883.102.html#putative-plasmid-analysis-pmag215">Putative
+plasmid analysis (pMAG215)</a> for information about this extra contig
+description.</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><img  src="https://webfs/n/projects/jp2992/stowers-notes/photos/assembly_bandage.png" class="wikilink" alt="assembly_bandage.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Figure 1.</strong> Genome assembly for RM1021 (bottom row)
+and MAG215 (top row) using Hifiasm (left column) and Flye (right
+column)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="descriptive-stats">Descriptive stats</h2>
+<p>The table below presents descriptive stats of the nine <em>S.
+meliloti</em> assembled genomes. <strong>The highlighted in bold
+corresponds to an impostor which is a <em>pseudomona</em>.</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 17%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>file</th>
+<th>type</th>
+<th># seqs</th>
+<th>sum_len</th>
+<th>min_len</th>
+<th>avg_len</th>
+<th>max_len</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01_asm_flye.fasta</td>
+<td>DNA</td>
+<td>5</td>
+<td>6,919,858</td>
+<td>139,932</td>
+<td>1,383,971.6</td>
+<td>3,593,188</td>
+</tr>
+<tr>
+<td>A02_asm_hifiasm.fasta</td>
+<td>DNA</td>
+<td>3</td>
+<td>7,034,387</td>
+<td>1,597,380</td>
+<td>2,344,795.7</td>
+<td>3,753,122</td>
+</tr>
+<tr>
+<td>B02_asm_flye.fasta</td>
+<td>DNA</td>
+<td>3</td>
+<td>6,696,400</td>
+<td>1,355,887</td>
+<td>2,232,133.3</td>
+<td>3,657,162</td>
+</tr>
+<tr>
+<td>C01_asm_flye.fasta</td>
+<td>DNA</td>
+<td>3</td>
+<td>6,926,656</td>
+<td>1,494,128</td>
+<td>2,308,885.3</td>
+<td>3,735,505</td>
+</tr>
+<tr>
+<td>D01_asm_flye.fasta</td>
+<td>DNA</td>
+<td>3</td>
+<td>6,746,538</td>
+<td>1,305,092</td>
+<td>2,248,846</td>
+<td>3,835,146</td>
+</tr>
+<tr>
+<td><strong>E01_asm_flye.fasta</strong></td>
+<td><strong>DNA</strong></td>
+<td><strong>2</strong></td>
+<td><strong>5,882,655</strong></td>
+<td><strong>121,616</strong></td>
+<td><strong>2,941,327.5</strong></td>
+<td><strong>5,761,039</strong></td>
+</tr>
+<tr>
+<td>F01_asm_flye.fasta</td>
+<td>DNA</td>
+<td>3</td>
+<td>6,744,852</td>
+<td>1,415,219</td>
+<td>2,248,284</td>
+<td>3,710,337</td>
+</tr>
+<tr>
+<td>G01_asm_flye.fasta</td>
+<td>DNA</td>
+<td>4</td>
+<td>6,922,790</td>
+<td>166,347</td>
+<td>1,730,697.5</td>
+<td>3,544,365</td>
+</tr>
+<tr>
+<td>H01_asm_flye.fasta</td>
+<td>DNA</td>
+<td>4</td>
+<td>6,864,704</td>
+<td>192,654</td>
+<td>1,716,176</td>
+<td>3,654,821</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!NOTE]</p>
+<p>Given the inconsistency observed during <a
+href="https://webfs/n/projects/jp2992/stowers-notes/Project-report-cbio.mm2883.102.html#plasmid-typing">plasmid
+typing</a> for A02’s putative plasmid and the assembly graph file
+produced by Flye (<a
+href="https://webfs/n/projects/jp2992/MOLNG4331/flye/A02/A02_asm_flye.png">A02_asm_flye.png</a>),
+assembly was re-done using Hifiasm and confirmed our suspicious of being
+an assembly error.</p>
+</blockquote>
+<p>A01 was also fishy as, apparently, it has 2 accessory plasmid,
+re-assembly was done with Hifiasm and showed a same result. The assembly
+<a
+href="https://webfs/n/projects/jp2992/MOLNG4331/hifiasm/A01/A01.bp.p_ctg.gfa">A01_hifiasm.gfa</a>
+can be visualized in Bandage.</p>
+<h2 id="coverage">Coverage</h2>
+<p>Text files (.txt) in the following folder contains histogram coverage
+and depth for each contig for every <em>S. meliloti</em> assembly. It
+also includes mean base quality and mapping quality: <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/genomes/coverage/">Coverage</a></p>
+<p><strong>In summary:</strong></p>
+<ul>
+<li><p>The range of sample coverage is 334x−761x.</p></li>
+<li><p>The median coverage is 494x.</p></li>
+</ul>
+<h2 id="completeness">Completeness</h2>
+<h3 id="quast">QUAST</h3>
+<p>After assembling, QUAST was used to compare the strains to MAG215. We
+can see that the the classic reference Rm1021 (B02) is not the most
+similar to MAG215.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/genomes/genome_comparison/quast/report.html">QUAST_Results</a></p>
+<h3 id="checkm">CheckM</h3>
+<p><strong><em>CheckM</em></strong> evaluates the completeness of the
+nine <em>S. meliloti</em> strains according to presence/absence of
+marker genes and the expected co-localization of these genes.</p>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 24%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 2%" />
+<col style="width: 3%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th>Bin Id</th>
+<th>Marker lineage</th>
+<th># genomes</th>
+<th># markers</th>
+<th># marker sets</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>Completeness</th>
+<th>Contamination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1019</td>
+<td>3</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td>A02_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1021</td>
+<td>1</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.31</td>
+</tr>
+<tr>
+<td>B02_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>4</td>
+<td>1020</td>
+<td>1</td>
+<td>0</td>
+<td>99.28</td>
+<td>0.31</td>
+</tr>
+<tr>
+<td>C01_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1020</td>
+<td>2</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.47</td>
+</tr>
+<tr>
+<td>D01_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1022</td>
+<td>0</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td><strong>E01_asm_flye</strong></td>
+<td>**g__Pseudomonas (UID4526)**</td>
+<td>38</td>
+<td>1397</td>
+<td>371</td>
+<td>5</td>
+<td>1364</td>
+<td>27</td>
+<td>1</td>
+<td>99.61</td>
+<td>2.58</td>
+</tr>
+<tr>
+<td>F01_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1022</td>
+<td>0</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>G01_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1021</td>
+<td>1</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.31</td>
+</tr>
+<tr>
+<td>H01_asm_flye</td>
+<td>g__Ensifer(UID3566)</td>
+<td>27</td>
+<td>1025</td>
+<td>322</td>
+<td>3</td>
+<td>1019</td>
+<td>3</td>
+<td>0</td>
+<td>99.59</td>
+<td>0.49</td>
+</tr>
+</tbody>
+</table>
+<h3 id="liftoff">Liftoff</h3>
+<p>To get us started on finding the genes in the two different
+assemblies, I ran liftoff to trasnfer the gene annotations from the
+reference strain to our assemblies. For reference, the reference gene
+model contains 6298 genes.</p>
+<p>The mag215 strain was able to have 5698 of those genes mapped over,
+missing out on 600 on them, either due to the gene completely being
+missing in this strain or having evolved past the point of LiftOff being
+able to map them.</p>
+<p>Here’s the mag215 gtf after liftoff:<br />
+<a
+href="https://webfs/n/core/Bioinformatics/analysis/Sankari/mm2883/cbio.mm2883.102/data/mag215/liftoff.mag215.gtf">mag215_liftoff_gtf</a></p>
+<p>Here’s a list of the 600 genes unable to be mapped:<br />
+<a
+href="https://webfs/n/core/Bioinformatics/analysis/Sankari/mm2883/cbio.mm2883.102/data/mag215/liftoff.mag215.unmapped.gtf">mag215_liftoff_missing</a></p>
+<p>On the other hand, every single gene was able to be mapped to the
+rm1021 strain, which a great sign that our assembly is good: <a
+href="https://webfs/n/core/Bioinformatics/analysis/Sankari/mm2883/cbio.mm2883.102/data/rm1021/liftoff.rm1021.gtf">rm1021_liftoff_gtf</a></p>
+<h1 id="genome-annotation">Genome annotation</h1>
+<p>Genome annotation of all strains was performed with
+<strong><em>PGAP</em></strong> the pipeline developed by the NCBI.</p>
+<p>All annotation are inside each assembly’s folder under a folder named
+<em>pgap_annotation</em>. <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/flye">assemblies</a></p>
+<blockquote>
+<p>[!TODO] I want to change this folder organization as I will implement
+more annotation tools</p>
+</blockquote>
+<h1 id="genome-synteny">Genome synteny</h1>
+<hr />
+<h2 id="all-vs-mag215">All vs MAG215</h2>
+<p>Genome alignment was performed between all the strains assembled
+against MAG215. The alignment includes the B02 (Rm1021) which might help
+to rule out genomic regions.</p>
+<p>In this file we can observed a dot plot of the whole genome alignment
+for all the strains against MAG215 <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/genomes/genome_comparison/minimap2/all_vs_mag215_asm20.paf.pdf">all_vs_mag215_asm20.paf.pdf</a></p>
+<p>For a more interactive view in this <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/flye/genomes/genome_comparison/minimap2/igv_session.xml">igv
+session</a> you can observed the alignment including the annotation for
+MAG215.</p>
+<p>Below some descriptive stats of the alignment of a min alignment
+length of 5000 and mean quality of 30. We see high chromosome and
+super-plasmids coverage, but not for the accessory plasmid.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>name</th>
+<th>size</th>
+<th>numreads</th>
+<th>covbases</th>
+<th>coverage</th>
+<th>meandepth</th>
+<th>meanmapq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contig_1_H01</td>
+<td>1689003</td>
+<td>118</td>
+<td>1670705</td>
+<td>98.9166</td>
+<td>6.54925</td>
+<td>60</td>
+</tr>
+<tr>
+<td>contig_2_H01</td>
+<td>3654821</td>
+<td>194</td>
+<td>3551763</td>
+<td>97.1802</td>
+<td>6.65477</td>
+<td>59.8</td>
+</tr>
+<tr>
+<td>contig_3_H01</td>
+<td>1328226</td>
+<td>214</td>
+<td>1310964</td>
+<td>98.7004</td>
+<td>5.16338</td>
+<td>59.8</td>
+</tr>
+<tr>
+<td>contig_4_H01</td>
+<td>192654</td>
+<td>39</td>
+<td>126563</td>
+<td>65.6945</td>
+<td>0.876483</td>
+<td>59.9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>I will try minigraph-cactus as an alternative to
+progressiveMauve since I do not like the output of it</strong></p>
+<h2 id="mag215-vs-rm1021">MAG215 vs Rm1021</h2>
+<p>Genome synteny analysis with
+<strong><em>progressiveMauve</em></strong> showed significant levels of
+rearrangements in MAG215 compared to RM1021, as well as different levels
+of conservation per synteny block and unique zones to MAG215 and
+RM1021.</p>
+<p><img src="https://webfs/n/projects/jp2992/stowers-notes/photos/synteny_backbone.jpg" class="wikilink"
+alt="synteny_backbone.jpg" />
+<img src="https://webfs/n/projects/jp2992/stowers-notes/photos/synteny.jpg" class="wikilink" alt="synteny.jpg" /></p>
+<p><strong>Figure 2.</strong> Genome to genome alignment. For both
+pictures, first and second row are NCBI’s RM1021 and Sankari lab’s
+RM1021, respectively. Third row is MAG215 and also the reference for
+alignment orientation. <strong>Top picture</strong> showing backbone
+analysis; pink, conserved regions in all strains; green, conserved
+regions only between Rm1021; no color, unaligned regions. <strong>Bottom
+picture</strong> is showing synteny blocks; no color are unaligned
+regions; inside each synteny block, bars represents similarity profile.
+Blocks over the line were aligned in forward and below in reverse
+complement.</p>
+<h1 id="pan-genome-analysis">Pan-genome analysis</h1>
+<p>Everything related with pan-genome is in <a
+href="https://webfs/n/projects/jp2992/stowers-notes/Pan-genome%20analysis.html">Pan-genome
+analysis</a></p>
+<h1 id="plasmids-information">Plasmids information</h1>
+<hr />
+<p>Everything related with accessory Plasmid assessment.</p>
+<h2 id="plasmid-typing">Plasmid typing</h2>
+<hr />
+<p>During <a
+href="https://webfs/n/projects/jp2992/stowers-notes/Project-report-cbio.mm2883.102.html#putative-plasmid-analysis-pmag215">Putative
+plasmid analysis</a> we learned that <em>S. meliloti</em> can hold
+accessory plasmids.</p>
+<p>More plasmids were found in the rest of the strains. Therefore, we
+will type them to identify its existence. To do so we will take into
+account the <strong>coverage</strong> and the <strong>plasmid-related
+proteins</strong>.</p>
+<h3 id="coverage-1">Coverage</h3>
+<p>Table below presents descriptive stats from Flye for all putative
+accessory plasmids for all strains. We can see that they have a mean
+coverage high consistent with the rest of the genome.</p>
+<p>With Flye’s report we noticed that A02’s plasmid had apparent
+unsolved path with the main chromosome which hindered its
+circularization, and the assembler decided to split the sequence from
+the chromosome. Plasmid-related proteins will help us solve this.</p>
+<table>
+<thead>
+<tr>
+<th>sample</th>
+<th>seq_name</th>
+<th>length</th>
+<th>cov.</th>
+<th>circ.</th>
+<th>graph path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01</td>
+<td>contig_3</td>
+<td>256854</td>
+<td>471</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>A01</td>
+<td>contig_1</td>
+<td>139932</td>
+<td>434</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>A02*</td>
+<td>contig_3</td>
+<td>288326</td>
+<td>536</td>
+<td>N</td>
+<td>1,3</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>contig_3</td>
+<td>166347</td>
+<td>678</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>H01</td>
+<td>contig_4</td>
+<td>192654</td>
+<td>772</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>* Determined as assembly error. See <em>assembly assessment</em>
+section</p>
+<h3 id="plasmid-related-features">Plasmid-related features</h3>
+<ol type="1">
+<li>Relaxases proteins.</li>
+<li>Mating Pair Formation system (MPF).</li>
+<li>OriV.</li>
+<li>Replication Initiation Protein (RIP).</li>
+</ol>
+<p><strong><em>MOB Suites</em></strong> was used for identify <strong>1
+&amp; 2</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 1%" />
+<col style="width: 0%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 3%" />
+<col style="width: 6%" />
+<col style="width: 1%" />
+<col style="width: 23%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>size</th>
+<th>gc</th>
+<th>rep_type(s)</th>
+<th>rep_type_accession(s)</th>
+<th>relaxase_type(s)</th>
+<th>relaxase_type_accession(s)</th>
+<th>mpf_type</th>
+<th>mpf_type_accession(s)</th>
+<th>predicted_mobility</th>
+<th>mash_nearest_neighbor</th>
+<th>mash_neighbor_distance</th>
+<th>mash_neighbor_identification</th>
+<th>primary_cluster_id</th>
+<th>secondary_cluster_id</th>
+<th>predicted_host_range_overall_rank</th>
+<th>predicted_host_range_overall_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>contig_3_A02</strong></td>
+<td>288326</td>
+<td>0.62</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>CP021807</td>
+<td>0.219531</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA612</td>
+<td>AI850</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contig_3_A01</td>
+<td>256854</td>
+<td>0.58</td>
+<td>rep_cluster_471</td>
+<td>001821__NC_018682_00001</td>
+<td>MOBP</td>
+<td>CP026529_00118</td>
+<td>MPF_T</td>
+<td>NC_009621_01097,NC_017324_00907,NC_017324_00906,NC_017324_00904,NC_017324_00902,NC_009621_01115</td>
+<td>conjugative</td>
+<td>NC_019847</td>
+<td>0.080322</td>
+<td>Sinorhizobium meliloti GR4</td>
+<td>AA614</td>
+<td>AI853</td>
+<td>family</td>
+<td>Rhizobiaceae</td>
+</tr>
+<tr>
+<td>contig_4_H01</td>
+<td>192654</td>
+<td>0.58</td>
+<td>rep_cluster_471</td>
+<td>001821__NC_018682_00001</td>
+<td>MOBP</td>
+<td>CP026529_00118</td>
+<td>-</td>
+<td>-</td>
+<td>mobilizable</td>
+<td>CP021832</td>
+<td>0.0716227</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA618</td>
+<td>AI857</td>
+<td>family</td>
+<td>Rhizobiaceae</td>
+</tr>
+<tr>
+<td>contig_3_G01</td>
+<td>166347</td>
+<td>0.59</td>
+<td>rep_cluster_546</td>
+<td>001918__NC_013545_00001</td>
+<td>MOBP</td>
+<td>CP026529_00118</td>
+<td>MPF_T</td>
+<td>NC_016814_00035,NC_019313_00276,NC_017327_00230,NC_017327_00231,NC_009622_00075</td>
+<td>conjugative</td>
+<td>CP003934</td>
+<td>0.00793</td>
+<td>Sinorhizobium meliloti GR4</td>
+<td>AA610</td>
+<td>AI848</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+</tr>
+<tr>
+<td>contig_1_A01</td>
+<td>139932</td>
+<td>0.58</td>
+<td>-</td>
+<td>-</td>
+<td>MOBP</td>
+<td>CP026529_00118</td>
+<td>MPF_T</td>
+<td>NC_009622_00075,NC_017327_00231,NC_017327_00230,NC_019313_00276,NC_016814_00035</td>
+<td>conjugative</td>
+<td>CP003934</td>
+<td>0.109331</td>
+<td>Sinorhizobium meliloti GR4</td>
+<td>AA610</td>
+<td>AI848</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+</tr>
+</tbody>
+</table>
+<p><strong>We can observe that A02’s plasmid was not predicted with a
+relaxase-type protein, nor a MPF, additionally presents a GC content
+more similar to the chromosome than to the other plasmids.</strong></p>
+<p>Through the annotation with <strong><em>PGAP</em></strong> we can
+identify <strong>4</strong>. Below, we see that using the GFF,
+<strong>we were abled to retrieved a RepABC for all putative plasmids
+except for A02</strong>. This supports the idea of being an assembly
+artifact.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Feature</th>
+<th>Start</th>
+<th>End</th>
+<th>Strand</th>
+<th>Gene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>69939</td>
+<td>71153</td>
+<td>-</td>
+<td>repC</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>71308</td>
+<td>72291</td>
+<td>-</td>
+<td>repB</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>72288</td>
+<td>73484</td>
+<td>-</td>
+<td>repA</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>77376</td>
+<td>78653</td>
+<td>-</td>
+<td>repC</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>40003</td>
+<td>41217</td>
+<td>-</td>
+<td>repC</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>41418</td>
+<td>42437</td>
+<td>-</td>
+<td>repB</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>42434</td>
+<td>43657</td>
+<td>-</td>
+<td>repA</td>
+</tr>
+<tr>
+<td>A01_annot.gff</td>
+<td>CDS</td>
+<td>159514</td>
+<td>160791</td>
+<td>+</td>
+<td>repA</td>
+</tr>
+<tr>
+<td>G01_annot.gff</td>
+<td>CDS</td>
+<td>152673</td>
+<td>153950</td>
+<td>+</td>
+<td>repC</td>
+</tr>
+<tr>
+<td>G01_annot.gff</td>
+<td>CDS</td>
+<td>157959</td>
+<td>159161</td>
+<td>+</td>
+<td>repA</td>
+</tr>
+<tr>
+<td>G01_annot.gff</td>
+<td>CDS</td>
+<td>159158</td>
+<td>160192</td>
+<td>+</td>
+<td>repB</td>
+</tr>
+<tr>
+<td>G01_annot.gff</td>
+<td>CDS</td>
+<td>160366</td>
+<td>161580</td>
+<td>+</td>
+<td>repC</td>
+</tr>
+<tr>
+<td>H01_annot.gff</td>
+<td>CDS</td>
+<td>176279</td>
+<td>177493</td>
+<td>-</td>
+<td>repC</td>
+</tr>
+<tr>
+<td>H01_annot.gff</td>
+<td>CDS</td>
+<td>177693</td>
+<td>178712</td>
+<td>-</td>
+<td>repB</td>
+</tr>
+<tr>
+<td>H01_annot.gff</td>
+<td>CDS</td>
+<td>178709</td>
+<td>179932</td>
+<td>-</td>
+<td>repA</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>OriV-Finder</em></strong> was abled to report
+<strong>3</strong> thanks to the predictions of RIP proteins, this tool
+uses its own HMM searches, but in the previous table we can see that
+PGAP also predicted RIP proteins for all of the plasmids, the complete
+module RepABC. However, some plasmids also had matches with OriC in the
+database DoriC.</p>
+<ul>
+<li><p><strong>A01 contig 1:</strong> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/A01_contig_1_OriV_prediction/Genome_Viz.html">RIP
+and OriV positions</a> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/A01_contig_1_OriV_prediction/OriV_Viz.html">OriV
+details</a></p></li>
+<li><p><strong>A01 contig 3:</strong> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/A01_contig_3_OriV_prediction/Genome_Viz.html">RIP
+and OriV positions</a> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/A01_contig_3_OriV_prediction/OriV_Viz.html">OriV
+details</a></p></li>
+<li><p><strong>G01</strong> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/G01_OriV_prediction/Genome_Viz.html">RIP
+and OriV positions</a> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/G01_OriV_prediction/OriV_Viz.html">OriV
+details</a></p></li>
+<li><p><strong>H01</strong> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/H01_OriV_prediction/Genome_Viz.html">RIP
+and OriV positions</a> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/H01_OriV_prediction/OriV_Viz.html">OriV
+details</a></p></li>
+</ul>
+<h2 id="plasmid-annotation">Plasmid annotation</h2>
+<hr />
+<p>You can find gene annotation for each plasmid in <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/">plasmids_smeliloti</a>.
+Each plasmid has an annotation folder in the form of
+<strong>[A-Z][0-9]{2}_pgap_annot</strong>, for example, annotation for
+genome <strong>A01</strong> is <strong>A01_pgap_annot</strong> and so
+on.</p>
+<p>Summary stats of annotation for each plasmid:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 15%" />
+<col style="width: 12%" />
+<col style="width: 23%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Type</th>
+<th>Number</th>
+<th>Size total (kb)</th>
+<th>Size mean (bp)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01_contig_1</td>
+<td>cds</td>
+<td>152</td>
+<td>113.40</td>
+<td>746.03</td>
+</tr>
+<tr>
+<td>A01_contig_1</td>
+<td>gene</td>
+<td>128</td>
+<td>99.59</td>
+<td>778.05</td>
+</tr>
+<tr>
+<td>A01_contig_1</td>
+<td>pseudogene</td>
+<td>24</td>
+<td>13.81</td>
+<td>575.25</td>
+</tr>
+<tr>
+<td>A01_contig_1</td>
+<td>region</td>
+<td>1</td>
+<td>139.93</td>
+<td>139932.00</td>
+</tr>
+<tr>
+<td><strong>A01_contig_1</strong></td>
+<td><strong>Total</strong></td>
+<td><strong>609</strong></td>
+<td>593.52</td>
+<td>974.58</td>
+</tr>
+<tr>
+<td>A01_contig_3</td>
+<td>cds</td>
+<td>279</td>
+<td>201.10</td>
+<td>720.80</td>
+</tr>
+<tr>
+<td>A01_contig_3</td>
+<td>gene</td>
+<td>200</td>
+<td>156.38</td>
+<td>781.88</td>
+</tr>
+<tr>
+<td>A01_contig_3</td>
+<td>pseudogene</td>
+<td>80</td>
+<td>44.80</td>
+<td>560.00</td>
+</tr>
+<tr>
+<td>A01_contig_3</td>
+<td>region</td>
+<td>1</td>
+<td>256.85</td>
+<td>256854.00</td>
+</tr>
+<tr>
+<td>A01_contig_3</td>
+<td>trna</td>
+<td>1</td>
+<td>0.07</td>
+<td>71.00</td>
+</tr>
+<tr>
+<td><strong>A01_contig_3</strong></td>
+<td><strong>Total</strong></td>
+<td><strong>1120</strong></td>
+<td>1061.48</td>
+<td>947.75</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>cds</td>
+<td>175</td>
+<td>139.73</td>
+<td>798.47</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>gene</td>
+<td>165</td>
+<td>135.45</td>
+<td>820.90</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>pseudogene</td>
+<td>10</td>
+<td>4.28</td>
+<td>428.40</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>region</td>
+<td>1</td>
+<td>166.35</td>
+<td>166347.00</td>
+</tr>
+<tr>
+<td><strong>G01</strong></td>
+<td><strong>Total</strong></td>
+<td><strong>701</strong></td>
+<td>725.27</td>
+<td>1034.63</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>cds</td>
+<td>225</td>
+<td>151.45</td>
+<td>673.11</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>gene</td>
+<td>182</td>
+<td>126.45</td>
+<td>694.79</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>pseudogene</td>
+<td>43</td>
+<td>25.00</td>
+<td>581.35</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>region</td>
+<td>1</td>
+<td>192.65</td>
+<td>192654.00</td>
+</tr>
+<tr>
+<td><strong>H01</strong></td>
+<td><strong>Total</strong></td>
+<td><strong>901</strong></td>
+<td>798.45</td>
+<td>886.19</td>
+</tr>
+</tbody>
+</table>
+<h2 id="plasmid-homology">Plasmid homology</h2>
+<h3 id="between-public-plasmids">Between public plasmids</h3>
+<p>I will use the same <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/extra_plasmid_H01/aln_homologous/plasmids_smeliloti_filtered.fasta">dataset
+with 114 sequences</a>, collected when we were confirming pMAG215, to
+find if the other 3 plasmids were reported before or are also new
+ones.</p>
+<blockquote>
+<p>[!Update]</p>
+<p>I updated the dataset to include more sequences <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/ref_smeliloti_plasmids_filt.fasta">ref_smeliloti_plasmids_filt.fasta</a></p>
+<p>It was not used here though.</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>rname</th>
+<th>endpos</th>
+<th>numreads</th>
+<th>covbases</th>
+<th>coverage</th>
+<th>meandepth</th>
+<th>meanmapq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contig_1_A01</td>
+<td>139932</td>
+<td>99</td>
+<td>104765</td>
+<td>74.8685</td>
+<td>2.259</td>
+<td>48.5</td>
+</tr>
+<tr>
+<td>contig_3_A01</td>
+<td>256854</td>
+<td>738</td>
+<td>180208</td>
+<td>70.1597</td>
+<td>5.84001</td>
+<td>44.4</td>
+</tr>
+<tr>
+<td>contig_3_G01</td>
+<td>166347</td>
+<td>217</td>
+<td>165616</td>
+<td>99.5606</td>
+<td>8.36703</td>
+<td>47.9</td>
+</tr>
+<tr>
+<td>contig_4_H01</td>
+<td>192654</td>
+<td>260</td>
+<td>109934</td>
+<td>57.0629</td>
+<td>2.32121</td>
+<td>43.7</td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/homology/public_plasmids_vs_plasmids_in_house/igv_session.xml">igv_session</a>
+here we can observed the alignments.</p>
+<p>G01 is the most covered plasmid, with some plasmids covering up to
+89% with &gt;98% identity, although it still has some unique regions
+observed as long insertions, there is high probability that they are
+same plasmid.</p>
+<p>The rest of the plasmids are partially covered with plasmids covering
+no more than 40%. Indicating these might be new plasmids like
+pMAG215.</p>
+<h3 id="between-in-house-strains">Between in-house strains</h3>
+<h4 id="all-vs-pmag215">All vs pMAG215</h4>
+<p>Minimap2 (asm20) was used to get insight of regions shared between
+the plasmids and pMAG215.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/homology/all_vs_pmag215/out.pdf">all_vs_pmag215_asm20</a>
+shows dot plot with coverage of the 3 in-house plasmids to pMAG215 using
+Minimap2-asm20</p>
+<p>When can observed the alignments selecting contig_4 (pMAG215) in <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/flye/genomes/genome_comparison/minimap2/igv_session.xml">igv
+session</a>. <strong>This is the same alignment presented in genome
+synteny section</strong>.</p>
+<h4 id="all-vs-all-plasmids">All vs All plasmids</h4>
+<p>Roary was used to observe set of genes shared by the 4 plasmids,
+using 80% and 50% identity.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/roary/">roary
+folder</a> in this folder you can find results for 80% (*_80pct_*) and
+50% (*_50pct_) in each folder there is a folder called
+fixed_input_files/ which contains the GFF to look for genes reported in
+the CSV file <strong>gene_presence_absence.csv</strong></p>
+<p><strong>Summary:</strong></p>
+<p><strong>80%</strong></p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/roary/roary_result_80_pct/pangenome_matrix.png">pangenome_matrix.png</a>
+left a binary tree built with accessory genome. Right matrix of
+presence/absence of accessory genome.</p>
+<table>
+<thead>
+<tr>
+<th>Gene Category</th>
+<th>Strain Frequency Range</th>
+<th>Number of Genes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core genes</td>
+<td>99% ≤ strains ≤ 100%</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Soft core genes</td>
+<td>95% ≤ strains &lt; 99%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Shell genes</td>
+<td>15% ≤ strains &lt; 95%</td>
+<td>512</td>
+</tr>
+<tr>
+<td>Cloud genes</td>
+<td>0% ≤ strains &lt; 15%</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Total genes</strong></td>
+<td>0% ≤ strains ≤ 100%</td>
+<td><strong>517</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>50%</strong></p>
+<table>
+<thead>
+<tr>
+<th>Gene Category</th>
+<th>Strain Frequency Range</th>
+<th>Number of Genes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core genes</td>
+<td>99% ≤ strains ≤ 100%</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Soft core genes</td>
+<td>95% ≤ strains &lt; 99%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Shell genes</td>
+<td>15% ≤ strains &lt; 95%</td>
+<td>462</td>
+</tr>
+<tr>
+<td>Cloud genes</td>
+<td>0% ≤ strains &lt; 15%</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Total genes</strong></td>
+<td>0% ≤ strains ≤ 100%</td>
+<td><strong>471</strong></td>
+</tr>
+</tbody>
+</table>
+<p>We can see that small number of genes are shared across all 4
+plasmids, probably indicating about different functions associated to
+each of them. However, during alignment of the 3 plasmids against
+pMAG215 we were abled to see differences in similarity between plasmids,
+for example, we can see that A01 is apparently the most similar sharing
+almost 50 % of the plasmid sequence.</p>
+<h2 id="plasmid-copy-number">Plasmid copy number</h2>
+<p>All of them were predicted to be 1 copy number by
+<em>Plassembler</em> (based on <em>Unicycler</em>) which uses coverage
+comparison against chromosome.</p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>contig</th>
+<th>length</th>
+<th>depth</th>
+<th>copy number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01</td>
+<td>chromosome</td>
+<td>1264915</td>
+<td>558.67</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A01</td>
+<td>chromosome_2</td>
+<td>3593188</td>
+<td>384.48</td>
+<td>0.69</td>
+</tr>
+<tr>
+<td>A01</td>
+<td>chromosome_3</td>
+<td>1664969</td>
+<td>468.34</td>
+<td>0.84</td>
+</tr>
+<tr>
+<td>A01</td>
+<td>1</td>
+<td>256854</td>
+<td>467.75</td>
+<td>0.84</td>
+</tr>
+<tr>
+<td>A01</td>
+<td>2</td>
+<td>139932</td>
+<td>432.28</td>
+<td>0.77</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>chromosome</td>
+<td>1682661</td>
+<td>501.82</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>chromosome_2</td>
+<td>3544365</td>
+<td>526.2</td>
+<td>1.05</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>chromosome_3</td>
+<td>1529417</td>
+<td>579.84</td>
+<td>1.16</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>1</td>
+<td>166347</td>
+<td>671.13</td>
+<td>1.34</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>chromosome</td>
+<td>1689003</td>
+<td>547.89</td>
+<td>1</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>chromosome_2</td>
+<td>3654821</td>
+<td>558.88</td>
+<td>1.02</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>chromosome_3</td>
+<td>1328226</td>
+<td>614.05</td>
+<td>1.12</td>
+</tr>
+<tr>
+<td>H01</td>
+<td>1</td>
+<td>192654</td>
+<td>753.57</td>
+<td>1.38</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>
+Show command
+</summary>
+<pre><code>target=(&quot;A01&quot; &quot;G01&quot; &quot;H01&quot;)
+
+task_id=$SLURM_ARRAY_TASK_ID
+
+strain=${target[$task_id]}
+
+echo &quot;processing&quot; $strain
+
+reads=$(ls /n/analysis/Sankari/mm2883/MOLNG-4331/EA156900/LongPlex/longplex_output/MOLNG4331/merged_fastq/*.gz | grep $strain)
+
+conda activate plassembler
+
+plassembler long --force -l $reads -t $cpus --pacbio_model &quot;pacbio-hifi&quot; \
+
+--flye_assembly /n/projects/jp2992/MOLNG4331/flye/$strain/assembly_info.fasta \
+
+--flye_info /n/projects/jp2992/MOLNG4331/flye/$strain/assembly_info.txt \
+
+-d /n/projects/jp2992/MOLNG4331/biocomp_tools/plsdb \
+
+-o /n/projects/jp2992/MOLNG4331/plasmids_smeliloti/in_house_pls/$strain/</code></pre>
+</details>
+<h2 id="plasmidome">Plasmidome</h2>
+<p>Everything related with plasmidome is in <a
+href="https://webfs/n/projects/jp2992/stowers-notes/Plasmidome.html">Plasmidome</a></p>
+<h1 id="variant-calling-using-core-genome">Variant calling using core
+genome</h1>
+<p>For variant calling plasmid was removed before. The reason is that
+some part of the plasmids might be represented in the super plasmids or
+the chromosome, representing possible bias during alignment. Afterwards,
+<strong><em>Snippy</em></strong> was used for variant calling.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/flye/pan-genome_analysis/snps_core_genome/snippy_result_no_plasmid/snps.tab">snps.tab</a>
+Contains variants with product and effect annotation.</p>
+<h1 id="putative-plasmid-analysis-pmag215">Putative plasmid analysis
+(pMAG215)</h1>
+<hr />
+<p>During MAG215 assembly an extra piece of DNA sequence was found. This
+extra DNA sequence was unexpected and had some features indicating it
+may be an accessory plasmid (size, coverage, circular), therefore it had
+to be analyzed separately.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/stowers-notes/Hunting-a-plasmid.html">Hunting
+a plasmid</a> describes everything related to the plasmid.</p>
+<h1 id="collaborator-s.-meliloti-genome-assembly">Collaborator <em>S.
+meliloti</em> genome assembly</h1>
+<hr />
+<h2 id="data">Data</h2>
+<ul>
+<li><p>In total 119 <em>S. meliloti</em> strains were assembled and
+shared by a collaborator of Siva.</p></li>
+<li><p>Genomes are stored in <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/">collaborator_Smeliloti_hifi</a></p></li>
+</ul>
+<h2 id="reads-quality">Reads quality</h2>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/raw_reads/QC/multiqc_report.html">multiqc_report.htm</a>
+Quality report of the PacBio reads.</p>
+<p>We can noticed that compared to Siva’s PacBio they counted with less
+number of reads and a smallest median read length. Given that Siva’s
+sequencing has 10 times more data than the collaborator, I subsample to
+20k reads to achieve similar amount of data as the collaborator. At the
+end, Siva’s counted with a mean read length between 14522 -15000 bp per
+sample, whereas the collaborator presents median between 6249-7249
+bp.</p>
+<h2 id="genome-assembly">Genome assembly</h2>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/code/descriptive_stats_collaborator_genomes.ipynb">descriptive_stats_collaborator_genomes.ipynb</a>
+custom script to parse and plot.</p>
+<h3 id="collaborator-assemblies">Collaborator assemblies</h3>
+<p>Below I present some descriptive stats for these assemblies. However,
+since we count with the reads and we noticed that some of the genomes
+presents low coverage, we will produced our own assemblies.</p>
+<h4 id="descriptive-stats-1">Descriptive stats</h4>
+<p>Most of the genomes are concentrated among 3 to 5 sequences. 4
+genomes fall in the minimum 2 sequences and 6 genomes representing the
+maximum with 6 sequences.</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/collabo_asm/descriptive_stats_histogram.png">descriptive_stats_histogram.png</a></p>
+<blockquote>
+<p>[!Question]</p>
+<p>Because of the assemblies headers, I suspected that their assemblies
+were done using Hifiasm, nonetheless my hifiasm results are slightly
+different. <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/descript_stats_hist_hifiasm.png">descript_stats_hist_hifiasm.png</a></p>
+<p>Analyzing our hifiasm assembly of
+m64404e_240423_150118.hifi_reads.bc2001–bc2001, I found is equivalent to
+<strong>Strain_025</strong> in the collaborator assemblies. They are the
+same assemblies. But there are others that are not the same in terms of
+amount of contigs.</p>
+<p>Are they running different parameters, a consensus or a different
+tool?</p>
+</blockquote>
+<h4 id="completeness-1">Completeness</h4>
+<p>According to <strong><em>CheckM</em></strong>, we found that most of
+the genomes present high completeness, but some of them presents
+interesting indices of strain heterogeneity (genomes &gt; 0 = 29).</p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/collabo_asm/QC_asm/completeness_collab_assemblies.png">completeness_collab_assemblies.png</a></p>
+<blockquote>
+<p>[!Question] What is the reason for strain heterogeneity? Do we have
+strain contamination? Natural duplications or assembly errors?</p>
+</blockquote>
+<p>I’m suspecting it is indicating assembly errors, as the heterogeneity
+comes from single copy genes with 2 copies and all of them are &gt;98%
+AA identity. Although this can happen with strain contamination it is
+happening for low number of gene markers.</p>
+<h3 id="in-house-assemblies">In-house assemblies</h3>
+<p>For our version of assemblies, I first applied Flye. However, it is
+immediately notable that due to the differences in coverage between
+samples with some of them being very low, a lot of genomes are notably
+fragmented (<a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/descript_stats_hist_flye.png">descript_stats_hist_flye.png</a>).
+This metrics are higher than the collaborator’s assemblies. So I applied
+Hifiasm too <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/descript_stats_hist_hifiasm.png">descript_stats_hist_hifiasm.png</a></p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/cov_vs_seqs_flye.jpg">cov_vs_seqs_flye.jpg</a>
+&amp; <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/cov_vs_seqs_hifiasm.jpg">cov_vs_seqs_hifiasm.jpg</a>
+give us an idea of the mean coverage and the fragmentation level for
+Flye and Hifiasm, respectively. Hifiasm actually produced more
+contiguous genomes, apparently it is better than flye handling low
+coverage, noticed that there is one genome highly fragmented which is
+below the mean coverage &gt;=13x recommended by the authors.</p>
+<p>The initial problem with hifiasm was the circularization and the
+duplication during plasmid assembly and the problem with flye is it get
+tangled sometimes with insertion sequences. However, I found that maybe
+this can happen with real plasmids. <strong>I am using Plasmer to
+predict chromosome and plasmids.</strong></p>
+<p>The low coverage cause in Flye two interesting problems that were not
+observed in Hifiasm:</p>
+<ol type="1">
+<li>Fragmentation genomes by repetition.</li>
+<li>Mixing of accessory plasmid and super plasmid by repetition.</li>
+</ol>
+<p>Let’s check example of each in the collaborator data:</p>
+<h3 id="case-of-bc2001-true-fragmentation-false-plasmid">(1) Case of
+bc2001: True fragmentation, False plasmid</h3>
+<p><strong>m64404e_240423_150118.hifi_reads.bc2001–bc2001</strong>
+presents 3 interesting things:</p>
+<ol type="1">
+<li>There is a circularized plasmids by flye ~165kb, as well as
+autocycler, but no hifiasm. Mob_typer predicted relaxases and MPF. So a
+possible plasmid.</li>
+<li>Flye fragmented the chromosome with a chunk of ~400kb and a 22kb
+connecting, however mob_typer is no predicting anything there. And they
+have GC content and mash values concordant with chromosome.</li>
+<li>Plasmer predicts only the ~165kb as plasmid.</li>
+</ol>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 2%" />
+<col style="width: 3%" />
+<col style="width: 2%" />
+<col style="width: 7%" />
+<col style="width: 1%" />
+<col style="width: 32%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>num_contigs</th>
+<th>size</th>
+<th>gc</th>
+<th>rep_type(s)</th>
+<th>rep_type_accession(s)</th>
+<th>relaxase_type(s)</th>
+<th>relaxase_type_accession(s)</th>
+<th>mpf_type</th>
+<th>mpf_type_accession(s)</th>
+<th>predicted_mobility</th>
+<th>mash_nearest_neighbor</th>
+<th>mash_neighbor_distance</th>
+<th>mash_neighbor_identification</th>
+<th>primary_cluster_id</th>
+<th>secondary_cluster_id</th>
+<th>predicted_host_range_overall_rank</th>
+<th>predicted_host_range_overall_name</th>
+<th>observed_host_range_ncbi_rank</th>
+<th>observed_host_range_ncbi_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contig_1</td>
+<td>1</td>
+<td>3733358</td>
+<td>0.626131</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>NC_019847</td>
+<td>0.219531</td>
+<td>Sinorhizobium meliloti GR4</td>
+<td>AA614</td>
+<td>AI853</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contig_2</td>
+<td>1</td>
+<td>1702905</td>
+<td>0.623954</td>
+<td>-</td>
+<td>-</td>
+<td>MOBQ</td>
+<td>NC_020527_00552</td>
+<td>-</td>
+<td>-</td>
+<td>mobilizable</td>
+<td>NC_019847</td>
+<td>0.203604</td>
+<td>Sinorhizobium meliloti GR4</td>
+<td>AA614</td>
+<td>AI853</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contig_5</td>
+<td>1</td>
+<td>1637147</td>
+<td>0.600446</td>
+<td>-</td>
+<td>-</td>
+<td>MOBP,MOBQ,MOBQ</td>
+<td>CP026529_00118,NC_013545_00086,NC_020527_00552</td>
+<td>MPF_T</td>
+<td>NC_016813_00008,NC_016814_00035,NC_019313_00276,NC_017327_00230,NC_017327_00231,NC_009622_00075,NC_021911_00770,NC_018683_00943,NC_017327_00916,NC_003037_00774,NC_003037_00773,NC_019848_00953</td>
+<td>conjugative</td>
+<td>NC_019313</td>
+<td>0.0987984</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA614</td>
+<td>AI852</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+</tr>
+<tr>
+<td><strong>contig_3</strong></td>
+<td>1</td>
+<td>469174</td>
+<td>0.615251</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>CP021815</td>
+<td>0.191731</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA617</td>
+<td>AI856</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contig_6</td>
+<td>1</td>
+<td>165353</td>
+<td>0.588384</td>
+<td>rep_cluster_590</td>
+<td>002015__EF066650_00001</td>
+<td>MOBQ,MOBQ</td>
+<td>NC_008383_00124,NC_010865_00150</td>
+<td>MPF_T</td>
+<td>NC_010865_00147,NC_008383_00141,NC_010865_00164</td>
+<td>conjugative</td>
+<td>CP021216</td>
+<td>0.00369655</td>
+<td>Sinorhizobium meliloti RU11/001</td>
+<td>AD885</td>
+<td>AN557</td>
+<td>family</td>
+<td>Rhizobiaceae</td>
+<td>family</td>
+<td>Rhizobiaceae</td>
+</tr>
+<tr>
+<td><strong>contig_4</strong></td>
+<td>1</td>
+<td>22017</td>
+<td>0.624199</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>CP002477</td>
+<td>0.295981</td>
+<td>Streptomyces pratensis ATCC 33331</td>
+<td>AE907</td>
+<td>AO780</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="case-of-bc2002-false-fragmentation-true-plasmid">(2) Case of
+bc2002: False fragmentation, True plasmid</h3>
+<p><strong>m64404e_240423_150118.hifi_reads.bc2002–bc2002</strong>
+presents a circular 73kb and a interesting fragmentation in one of the
+super plasmids.</p>
+<p><strong>Assemblies visualization :</strong> <a
+href="https://webfs/n/projects/jp2992/stowers-notes/photos/sample_bc2002_flye_version.png">sample_bc2002_flye_version.png</a>
+vs <a
+href="https://webfs/n/projects/jp2992/stowers-notes/photos/sample_bc2002_hifiasm.png">sample_bc2002_hifiasm.png</a></p>
+<p>When we see the Autocycler product: <a
+href="https://webfs/n/projects/jp2992/stowers-notes/photos/sample_bc2002_autocycler.png">sample_bc2002_autocycler.png</a></p>
+<p>We can observed 5 interesting things:</p>
+<ol type="1">
+<li>The ~73 kb was linearized. Linear plasmid?? Noticed that the other
+putative plasmid (~300kb) was circularized.</li>
+<li>The ~300kb that flye fragmented in the mega-plasmid was
+circularized. Possible plasmid??</li>
+<li>The ~300kb integrated in the hifiasm genome which belongs to the
+fragmented in flye could not be resolved.</li>
+<li><em>Plasmer</em> is predicting contig_1, contig_2 and contig_7 as
+plasmids which corresponds to a ~300kb, ~14kb and ~73 kb. <strong>The
+interesting part here is that the hifiasm version of this strain did not
+report any of this !!!</strong></li>
+<li>Mob-type is predicting relaxase for the ~300kb, MPF for the ~14kb
+and the 300kb. None for the ~73kb, however it presents significant mash
+values.</li>
+</ol>
+<p>I believe the ~300kb might be a real plasmid, but before continuing I
+want to look for proteins in this ~73kb because it is intriguing me</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 2%" />
+<col style="width: 4%" />
+<col style="width: 2%" />
+<col style="width: 5%" />
+<col style="width: 1%" />
+<col style="width: 31%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>num_contigs</th>
+<th>size</th>
+<th>gc</th>
+<th>rep_type(s)</th>
+<th>rep_type_accession(s)</th>
+<th>relaxase_type(s)</th>
+<th>relaxase_type_accession(s)</th>
+<th>mpf_type</th>
+<th>mpf_type_accession(s)</th>
+<th>predicted_mobility</th>
+<th>mash_nearest_neighbor</th>
+<th>mash_neighbor_distance</th>
+<th>mash_neighbor_identification</th>
+<th>primary_cluster_id</th>
+<th>secondary_cluster_id</th>
+<th>predicted_host_range_overall_rank</th>
+<th>predicted_host_range_overall_name</th>
+<th>observed_host_range_ncbi_rank</th>
+<th>observed_host_range_ncbi_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contig_5</td>
+<td>1</td>
+<td>3914896</td>
+<td>0.626396</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>CP021815</td>
+<td>0.210897</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA617</td>
+<td>AI856</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contig_3</td>
+<td>1</td>
+<td>1654954</td>
+<td>0.623932</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>CP021216</td>
+<td>0.203604</td>
+<td>Sinorhizobium meliloti RU11/001</td>
+<td>AD885</td>
+<td>AN557</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contig_4</td>
+<td>1</td>
+<td>1566735</td>
+<td>0.600660</td>
+<td>-</td>
+<td>-</td>
+<td>MOBP,MOBQ</td>
+<td>CP026529_00118,NC_020527_00552</td>
+<td>MPF_T</td>
+<td>NC_019313_00276,NC_017327_00230,NC_017327_00231,NC_009622_00075,NC_021911_00770,NC_018683_00943,NC_017327_00916,NC_003037_00774,NC_003037_00773,NC_019848_00953,NC_016814_00035</td>
+<td>conjugative</td>
+<td>NC_019313</td>
+<td>0.0968463</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA614</td>
+<td>AI852</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+</tr>
+<tr>
+<td><strong>contig_1</strong></td>
+<td>1</td>
+<td>317278</td>
+<td>0.599232</td>
+<td>rep_cluster_546</td>
+<td>001918__NC_013545_00001</td>
+<td>MOBP</td>
+<td>CP026529_00118</td>
+<td>MPF_T</td>
+<td>NC_009622_00075,NC_017327_00231,NC_017327_00230,NC_019313_00276,NC_016814_00035</td>
+<td>conjugative</td>
+<td>CP021803</td>
+<td>0.0665597</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA615</td>
+<td>AI854</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+<td>genus</td>
+<td>Sinorhizobium</td>
+</tr>
+<tr>
+<td><strong>contig_2</strong></td>
+<td>1</td>
+<td>73529</td>
+<td>0.588856</td>
+<td>rep_cluster_492</td>
+<td>001860__NC_019313_00001</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>non-mobilizable</td>
+<td>CP021215</td>
+<td>0.030677</td>
+<td>Sinorhizobium meliloti RU11/001</td>
+<td>AA608</td>
+<td>AI846</td>
+<td>family</td>
+<td>Rhizobiaceae</td>
+<td>family</td>
+<td>Rhizobiaceae</td>
+</tr>
+<tr>
+<td><strong>contig_7</strong></td>
+<td>1</td>
+<td>14037</td>
+<td>0.582247</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>MPF_T</td>
+<td>NC_009622_00075,NC_017327_00231,NC_017327_00230,NC_019313_00276</td>
+<td>non-mobilizable</td>
+<td>CP026529</td>
+<td>0.11676</td>
+<td>Sinorhizobium meliloti</td>
+<td>AA611</td>
+<td>AI849</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>I will look for homology using my new plasmid dataset: <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/ref_smeliloti_plasmids_filt.fasta">ref_smeliloti_plasmids_filt.fasta</a></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>qlength</th>
+<th>qstart</th>
+<th>qend</th>
+<th>strand</th>
+<th>ref_accession</th>
+<th>ref_length</th>
+<th>ref_start_pos</th>
+<th>ref_end_pos</th>
+<th>matches</th>
+<th>aln_length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>contig_2</strong></td>
+<td><strong>73529</strong></td>
+<td><strong>517</strong></td>
+<td><strong>39549</strong></td>
+<td><strong>-</strong></td>
+<td><strong>NZ_CP021215.1</strong></td>
+<td><strong>144210</strong></td>
+<td><strong>105537</strong></td>
+<td><strong>140295</strong></td>
+<td><strong>34748</strong></td>
+<td><strong>39032</strong></td>
+</tr>
+<tr>
+<td><strong>contig_2</strong></td>
+<td><strong>73529</strong></td>
+<td><strong>59013</strong></td>
+<td><strong>73529</strong></td>
+<td><strong>+</strong></td>
+<td><strong>NC_013545.1</strong></td>
+<td><strong>144170</strong></td>
+<td><strong>10178</strong></td>
+<td><strong>22982</strong></td>
+<td><strong>12780</strong></td>
+<td><strong>14516</strong></td>
+</tr>
+<tr>
+<td>contig_2</td>
+<td>73529</td>
+<td>47275</td>
+<td>49592</td>
+<td>-</td>
+<td>NZ_CP021215.1</td>
+<td>144210</td>
+<td>22455</td>
+<td>24771</td>
+<td>2118</td>
+<td>2326</td>
+</tr>
+<tr>
+<td>contig_2</td>
+<td>73529</td>
+<td>52417</td>
+<td>53664</td>
+<td>-</td>
+<td>NZ_CP021215.1</td>
+<td>144210</td>
+<td>18538</td>
+<td>19785</td>
+<td>1168</td>
+<td>1247</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>So I found significant match with a plasmid that is twice as long.
+After gene annotation with PGAP I found prediction of the module RepABC
+and with BAKTA I found OriC. Mapping the 73kb against the genome did not
+produced any significant contiguous alignment, suggesting it may not be
+a miss-assembly. <strong>Why there are not relaxases or
+MPF?</strong></p>
+<h3 id="case-bc2090-contamination">Case bc2090: Contamination</h3>
+<p>m64404e_240531_162148.hifi_reads.bc2090–bc2090 presented a plasmid
+with a GC content equivalent to the usually found in the <em>S.
+meliloti</em> chromosome and it was reported by Flye as circular, so I
+went to investigate.</p>
+<p>To my surprise this assembly presents only 2 contigs: 1 around 5Mb
+and 1 around 165Kb. I looked for the equivalent in collaborator
+assemblies and casually it was the strains named as strain_EXC.
+<strong>A Signed of exclusion?</strong> When I checked the CheckM
+completeness of the latter it was actually placed at order
+o__Rhizobiales, so I decided to run taxonomy classification with
+<strong><em>Kraken2</em></strong> <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/flye_asm/m64404e_240531_162148.hifi_reads.bc2090--bc2090/k2_report.txt">k2_report.txt</a>
+which placed it at genus <em>Bosea</em>.</p>
+<h3 id="retrieve-acce.-plasmids">Retrieve acce. plasmids</h3>
+<p>Let’s remember the benchmarking presented by Ryan Wick for plasmid
+recovery:
+<img src=https://webfs/n/projects/jp2992/stowers-notes/photos/plasmid_recovery_RWick.png /></p>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/code/descriptive_stats_collaborator_genomes.ipynb">descriptive_stats_collaborator_genomes.ipynb</a>
+contains code used to processed this data.</p>
+<p>Summary of the data:</p>
+<ol type="1">
+<li>There is a total of 345 putative sequences that belongs to accessory
+plasmids in 116 out of the 119 strains according to Plasmer
+predictions.</li>
+<li>Gene annotation with BAKTA returned RepABC for at least one contig
+all of them within a distance &lt;2kb one after the other one.</li>
+<li>Among the putative plasmids 93 strains presents a contig with an
+annotation related with <em>conjugative</em> or <em>Type IV secretion
+system</em>. This is based on Plasmer prediction which has two problems:
+1) It was trained on PLSDB which has the mega plasmids and 2) by default
+it predicts everything above 500kb as chromosomes, but with the coverage
+problems the mega-plasmids can get fragmented and it can predict them as
+plasmids.</li>
+<li>Among all contigs predicted to be plasmids 83 were circular and 252
+linear. However, in the image and the table below we can see the
+distribution of mean coverage with some of them having very low
+coverage. Additionally, the linear are not necessarily linear in biology
+but an assembly fragmentation.</li>
+</ol>
+<p><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/flye_asm/stats_putative_pls/length_vs_cov_reassembled_pls.png">Length_vs_cov_reassembled_pls.png</a>
+This plot show the distribution of length vs coverage labeled by the
+circularization status <strong>Y</strong>=Circular,
+<strong>N</strong>=No circular.</p>
+<h4 id="assessment-of-putative-accessory-plasmids">Assessment of
+putative accessory plasmids</h4>
+<p>Here I describe the process to determine which contigs in the
+collaborator assemblies look like accessory plasmids.</p>
+<p>I used the following workflow: <a
+href="https://webfs/n/projects/jp2992/stowers-notes/photos/wf_plasmid_assess.png">wf_plasmid_assess.png</a></p>
+<p>Contigs were further filtered using the following criteria for
+reliable plasmid selection:</p>
+<ol type="1">
+<li><strong>A minimum base coverage of 4</strong>. A nucleotide must be
+supported at least by 4 reads.</li>
+<li><strong>RepABC prediction with a maximum distance of 2kb between
+each RIP</strong>. That is, RepA &lt;-&gt; RepB &lt;-&gt; RepC, where
+&lt;-&gt; is less than 2kb.</li>
+<li>If previous did not fulfill, it must have a hit with the PLSDB
+database which was filtered to plasmids below 500kb (max. mash distance
+and p-value of 0.1).</li>
+</ol>
+<p>After this, I kept 77 strains and 99 sequences, which were divided in
+three subsets: 1. <strong>The best:</strong> The most reliable defined
+as those that have repABC match, a match in the PLSDB and they are
+circular. 2. <strong>The intermediate:</strong> they have RepABC and a
+highly significant match in PLSDB (&lt;0.06), but they are not circular.
+This are might as good as the previous subset except they were not
+circularized which make us treat them carefully.<br />
+3. <strong>The fishy:</strong> They have a PLSDB and they might or not
+have RepABC.</p>
+<p>Here 2 interesting scenarios can happen:</p>
+<ol type="1">
+<li><strong>Strains in more than 1 subset:</strong> This can be cause
+due to acce. plasmids fragmentation or leaking of PsymA/B
+fragments.<br />
+</li>
+<li><strong>False positive in intermediate:</strong> Fragmentation in
+PsymA/B casually including the RepABC might leak.</li>
+</ol>
+<p>Final excel: <a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/flye_asm/stats_putative_pls/reassembled_pls_final_w_strains_keys.xlsx">reassembled_pls_final_w_strains_keys.xlsx</a></p>
+<h4 id="chromosome-vs-accessory-plasmids-coverage">Chromosome vs
+accessory plasmids coverage</h4>
+<p>Here for ease I will include on “chromosomes” the psymA/B.</p>
+<p>Let’s explore how is the relationship between average/min. coverage
+and plasmid recovery.</p>
+<ol type="1">
+<li><strong>m64404e_240423_150118.hifi_reads.bc2056–bc2056</strong> is
+the worst assembly with mean around 10x and it was the only one with no
+circular sequences (neither the chromosome nor any plasmids)</li>
+<li><a
+href="https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/flye_asm/stats_putative_pls/chromosomeCov_vs_accePlasmidCov.png">chromosomeCov_vs_accePlasmidCov.png</a>
+most of the circular plasmids are between average cov 10-30x which
+presented chromosomes mean cov between 35-50x. Most of the assemblies
+that achieved 3 chromosomes circularized are found in the same range.
+This is super interesting because all the other circular plasmids comes
+from an assembly that achieved 2 chromosome circularized.</li>
+<li></li>
+</ol>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
