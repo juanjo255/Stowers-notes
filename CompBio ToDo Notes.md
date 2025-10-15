@@ -1,6 +1,13 @@
 
 # To Do (weekly)
 
+for homology network in the case of sinorhizobium only color the new and the known plasmids. the legend for other genera does not matter. add color scale.
+
+for the scatterplot draw circles around the mixed clusters. add legend for known and new plasmids. make it squared as possible and reduce dots sizes. 
+
+Flowchart linear. 
+
+
 - [x] Get 16S from microbiome
 - [ ] Cluster plasmids from strains dakota and penn. 
 	- [ ] Diversity of plasmids: how similar.
