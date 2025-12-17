@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b53e423912e5c8fb",
+        "id": "0c4bd456b0475f56",
         "type": "tabs",
         "children": [
           {
-            "id": "0c5e0ac2cef5e016",
+            "id": "7e0d4e0b38172c96",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Project-report-cbio.mm2883.102.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "7a3df22a844c2c3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Methylation Calling PacBio HiFi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Methylation Calling PacBio HiFi"
-            }
-          },
-          {
-            "id": "3bd09b8a66d53dac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Methylation Analysis.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Methylation Analysis"
+              "title": "Project-report-cbio.mm2883.102"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -59,6 +30,29 @@
     "id": "84a7432e0bdea2ba",
     "type": "split",
     "children": [
+      {
+        "id": "a4d057f0ef339542",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53b797fac14454eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      },
       {
         "id": "fcaa9e0d7053fb6d",
         "type": "tabs",
@@ -77,24 +71,7 @@
             }
           },
           {
-            "id": "53b797fac14454eb",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
-            }
-          },
-          {
-            "id": "baa21fc0c47cd8d6",
+            "id": "d8f7ab4bbe2dd09f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -107,7 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 260.5
   },
   "right": {
     "id": "7a61529cf0aab50e",
@@ -123,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Methylation Calling PacBio HiFi.md",
+                "file": "CompBio ToDo Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Methylation Calling PacBio HiFi"
+              "title": "Backlinks for CompBio ToDo Notes"
             }
           },
           {
@@ -142,12 +119,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Methylation Calling PacBio HiFi.md",
+                "file": "CompBio ToDo Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Methylation Calling PacBio HiFi"
+              "title": "Outgoing links from CompBio ToDo Notes"
             }
           },
           {
@@ -171,13 +148,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Methylation Calling PacBio HiFi.md",
+                "file": "CompBio ToDo Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Methylation Calling PacBio HiFi"
+              "title": "Outline of CompBio ToDo Notes"
             }
           }
         ]
@@ -194,17 +171,47 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "webpage-html-export:Export as HTML": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "7a3df22a844c2c3b",
+  "active": "7e0d4e0b38172c96",
   "lastOpenFiles": [
-    "Methylation Analysis.md",
-    "Methylation Calling PacBio HiFi.md",
-    "Screenshot 2025-10-17 at 9.08.45 AM.png",
-    "Untitled.base",
     "README.md",
-    "Min. coverage to get S. meliloti plasmids.md"
+    "Plasmidome/Dakota Collab Asm Report.md",
+    "Plasmidome/Plasmidome.md",
+    "CompBio ToDo Notes.md",
+    "Plasmidome/Plasmid prediction tool.md",
+    "Plasmidome/Plasmid prediction in illumina MAG strains.md",
+    "Plasmidome/List of plasmids to re-sequence.md",
+    "SMRandom-seq/Bacteroid SmRandom Seq.md",
+    "Untitled.base",
+    "photos/Nodule_SCT_M20violin_seurat_clusters_percent.tRNA.png",
+    "NCR_prediction/NCR_prediction_Fenugreek_and_Sainfoin.md",
+    "Methylation/Methylation Analysis.md",
+    "Methylation/Methylation Calling PacBio HiFi.md",
+    "photos/motifs_pacbio_b_japonicum.png",
+    "SMRandom-seq",
+    "Project-report-cbio.mm2883.102.md",
+    "Pasted image 20251126105048.png",
+    "photos/benchmarking_pls_tools.jpeg",
+    "photos/Unconfirmed 305429.crdownload",
+    "Plasmidome/Processing 48 Sinorhizobium meliloti Strains.md",
+    "Plasmidome/stowers.html",
+    "photos/genome_and_plasmid_asm_wf.png",
+    "photos/meth_motif_s_meliloti.png",
+    "Methylation",
+    "Plasmidome",
+    "NCR_prediction",
+    "HTML/NCR_pred_report.html",
+    "HTML/all_stowers_notes.html",
+    "HTML/stowers.html",
+    "Hunting-a-plasmid.md",
+    "Min. coverage to get S. meliloti plasmids.md",
+    "Pan-genome analysis.md",
+    "Taurine Homologous in other Nodule Species.md",
+    "photos/ncr_pred_w_spada.png",
+    "photos/ncr_prediction_pre-spada.png"
   ]
 }

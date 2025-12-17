@@ -1,38 +1,82 @@
 
 # To Do (weekly)
 
-for homology network in the case of sinorhizobium only color the new and the known plasmids. the legend for other genera does not matter. add color scale.
-
-for the scatterplot draw circles around the mixed clusters. add legend for known and new plasmids. make it squared as possible and reduce dots sizes. 
-
-Flowchart linear. 
 
 
-- [x] Get 16S from microbiome
+
+
+
+
+
+## SMRandomSeq
+
+- [x] check similarity between rRNA operons:
+	- [ ] They are all super similar. consider two of them are in the antises strand (-) and there is one on the leading strand (+): check the alignment file:[rRNA16S_w_strand_clustalw.aln](https://webfs/n/projects/jp2992/sergio/map_reads/rRNA16S_w_strand_clustalw.aln)
+	- [ ] These are the coordinates of rRNA-16s Chromosome:2810004-2811487 Chromosome:3212858-3214341 Chromosome:81767-83250
+- [x] what cluster of bacteroids is similar to free-living
+	- Check the document. I evaluate it using integration with SCTransform and Lognormalize.
+- [x] check if a different operon was found in free living compared to bacteriods 
+- [x] check the difference in expression using the multimapping between free-living and bacteriods
+- [x] check if there is a operon preference in rRNA in the free living
+- [x] check which cluster present the more tRNA
+
+
+- [x] **However, the most important thing I want to know is mainly see if the results makes sense.** Sergio is busy with his other project . Can you help us understand what Di performed, **what other analysis can be done with this data**, **how is this data compared to other single cell analysis in bacteria, how good is the clustering, can we believe the clustering?**
+- [x] Sergio mentioned that the rRNA represented 98%:  the paper said that "rRNA-depletion treatment reduced the rRNA proportion from 71% to 10%, 88% to 29%, 74% to 4%, 91% to 45%, 83% to 5%, respectively"
+- [x] **There were 5 overlapped gene IDs between the top 10 highest expression genes in the B. subtilis datasets** of the species mixture by smRandom-seq and the public bulk RNA-seq dataset
+
+
+## Plasmidome
+
+- [x] Check how many predictions belong to the RFPlasmid
+	- 13 predictions: these were on the strains that did not have any clue by the other methods.
+	- 11/13 did not have acc. plasmid
+	- 2 predictions had 4 and 5.
+	- [ ] RFPlasmid might be showing that 5-mers are not enough to see acc. pls.
+		- [ ] Is it worthy to move to more -mer based tools like Plasmer? Let's first check the k-mer distributions between acc. plasmids and psyms/chromosomes.
+			- Based on their results with 31k bacterial genomes plasmids find a better kmer sharing at 25-mer, whereas chromosomes at a 18 k-mer.
+
+## NCR predictions
+
+- [ ] Any mature protein similar to the NCR.
+- [ ] Ask andrew how the proteins were predicted why are they different ids for the same thing.
+- [ ] 
+- [ ] Check the peptides that were found from the curated list. Check how many are predicted to have homologous with the HMM models by the collaborator.
+- [ ] Train the ESM form Jay and predict NCRs.
+
 - [ ] Cluster plasmids from strains dakota and penn. 
 	- [ ] Diversity of plasmids: how similar.
-- [ ] Methylation profile differences between rm1021 and mag215 
+
+
+## Methylation
+
+- [x] Compare between Nanopore and Pacbio in b. japonicum
+- [x] Compare different coverage of nanopore against pacbio b.japonicum
+
+- [ ] Methylation profile differences between new sequenced strains.
+- [ ] Annotate the contamination in b. japonicum
  
-- [ ] Build a genome map of annotation for accessory plasmids:
-	- The idea is to show an artificial genome built by the plasmids. 
-- [ ] Add the MAG strains ours and the ncbi published to the clustering.
-- [ ] Highlight all the clusters where the new plasmids fall.
-- [ ] Make homology network colored by the clusters of MGE-Cluster and highlight the new plasmids.
+
+## Other
 
 
-- [x] Look for taurine cluster in S. meliloti in other:
+- [ ] Look for taurine cluster in S. meliloti in other:
+	- [ ] <span style="color:red"> This was done. However, I will leave it here just in case.</span>
 	-   The taurine cluster in S. Meliloti 1021 is located in PsymB:
 		- SM_b21526 (tauA)
 		- SM_b21527 (tauB)
 		- SM_b21528 (tauC)
 		- SM_b21529 (tauD)
 
+
+
 - [ ] Check dakota collaborator assemblies:
 	-  **TO NOTE:** I assembled using the pipeline Hybracter. It assemblies with Flye and includes Plassembler to get plasmids. A small comparison shows me that **Flye reported 54 samples** containing sequences below 500kb being circular, however **Plassembler recovered only in 18 of them**. One reason for this could be that Plassembler is actually sensible to coverage when using only long reads (maybe because of Unicycler? anyways its main purpose is to be used with hybrid assemblies). For example, 
-		<img src="https://webfs/n/projects/jp2992/stowers-notes/photos/flye_asm_P9A10.png" height=300 > 
-		In the picture the helicopter propeller is probably the two psymA/B and there are apparently two circular acce. plasmids
+<img src="https://webfs/n/projects/jp2992/stowers-notes/photos/flye_asm_P9A10.png" height=300 > 
+		
+In the picture the helicopter propeller is probably the two psymA/B and there are apparently two circular acce. plasmids
 
-		<img src="https://webfs/n/projects/jp2992/stowers-notes/photos/plassembler_asm_P9A10.png" height=400 > 
+<img src="https://webfs/n/projects/jp2992/stowers-notes/photos/plassembler_asm_P9A10.png" height=400 > 
 		Plassembler in this case reported no circular plasmids.  
 
 - [ ] Add in house plasmids to MGE-Cluster to see how they relate with other plasmids.
@@ -53,7 +97,7 @@ Flowchart linear.
 
 - [ ] Build a Pan-genome graph for S. meliloti using susceptible strains. I have to wait for Madi info.
 	- [ ] I received the susceptible MAG from Madi on Jul. 14. [resistant_strains.xlsx](https://webfs/n/projects/jp2992/MOLNG4331/resistant_strains.xlsx)
-	- [ ] PPanGGoLin for pan-genome construction. *Update:* Its faster than Roary, it has support and plenty of several stats and graphs.
+	- [ ] PPanGGoLin for pan-genome construction. ***Update**:* Its faster than Roary, it has support and plenty of several stats and graphs.
 	- [ ] Try minigraph-cactus as an alternative to progressiveMauve since I do not like the output of it. it also allows to create pan-genome graph.
  - [ ] **Improve annotation for genes:** I missed the use of tools like InterProScan.
 	- During a meeting Eric Ross and Sukha Malladi annotate using their pipeline intended for eukaryotes, but has some tools useful for bacteria like interproscan, nonetheless they did not find significant matches for hypothetical proteins.

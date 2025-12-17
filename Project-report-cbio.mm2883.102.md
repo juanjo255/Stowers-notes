@@ -29,6 +29,7 @@ Assemble 9 Smeliloti strain genomes (it was supposed to be 10, but the demultipl
 | MAG62        | PacBio       | C01         | 8   |
 | MAG31**      | PacBio       | B01         | 9   |
 | MAG18        | PacBio       | A01         | 10  |
+|              |              |             |     |
 
 \* Pseudomonas contamination.
 ** No sequencing available. Library prep-related problems.
