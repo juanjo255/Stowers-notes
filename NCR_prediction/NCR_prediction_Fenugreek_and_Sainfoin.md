@@ -54,13 +54,13 @@ Here, for future learning I present the two approaches taken:
 
 The workflows are for editing in [Miro](https://miro.com/app/board/uXjVJaFw9G8=/?focusWidget=3458764635583399063)
 
-**TL;DR:** The SPADA output was filtered by length (200aa) and number of Cysteine of mature peptides (>=4Cys). An the matured peptide classified using the HMM models for IRLC and Dalbergioids generated in this [paper](https://doi.org/10.1101/2025.09.09.675119).
+**TL;DR:** The SPADA output was filtered by length (200aa) and number of Cysteine of mature peptides (>=4Cys). And the matured peptide classified using the HMM models for IRLC and Dalbergioids generated in this [paper](https://doi.org/10.1101/2025.09.09.675119).
 
 To validate the methods, Medicago truncatula was annotated and the curated list ([ref_mtruncatula_NCRs.csv](https://webfs/n/projects/jp2992/NCR_screening/ref_truncatula/NCR_screening/ref_mtruncatula_NCRs.csv) of NCR (715 NCRs) from M. truncatula taken from [Morphotype of bacteroids in different legumes correlates with the number and type of symbiotic NCR peptides](https://www.pnas.org/doi/pdf/10.1073/pnas.1704217114) used to confirm the results using MMseqs2 as aligner.
 
 
 > [!QUESTION]
-> Siva asked: Is it possible to predict anything with a signal? Yes, but the false positive are high. I have seen than just getting ORFs. Thousands get signal peptide. 
+> Siva asked: Is it possible to predict anything with a signal? Yes, but the false positive are high. I have seen that just getting ORFs. Thousands get signal peptide. 
 > 
 
 ****
@@ -79,8 +79,15 @@ All the metrics are for the filtered peptides.
 | Fenugreek (genome)        | 609            | NAN                       | 51,579  | 21      | 84.7    | 353     | [CRPs_w_cluster_w_seq.tsv](https://webfs/n/projects/jp2992/NCR_screening/fenugreek/SPADA_fenugreek_genome/CRPs_w_cluster_w_seq.tsv)        |
 | Fenugreek all (no dups)   | 1,083          | 823                       | 74,090  | 47      | 90      | 243     | [CRPs_w_cluster_w_seq.tsv](https://webfs/n/projects/jp2992/NCR_screening/fenugreek/SPADA_fenugreek_all/CRPs_w_cluster_w_seq.tsv)           |
 
+****
 
-The following results were for the alternative workflow (just for learn):
+> [!NOTE]
+> 
+> **The following results were for the alternative workflow (just for learn):**
+> 
+> 
+> 
+> As you noticed the number of retrieved peptides was lower than the expected. **Particularly, in M. truncatula NCR247 was not found**. Fortunately, Jonathon was abled to fix the SPADA pipeline and I could learned why I was not finding NCR 247 in my predictions: SPADA reports a mix of different gene predictors cause differences in sensitivity. The best sensitivity is provided by the default: Augustus Evidence; GeneWise & SplicePredictor. **It turned out that the sensitivity was compromised because I was using only Augustus_Evidence and NCR247 was found by GeneWise;SplicePredictor!**
 
 RBH=Reciprocal Best Hit
 
@@ -90,9 +97,7 @@ RBH=Reciprocal Best Hit
 | Sainfoin                  | 1614           | 56                                |
 | Fenugreek (transcriptome) | 427            | 169                               |
 
-As you noticed the number of retrieved peptides was lower than the expected. Particularly, in M. truncatula NCR247 was not found. Fortunately, Jonathon was abled to fix the SPADA pipeline and I could learnt why I was not finding NCR 247 in my predictions: SPADA reported that a mix of different gene predictors cause differences in sensitivity. The best sensitivity was provided by the default: Augustus Evidence; GeneWise & SplicePredictor. **It turned out that the sensitivity was compromised because I was using only Augustus_Evidence and NCR247 was found by GeneWise;SplicePredictor!**
-
-
+****
 
 ## Curious fact
 

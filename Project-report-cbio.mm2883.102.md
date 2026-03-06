@@ -3,6 +3,10 @@
 ***
 **Authors:** Andrew Price and Juan Jose Picon Cossio
 
+
+
+
+
 # Objective 
 
 Assemble 9 Smeliloti strain genomes (it was supposed to be 10, but the demultiplexing for one of the samples failed) for the Sankari lab.
@@ -303,6 +307,7 @@ Summary stats of annotation for each plasmid:
 
 
 ## Plasmid homology 
+
 ### Between public plasmids
 
 I will use the same [dataset with 114 sequences](https://webfs/n/projects/jp2992/MOLNG4331/extra_plasmid_H01/aln_homologous/plasmids_smeliloti_filtered.fasta), collected when we were confirming pMAG215, to find if the other 3 plasmids were reported before or are also new ones.
@@ -333,7 +338,7 @@ The rest of the plasmids are partially covered with plasmids covering no more th
 #### All vs pMAG215
 Minimap2 (asm20) was used to get insight of regions shared between the plasmids and pMAG215.
 
-[all_vs_pmag215_asm20](https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/homology/all_vs_pmag215/out.pdf) shows dot plot with coverage of the 3 in-house plasmids to pMAG215 using Minimap2-asm20 
+[all_vs_pmag215 _asm20](https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/homology/all_vs_pmag215/out.pdf) shows dot plot with coverage of the 3 in-house plasmids to pMAG215 using Minimap2-asm20 
 
 When can observed the alignments selecting contig_4 (pMAG215) in [igv session](https://webfs/n/projects/jp2992/MOLNG4331/flye/genomes/genome_comparison/minimap2/igv_session.xml). **This is the same alignment presented in genome synteny section**.
 
@@ -360,13 +365,13 @@ Roary was used to observe set of genes shared by the 4 plasmids, using 80% and 5
 
 **50%**
 
-| Gene Category   | Strain Frequency Range | Number of Genes |
-| --------------- | ---------------------- | --------------- |
-| Core genes      | 99% ≤ strains ≤ 100%   | 9               |
-| Soft core genes | 95% ≤ strains < 99%    | 0               |
-| Shell genes     | 15% ≤ strains < 95%    | 462             |
-| Cloud genes     | 0% ≤ strains < 15%     | 0               |
-| **Total genes** | 0% ≤ strains ≤ 100%    | **471**         |
+| Gene Category   | Strain Frequency Range | Number of Genes |     |
+| --------------- | ---------------------- | --------------- | --- |
+| Core genes      | 99% ≤ strains ≤ 100%   | 9               |     |
+| Soft core genes | 95% ≤ strains < 99%    | 0               |     |
+| Shell genes     | 15% ≤ strains < 95%    | 462             |     |
+| Cloud genes     | 0% ≤ strains < 15%     | 0               |     |
+| **Total genes** | 0% ≤ strains ≤ 100%    | **471**         |     |
 
 We can see that small number of genes are shared across all 4 plasmids, probably indicating about different functions associated to each of them. However, during alignment of the 3 plasmids against pMAG215 we were abled to see differences in similarity between plasmids, for example, we can see that A01 is apparently the most similar sharing almost 50 % of the plasmid sequence.
 
@@ -446,23 +451,7 @@ During MAG215 assembly an extra piece of DNA sequence was found. This extra DNA 
 # Collaborator *S. meliloti* genome assembly
 ***
 
-## Data
-
-* In total 119 *S. meliloti* strains were assembled and shared by a collaborator of Siva. 
-
-* Genomes are stored in [collaborator_Smeliloti_hifi](https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/)
-
-
-## Reads quality
-
-[multiqc_report.htm](https://webfs/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/raw_reads/QC/multiqc_report.html) Quality report of the PacBio reads.
-
-We can noticed that compared to Siva's PacBio they counted with less number of reads and a smallest median read length. Given that Siva's sequencing has 10 times more data than the collaborator, I subsample to 20k reads to achieve similar amount of data as the collaborator. At the end, Siva's counted with a mean read length between 14522 -15000 bp per sample, whereas the collaborator presents median between 6249-7249 bp.
-
-## Genome assembly
-
-[descriptive_stats_collaborator_genomes.ipynb](https://webfs/n/projects/jp2992/MOLNG4331/code/descriptive_stats_collaborator_genomes.ipynb) custom script to parse and plot.
 
 ### Collaborator assemblies
 
-Check [[Penn State Strains (Liana)]] 
+Check [[Penn State Strains (Liana)]]

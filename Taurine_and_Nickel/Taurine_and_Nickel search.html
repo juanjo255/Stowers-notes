@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Taurine_and_Nickel search</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Taurine_and_Nickel search</h1>
+</header>
+<p>To get have a good sensitivity I will use the Tau[ABCD] in 1021 to
+look for similars in all complete S. meliloti strains using
+<strong>MMSeqs2</strong> and build a database to look for those proteins
+in the other nodule bacteria.</p>
+<h1 id="tasks">Tasks</h1>
+<ol type="1">
+<li>Search for the TauA (gene) and nickel (promoter y gene) in the
+Rhizobiaceae, including our Sinorhizobium strains. ✅</li>
+<li>Make a phylogenetic tree of all the bacteria used, paint those
+presenting the Tau. ✅</li>
+<li>Make a phylogeny tree of all the bacteria found, paint those
+presenting the nickel promoter. ✅</li>
+<li>How many genomes above 70% coverage. ✅</li>
+<li>How many genomes above 40% coverage ✅</li>
+<li>Venn diagram between genomes in nickel and TauA ✅</li>
+<li>Add names to the graph like genus. ✅</li>
+</ol>
+<h1 id="methods">Methods</h1>
+<h2 id="data-acquisition-genomes">Data acquisition (genomes)</h2>
+<p>All the genomes of the family <em>Rhizobiaceae</em> were downloaded
+from RefSeq. Therefore, here I am using all species and strains with
+high-quality genomes.</p>
+<blockquote>
+<p>Download genomes command:
+<code>datasets download genome taxon &quot;Rhizobiaceae&quot; --include genome,protein,gbff --assembly-source &quot;RefSeq&quot;</code></p>
+</blockquote>
+<h2 id="gene-search">Gene Search</h2>
+<p><em>MMseqs2</em> in PSI-BLAST-like way was used to search for the
+TauA and Nickel. I consider a e-value of 1e-5 for BLASTP-like search and
+evalue of 1e-3 for profile construction and only 2 iterations. &gt;
+Command: &gt;
+/n/projects/jp2992/paco_taurine/code/slurm_create_PhyloTree.sh</p>
+<h2 id="phylogenetic-tree-constrution">Phylogenetic Tree
+Constrution</h2>
+<p>In parallel, I tried three approaches for the phylogenetic tree: 1.
+16rRNA were extracted with <code>barrnap</code> and <code>IQTREE</code>
+was used to create the phylogenetic tree. 2. Tree with Mash distances
+using <code>Mashtree</code>. It is not a phylogenetic tree itself maybe
+more a dendrogram of a matrix of similarities, but I think it might be
+good enough to represent. 3. Neighbor-Join (NJ) by MAFFT: It does
+perform phylogenetic inference. but It can work well to show distances
+relations. This was performed using MAFFT website and using the 16S-rRNA
+retrieved from barrnap (<strong>preferred</strong>).</p>
+<blockquote>
+<p>Command Barrnap + IQTREE:
+<code>&gt; /n/projects/jp2992/paco_taurine/code/create_fast_phylogenetic_tree.sh</code>
+Command mashtree:
+<code>&gt; /n/projects/jp2992/paco_taurine/code/create_fast_phylogenetic_tree.sh</code></p>
+</blockquote>
+<h1 id="results">Results</h1>
+<h2 id="taua-and-nickel-genes-search">TauA and Nickel genes search</h2>
+<figure>
+<img role="img" aria-label="tauA_Nickel_search.png" src="tauA_Nickel_search.png" class="wikilink" alt="tauA_Nickel_search.png" />
+<figcaption aria-hidden="true">tauA_Nickel_search.png</figcaption>
+</figure>
+<p>In the plot we can observed the distribution of coverage (tcov) and
+identities (findent) recovered with <code>MMseqs2</code>.The table below
+show the number of genomes found with the respective gene.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th># genomes</th>
+<th>&gt; 40%</th>
+<th>&gt;70%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TauA</td>
+<td>3115</td>
+<td>3082</td>
+<td>2862</td>
+</tr>
+<tr>
+<td>Nickel</td>
+<td>1109</td>
+<td>1108</td>
+<td>1079</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>3308</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="phylogenetic-tree">Phylogenetic Tree</h2>
+<p>The method selected was <em>NJ by MAFFT</em> (check methods) as it is
+the fastest and as the branch lengths are not attach to genomic
+distance, it produces artificial branch lengths with leaves at the same
+level, perfect for a pretty plot with the differences in the genes
+matches (cov and id). The other trees can be tuned to ignore the branch
+lengths, so the selection was just aesthetic. Mashtree produces too
+populated branches. On the other hand, IQTREE honestly looks very
+weird.</p>
+<blockquote>
+<p>Tree file:
+/n/projects/jp2992/paco_taurine/NJ_rhizobiaceae_16S_rRNA.on.nh</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]</p>
+<p><em>Barrnap</em> did not find the 16rRNA is all genomes. So I used
+only those with it, for a total of 3,190 out of 3,308</p>
+<p>16S-RNA:
+/n/projects/jp2992/paco_taurine/rhizobiaceae_16SrRNA_2.fasta</p>
+</blockquote>
+<p>Example of the tree: <img role="img" aria-label="example_tree_rhizobiaceae.svg" src="example_tree_rhizobiaceae.svg" class="wikilink" alt="example_tree_rhizobiaceae.svg" /></p>
+<p>The tree was plotted in <em>iTOL</em>, it is a private website, but
+the free features are good enough, also it is very easy to use.
+<em>TreeViewer</em> is an open source app alternative.</p>
+<p>To add the colors as in the image you need some metadata files (CSV).
+&gt;Metadata folder for iTOL:
+&gt;/n/projects/jp2992/paco_taurine/iTOL_metadata/</p>
+<p>All the trees plotted can be found at: &gt;Tree plotted:
+&gt;&gt;/n/projects/jp2992/paco_taurine/iTOL_trees_plots/</p>
+</body>
+</html>

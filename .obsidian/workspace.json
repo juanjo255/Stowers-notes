@@ -8,20 +8,77 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7e0d4e0b38172c96",
+            "id": "898003e163df59a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project-report-cbio.mm2883.102.md",
+                "file": "CompBio ToDo Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project-report-cbio.mm2883.102"
+              "title": "CompBio ToDo Notes"
+            }
+          },
+          {
+            "id": "16beb589b291fb60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plasmidome/Microbiome M. truncatula-sativa.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Microbiome M. truncatula-sativa"
+            }
+          },
+          {
+            "id": "30884cc546571517",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plasmidome/Tasks plasmidome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tasks plasmidome"
+            }
+          },
+          {
+            "id": "9805362b968d6c4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plasmidome/Plasmidome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Plasmidome"
+            }
+          },
+          {
+            "id": "e00653168d5c60f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plasmidome/Accessory Plasmid prediction tool.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Accessory Plasmid prediction tool"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -33,6 +90,7 @@
       {
         "id": "a4d057f0ef339542",
         "type": "tabs",
+        "dimension": 19.120458891013385,
         "children": [
           {
             "id": "53b797fac14454eb",
@@ -56,6 +114,7 @@
       {
         "id": "fcaa9e0d7053fb6d",
         "type": "tabs",
+        "dimension": 80.87954110898661,
         "children": [
           {
             "id": "fba0439d34130a70",
@@ -84,7 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 205.5
   },
   "right": {
     "id": "7a61529cf0aab50e",
@@ -101,7 +160,7 @@
               "type": "backlink",
               "state": {
                 "file": "CompBio ToDo Notes.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -161,7 +220,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -172,46 +231,56 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "bases:Create new base": false,
-      "webpage-html-export:Export as HTML": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "7e0d4e0b38172c96",
+  "active": "9805362b968d6c4a",
   "lastOpenFiles": [
-    "README.md",
-    "Plasmidome/Dakota Collab Asm Report.md",
+    "Plasmidome/photos/TA_freq_vs_length.png",
+    "Plasmidome/photos/example_ambiguity_w_acc_pls.png",
+    "Plasmidome/Tasks plasmidome.md",
     "Plasmidome/Plasmidome.md",
+    "Plasmidome/Accessory Plasmid prediction tool.md",
+    "AMP mining/AMP mining in T. molitor.md",
+    "Plasmidome/photos/10kb_28mer.png",
+    "Plasmidome/photos/10kb_20mer.png",
+    "Plasmidome/photos/30kb_20mer.png",
+    "Plasmidome/photos/30kb_20mer 1.png",
+    "n/projects/jp2992/stowers-notes/Plasmidome/photos/gene_annotation_heatmap_all_datasets.png.md",
+    "n/projects/jp2992/stowers-notes/Plasmidome/photos",
+    "n/projects/jp2992/stowers-notes/Plasmidome",
+    "n/projects/jp2992/stowers-notes",
+    "n/projects/jp2992",
+    "n/projects",
+    "n",
+    "Plasmidome/photos/ANI_strains.png",
+    "Plasmidome/Comparison of Origin of Replication.md",
+    "POP-seq/pop-seq Report.md",
+    "POP-seq/pop-seq Report.pdf",
+    "Plasmidome/photos/hierarchical_clust_TA_systems.png",
+    "Plasmidome/photos/PCA_6mer_ori_cont_highligth.png",
+    "Plasmidome/photos/PCA_6mer_ori.png",
+    "Plasmidome/Microbiome M. truncatula-sativa.md",
     "CompBio ToDo Notes.md",
-    "Plasmidome/Plasmid prediction tool.md",
-    "Plasmidome/Plasmid prediction in illumina MAG strains.md",
-    "Plasmidome/List of plasmids to re-sequence.md",
-    "SMRandom-seq/Bacteroid SmRandom Seq.md",
-    "Untitled.base",
-    "photos/Nodule_SCT_M20violin_seurat_clusters_percent.tRNA.png",
+    "AMP mining/photos/busco_completeness.png",
+    "AMP mining/photos",
     "NCR_prediction/NCR_prediction_Fenugreek_and_Sainfoin.md",
+    "AMP mining",
+    "Plasmidome/Comparison of Origin of Replication.pdf",
+    "Plasmidome/Penn State Strains (Liana).md",
+    "Plasmidome/Processing 48 Sinorhizobium meliloti Strains.md",
+    "Taurine_and_Nickel/Taurine_and_Nickel search.md",
+    "Plasmidome/Plasmid prediction in illumina MAG strains.md",
     "Methylation/Methylation Analysis.md",
     "Methylation/Methylation Calling PacBio HiFi.md",
-    "photos/motifs_pacbio_b_japonicum.png",
-    "SMRandom-seq",
+    "SMRandom-seq/Bacteroid SmRandom Seq.md",
     "Project-report-cbio.mm2883.102.md",
-    "Pasted image 20251126105048.png",
-    "photos/benchmarking_pls_tools.jpeg",
-    "photos/Unconfirmed 305429.crdownload",
-    "Plasmidome/Processing 48 Sinorhizobium meliloti Strains.md",
-    "Plasmidome/stowers.html",
-    "photos/genome_and_plasmid_asm_wf.png",
-    "photos/meth_motif_s_meliloti.png",
-    "Methylation",
-    "Plasmidome",
-    "NCR_prediction",
-    "HTML/NCR_pred_report.html",
-    "HTML/all_stowers_notes.html",
-    "HTML/stowers.html",
-    "Hunting-a-plasmid.md",
+    "README.md",
     "Min. coverage to get S. meliloti plasmids.md",
+    "Hunting-a-plasmid.md",
     "Pan-genome analysis.md",
-    "Taurine Homologous in other Nodule Species.md",
-    "photos/ncr_pred_w_spada.png",
-    "photos/ncr_prediction_pre-spada.png"
+    "Plasmidome/Dakota Collab Assembly Report.md",
+    "Plasmidome/List of plasmids to re-sequence.md"
   ]
 }

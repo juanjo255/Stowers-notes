@@ -16,3 +16,14 @@ summarize in the following [chartflow](https://miro.com/app/board/uXjVJaFw9G8=/?
 
 ![[genome_and_plasmid_asm_wf.png]]
 
+# Completeness
+
+All genomes presents a high level of completeness according to CheckM.
+
+![[completeness_distri_in_house.png]]
+
+However, there was one contamination from pseudomonas:
+
+![[marker_lineage_in_house.png]]
+
+**MAG154_2_filtered** was the responsable and therefore it was removed

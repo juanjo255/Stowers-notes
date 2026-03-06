@@ -1,73 +1,39 @@
 
-# To Do (weekly)
+# To Do (Ordered by priority)
 
 
+## Plasmidome description
 
+Working here: [[Plasmidome]]
 
+## Plasmid prediction
 
+- What I did here: [[Accessory Plasmid prediction tool]]
 
+## Pop seq 
 
+- What I did here: [[pop-seq Report]]
+- **This was transferred to Sumhner**
 
-## SMRandomSeq
-
-- [x] check similarity between rRNA operons:
-	- [ ] They are all super similar. consider two of them are in the antises strand (-) and there is one on the leading strand (+): check the alignment file:[rRNA16S_w_strand_clustalw.aln](https://webfs/n/projects/jp2992/sergio/map_reads/rRNA16S_w_strand_clustalw.aln)
-	- [ ] These are the coordinates of rRNA-16s Chromosome:2810004-2811487 Chromosome:3212858-3214341 Chromosome:81767-83250
-- [x] what cluster of bacteroids is similar to free-living
-	- Check the document. I evaluate it using integration with SCTransform and Lognormalize.
-- [x] check if a different operon was found in free living compared to bacteriods 
-- [x] check the difference in expression using the multimapping between free-living and bacteriods
-- [x] check if there is a operon preference in rRNA in the free living
-- [x] check which cluster present the more tRNA
-
-
-- [x] **However, the most important thing I want to know is mainly see if the results makes sense.** Sergio is busy with his other project . Can you help us understand what Di performed, **what other analysis can be done with this data**, **how is this data compared to other single cell analysis in bacteria, how good is the clustering, can we believe the clustering?**
-- [x] Sergio mentioned that the rRNA represented 98%:  the paper said that "rRNA-depletion treatment reduced the rRNA proportion from 71% to 10%, 88% to 29%, 74% to 4%, 91% to 45%, 83% to 5%, respectively"
-- [x] **There were 5 overlapped gene IDs between the top 10 highest expression genes in the B. subtilis datasets** of the species mixture by smRandom-seq and the public bulk RNA-seq dataset
-
-
-## Plasmidome
-
-- [x] Check how many predictions belong to the RFPlasmid
-	- 13 predictions: these were on the strains that did not have any clue by the other methods.
-	- 11/13 did not have acc. plasmid
-	- 2 predictions had 4 and 5.
-	- [ ] RFPlasmid might be showing that 5-mers are not enough to see acc. pls.
-		- [ ] Is it worthy to move to more -mer based tools like Plasmer? Let's first check the k-mer distributions between acc. plasmids and psyms/chromosomes.
-			- Based on their results with 31k bacterial genomes plasmids find a better kmer sharing at 25-mer, whereas chromosomes at a 18 k-mer.
 
 ## NCR predictions
 
-- [ ] Any mature protein similar to the NCR.
-- [ ] Ask andrew how the proteins were predicted why are they different ids for the same thing.
-- [ ] 
-- [ ] Check the peptides that were found from the curated list. Check how many are predicted to have homologous with the HMM models by the collaborator.
-- [ ] Train the ESM form Jay and predict NCRs.
+- What I did here: [[NCR_prediction_Fenugreek_and_Sainfoin]]
+- **This was transferred to Sumhner**
 
-- [ ] Cluster plasmids from strains dakota and penn. 
-	- [ ] Diversity of plasmids: how similar.
+## Bulk RNA-seq MAG215 under NCR247
+
+- [ ] MAG215 vs RM1021 did not show differential expressed genes. Presumably, this is due to an error with data as RM1021 with vs without treatment did not present difference when in the past it did.
 
 
 ## Methylation
+ 
+* What I am doing here: [[Methylation Analysis]]
+- So far, it just presents tools search, methyl calling pipeline for pacbio and a test for comparison between nanopore and pacbio.
 
-- [x] Compare between Nanopore and Pacbio in b. japonicum
-- [x] Compare different coverage of nanopore against pacbio b.japonicum
-
-- [ ] Methylation profile differences between new sequenced strains.
-- [ ] Annotate the contamination in b. japonicum
  
 
 ## Other
-
-
-- [ ] Look for taurine cluster in S. meliloti in other:
-	- [ ] <span style="color:red"> This was done. However, I will leave it here just in case.</span>
-	-   The taurine cluster in S. Meliloti 1021 is located in PsymB:
-		- SM_b21526 (tauA)
-		- SM_b21527 (tauB)
-		- SM_b21528 (tauC)
-		- SM_b21529 (tauD)
-
 
 
 - [ ] Check dakota collaborator assemblies:
@@ -81,32 +47,21 @@ In the picture the helicopter propeller is probably the two psymA/B and there ar
 
 - [ ] Add in house plasmids to MGE-Cluster to see how they relate with other plasmids.
 
-- [ ] Cluster all retrieved accessory plasmids:
-	- [x] Collect all the genus reported for nodule in M. sativa and M. truncatula
-	- [ ] Repeat clustering process below and homology network with the plasmids captured from other genus
-	- [ ] Using all the plasmids for the core genus in nodule PLSDB it was only 2,345 sequences too much for mge-cluster, I do not want to imagine COPLA).
-	- [x] Using only accessory plasmids.
-	- [ ] Cluster only sinorhizobium (including mega-plasmids) to see if we can differentiate between mega and accessory plasmids with this strategy. 
-	
-- [ ] Plot homology network using same plasmids used before.
-	- [x] For this I am using the code from a study (check plasmidome report  and jupyter Notebook) and plotting network graph of how are plasmids related in terms of homology measured by wGRR. 
-	- This can helps us to check for recombinant genes using metrics wGRR< 0.1 and BHH 80-80 inspired by the paper of phages-plasmids.
-
-- [ ] RNA-seq proccessing.
-	- [ ] So far, mapping 215 to 1021 do not show differential expressed genes.
 
 - [ ] Build a Pan-genome graph for S. meliloti using susceptible strains. I have to wait for Madi info.
 	- [ ] I received the susceptible MAG from Madi on Jul. 14. [resistant_strains.xlsx](https://webfs/n/projects/jp2992/MOLNG4331/resistant_strains.xlsx)
 	- [ ] PPanGGoLin for pan-genome construction. ***Update**:* Its faster than Roary, it has support and plenty of several stats and graphs.
 	- [ ] Try minigraph-cactus as an alternative to progressiveMauve since I do not like the output of it. it also allows to create pan-genome graph.
+	
+	
  - [ ] **Improve annotation for genes:** I missed the use of tools like InterProScan.
-	- During a meeting Eric Ross and Sukha Malladi annotate using their pipeline intended for eukaryotes, but has some tools useful for bacteria like interproscan, nonetheless they did not find significant matches for hypothetical proteins.
+	- During a meeting Eric Ross and Sukha Malladi annotate using their pipeline intended for eukaryotes, but has some tools useful for bacteria like interproscan, nonetheless they did not find significant matches for hypothetical proteins. **Update:** This is not more useful than BAKTA
 
-Future:
-- [ ] Pan-genome of everything.
-- [ ] Annotate SNPs using DeepVariant or Clair3.
+
+
 
 # Take into account for future
+
 * In the context of plasmids recovery: 
 
 	* **MGE cluster achieve a peak of a little over 300 Gb using 1,775 plasmids below 500kb**. Including the mega-plamids (fora. total of 2,345 ) is not enough with 600 Gb of memory!!
@@ -137,10 +92,31 @@ Future:
 
 # Done
 
-- [x] **Classify strains in collaborator with acce. plasmids to run on gel**.
+- [ ] **SMRandomSeq**
+	- [x] check similarity between rRNA operons:
+	- [x] They are all super similar. consider two of them are in the antises strand (-) and there is one on the leading strand (+): check the alignment file:[rRNA16S_w_strand_clustalw.aln](https://webfs/n/projects/jp2992/sergio/map_reads/rRNA16S_w_strand_clustalw.aln)
+	- [x] These are the coordinates of rRNA-16s Chromosome:2810004-2811487 Chromosome:3212858-3214341 Chromosome:81767-83250
+	- [x] what cluster of bacteroids is similar to free-living
+		- Check the document. I evaluate it using integration with SCTransform and Lognormalize.
+	- [x] check if a different operon was found in free living compared to bacteriods 
+	- [x] check the difference in expression using the multimapping between free-living and bacteriods
+	- [x] check if there is a operon preference in rRNA in the free living
+	- [x] check which cluster present the more tRNA
+	- [x] **However, the most important thing I want to know is mainly see if the results makes sense.** Sergio is busy with his other project . Can you help us understand what Di performed, **what other analysis can be done with this data**, **how is this data compared to other single cell analysis in bacteria, how good is the clustering, can we believe the clustering?**
+	- [x] Sergio mentioned that the rRNA represented 98%:  the paper said that "rRNA-depletion treatment reduced the rRNA proportion from 71% to 10%, 88% to 29%, 74% to 4%, 91% to 45%, 83% to 5%, respectively"
+	- [x] **There were 5 overlapped gene IDs between the top 10 highest expression genes in the B. subtilis datasets** of the species mixture by smRandom-seq and the public bulk RNA-seq dataset
+
+- [ ] **Look for taurine cluster in S. meliloti in other:**
+	- [x] <span style="color:red"> This was done. However, I will leave it here just in case.</span>
+	-   The taurine cluster in S. Meliloti 1021 is located in PsymB:
+		- SM_b21526 (tauA)
+		- SM_b21527 (tauB)
+		- SM_b21528 (tauC)
+		- SM_b21529 (tauD)
+- [ ] **Classify strains in collaborator with acce. plasmids to run on gel**.
 	- Among the best plasmids (check report), I will classify the assembled plasmids as super good, intermedia and fishy. 
 	- I have to do the same for the illumina MAG strains.
-- [x] **Recover plasmids.**
+- [ ] **Recover plasmids.**
 	- I downloaded the last 2024 version of PLSDB database, which is a curated database of plasmid (only complete sequences) here our number of plasmids for meliloti is reduced to 57.  
 	- On collab. assemblies.
 		- When checking at the biomarkers by mob_suite for all the plasmids in the plsdb, I found the following frequencies for relaxases:
@@ -153,10 +129,10 @@ Future:
 				- MOBP: 19
 		- This analysis came up after me thinking that for psymA/B it was always predicted MOPQ and for accessory plasmids I could find MOBP/Q however for example in 2002 if I found a mega-plasmid with no relaxase prediction and one with both MOBPQ/P. 
 		- What I want to know is if this can work as a metric to find miss-assembled PsymA/B and putative acce. plasmids. 
-- [x] **Define a coverage.** To do this, I will:
+- [ ] **Define a coverage.** To do this, I will:
 	- Define which assembly works better, the collaborator data contains coverage from approx. 10x to 50x very uneven between contigs and with reads sizes two times smaller than ours. ***Update:*** The low coverage cause in flye two interesting problems: 1, fragment genomes by repetition, and 2, mix accessory plasmid and super plasmid by repetition. Hifiasm was bolder, it miss-assembled mega-plasmid and accessory plasmids. Check section of collaborator assembly.
-- [x] **Assemble the 121 strains from collaborator.** 
-- [x] **For Madi presentation**:
+- [ ] **Assemble the 121 strains from collaborator.** 
+- [ ] **For Madi presentation**:
 	- [x] Dot plot in house plasmid vs plasmid: https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/homology/all_vs_pmag215/out.pdf
 	
 	- [x] Matrix accessory genes for plasmids (80% identity): https://webfs/n/projects/jp2992/MOLNG4331/plasmids_smeliloti/roary/roary_result_80_pct/pangenome_matrix.png

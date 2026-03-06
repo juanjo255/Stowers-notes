@@ -10,9 +10,9 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "/Volumes/projects/jp2992/stowers-notes/Plasmidome",
+    "exportPath": "/Volumes/projects-1/jp2992/stowers-notes/Taurine_and_Nickel",
     "filesToExport": [
-      "Plasmidome/Dakota Collab Asm Report.md",
+      "Plasmidome/Dakota Collab Assembly Report.md",
       "Hunting-a-plasmid.md",
       "Plasmidome/List of plasmids to re-sequence.md",
       "Methylation/Methylation Analysis.md",
@@ -24,7 +24,7 @@
       "Plasmidome/Plasmid prediction in illumina MAG strains.md",
       "Plasmidome/Plasmidome.md",
       "Project-report-cbio.mm2883.102.md",
-      "Taurine Homologous in other Nodule Species.md"
+      "Taurine_and_Nickel/Taurine_and_Nickel search.md"
     ],
     "useFallbackRenderer": false,
     "addBodyClasses": true,
@@ -227,7 +227,7 @@
     "faviconPath": "",
     "siteName": "",
     "iconEmojiStyle": "Native",
-    "exportRoot": "Plasmidome",
+    "exportRoot": "Taurine_and_Nickel",
     "includePluginCss": [],
     "includeStyleCssIds": [],
     "autoDisposeWebpages": true

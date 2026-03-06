@@ -129,7 +129,7 @@ However, some strains were not found in our MAG dataset:
 
 ## Only 2 or Less relaxases 
 
-> [!NOTE]
+> [!ATTENTION]
 > 
 > This strategy presents a big flaw. The supposition that MOBP was only found in accessory plasmids turned out to be false. I found some PsymA carrying MOBP due to possibly Integrative Mobile Elements (IME). 
 >     

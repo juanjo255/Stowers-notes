@@ -1,198 +1,328 @@
 
-# To Do:
-
-
-- [ ] re-cluster now adding the MAG and highlight all the clusters where all the new plasmids fall.
-	- Plot in scatter plot highlighting the new plasmids **(done)**.
-	- Run horizontal gene transfer 80 cov and 80 id.
-
-
-- [ ] Make homology network colored by the clusters of MGE-Cluster and highlight the MAG and the penn state plasmids. Steps:
-	1. I have to download the recent complete MAG: **These genomes I must rename them as they are standard as in the NCBI**. This means that I have to replace the GCA code by the contig code. For this I use `seqkit split` to keep notation.
-	2. Annotate plasmids with prodigal to keep consistency (as I annotate the PLSDB with these ones).
-	3. Highlight the new plasmids **(done)**.
-	4. Add the information from mge_cluster to the homology network **(done)**.
-
-
 
 # Objective
 
 PsymA for years has been consider a biggest hotspot for intra-strain variability and accessory gene acquisition by horizontal gene transfer, however it has been found that S. meliloti can also carry accessory plasmids, plasmids that have been proven to also carry competence genes affecting symbiosis. 
 
-During this project we will collect all the accessory plasmids available for S. meliloti and their relatedness with other found in the Rhizobiome.
+During this project, we will collect all the accessory plasmids available for *S. meliloti* along with other assembled in-house and with collaborators, and make a description of the diversity of these plasmids in *Sinorhizobium meliloti*.
+
+
+```table-of-contents
+title: **Table of Content**
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
+
+
 
 # Data
 
-So far, apart form the public genomes, we count we three sources of data:
-1. In-house PacBio: [[Processing 48 Sinorhizobium meliloti Strains]]
-2. PacBio from Penn State:
-3. Nanopore from Dakota:
+We count we four sources of data:
+
+1. PLSDB: 2024v2 was downloaded and filtered for only sequences below 500Kb.
+2. In-house PacBio: [[Processing 48 Sinorhizobium meliloti Strains]]
+3. PacBio from Penn State:[[Penn State Strains (Liana)]]
+4. Nanopore from Dakota:[[Dakota Collab Assembly Report]]
+
+# Results
+
+## Whole Genome Sequencing (WGS)
+
+We count we three WGS data: 
+ 1. In-house PacBio: [[Processing 48 Sinorhizobium meliloti Strains]]
+ 2. PacBio from Penn State:[[Penn State Strains (Liana)]]
+ 3. Nanopore from Dakota:[[Dakota Collab Assembly Report]]
+
+Each document present each processing: Assembly, filtering and plasmid retrieval. In summary:
+
+### Completeness 
+
+![[compleness_all_datasets.png]]
 
 
-# State of the Art: Plasmid Database
+### Contamination
 
-The PLSDB 2024v2 was downloaded and filtered for only sequences below 500Kb.
+| arker lineage            | Count | Note                                            |
+| ------------------------ | ----- | ----------------------------------------------- |
+| g__Ensifer (UID3566)     | 225   | -                                               |
+| g__Pseudomonas (UID4526) | 1     | MAG154_2_filtered                               |
+| o__Rhizobiales (UID3654) | 1     | m64404e_240531_162148.hifi_reads.bc2090--bc2090 |
 
-<details>
-<summary> Show command </summary>
-```
-path=/n/projects/jp2992/MOLNG4331/biocomp_tools/plsdb
-
-seqkit seq -M 500000 $path/plsdb_2025.fasta -o $path/plsdb_less_500kb_2025.fasta
-
-```
-</details>
-
-A study [1] presented *Core OTUs found within nodule communities across sampling design, an OTU was defined as core if present in >50% nodule samples*
-
-| OTU ID   | % Samples containing | Phylum              | Class                    | Order                   | Family                 | Genus              |
-| -------- | -------------------- | ------------------- | ------------------------ | ----------------------- | ---------------------- | ------------------ |
-| Otu00001 | 100.00%              | Proteobacteria(100) | Alphaproteobacteria(100) | Rhizobiales(100)        | Rhizobiaceae(100)      | Ensifer(100)       |
-| Otu00004 | 100.00%              | Proteobacteria(100) | Gammaproteobacteria(100) | Alteromonadales(100)    | Shewanellaceae(100)    | Shewanella(100)    |
-| Otu00002 | 93.10%               | Proteobacteria(100) | Gammaproteobacteria(100) | Oceanospirillales(100)  | Halomonadaceae(100)    | Halomonas(100)     |
-| Otu00034 | 82.76%               | Proteobacteria(100) | Gammaproteobacteria(100) | Oceanospirillales(100)  | Halomonadaceae(100)    | Halomonas(100)     |
-| Otu00003 | 75.86%               | Proteobacteria(100) | Gammaproteobacteria(100) | Pseudomonadales(100)    | Pseudomonadaceae(100)  | Pseudomonas(100)   |
-| Otu00007 | 68.97%               | Proteobacteria(100) | Betaproteobacteria(100)  | Burkholderiales(100)    | Comamonadaceae(100)    | unclassified(100)  |
-| Otu00371 | 68.97%               | Proteobacteria(100) | Alphaproteobacteria(100) | Rhizobiales(100)        | Rhizobiaceae(100)      | Ensifer(100)       |
-| Otu00005 | 65.52%               | Proteobacteria(100) | Gammaproteobacteria(100) | Pseudomonadales(100)    | Pseudomonadaceae(100)  | Pseudomonas(100)   |
-| Otu00006 | 65.52%               | Proteobacteria(100) | Betaproteobacteria(100)  | Burkholderiales(100)    | Comamonadaceae(100)    | Rhizobacter(88)    |
-| Otu00026 | 65.52%               | Proteobacteria(100) | Alphaproteobacteria(100) | Rhizobiales(100)        | Bradyrhizobiaceae(100) | Bradyrhizobium(86) |
-| Otu00030 | 62.07%               | Proteobacteria(100) | Alphaproteobacteria(100) | Rhizobiales(100)        | Rhizobiaceae(100)      | Rhizobium(100)     |
-| Otu00019 | 58.62%               | Proteobacteria(100) | Betaproteobacteria(100)  | Burkholderiales(100)    | Comamonadaceae(100)    | Rhizobacter(98)    |
-| Otu00028 | 55.17%               | Bacteroidetes(100)  | Sphingobacteriia(100)    | Sphingobacteriales(100) | Chitinophagaceae(100)  | Niastella(100)     |
-| Otu00010 | 51.72%               | Firmicutes(100)     | Bacilli(100)             | Bacillales(100)         | Planococcaceae(97)     | Solibacillus(85)   |
-| Otu00084 | 51.72%               | Bacteroidetes(100)  | Cytophagia(100)          | Cytophagales(100)       | Cytophagaceae(100)     | Ohtaekwangia(100)  |
+### Length, GC and Depth Per Chromosome
 
 
 
-Additionally, the study performed metagenomic sequencing to study the genome-wide similarity of Ensifer:
+![[len_QC_distri_all_datasets.png]]
+
+Notice that for some genomes inside the Penn and Dakota datasets if I filtered base on 30x coverage based on my "Other" sequences which represent everything that could be an accessory plasmids, I would lose most of the data, however if I consider, for example, only the chromosome, I lose less than 25% of my data.
+
+Some assemblies caught my curiosity. These have contigs with greater lengths than the mean. They were carrying chromosomes > 4Mb and some cases only presenting only 2 contigs > 1Mb (presumably pSymB is missing). 
+
+For example, I investigate the assembly from **contig_2_P9E10_R3L_R4X** and it matches with *S. meliloti*, however it does not present pSymB. A mapping between the its assembly and a S. meliloti reference revealed that pSymB might be contained inside the Chromosome: [map_to_ref.html](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/dakota_collab_P9/flye_asm/P9E10_R3L_R4X/medaka_polish/map_to_ref.paf.html) 
+
+The table Below the strains that were carrying a Chromosome > 4Mb with the number of contigs > 1Mb:
+
+| sample_id                                       | # contigs > 1Mb |
+| ----------------------------------------------- | --------------- |
+| P9E10_R3L_R4X                                   | 2               |
+| P9F10_G8T_R4X                                   | 2               |
+| P9F12                                           | 3               |
+| P9G1                                            | 3               |
+| P9G10                                           | 3               |
+| P9G11                                           | 3               |
+| P9G12                                           | 3               |
+| P9G9                                            | 3               |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010 | 2               |
+| m64404e_240423_150118.hifi_reads.bc2013--bc2013 | 3               |
+| m64404e_240423_150118.hifi_reads.bc2069--bc2069 | 3               |
+| m64404e_240423_150118.hifi_reads.bc2077--bc2077 | 3               |
+| m64404e_240423_150118.hifi_reads.bc2084--bc2084 | 3               |
+| m64404e_240423_150118.hifi_reads.bc2090--bc2090 | 3               |
+| m64404e_240531_162148.hifi_reads.bc2060--bc2060 | 3               |
+| m64404e_240531_162148.hifi_reads.bc2074--bc2074 | 3               |
+| m64404e_240531_162148.hifi_reads.bc2076--bc2076 | 2               |
+| m64404e_240531_162148.hifi_reads.bc2079--bc2079 | 3               |
+
+
+> [!question]
+> For strains with only two contigs: Is this an assembly error or the pSymB was actually "consumed"?
+> Coverage metric looks good and it is circularized... 
+
+
+### Strains Amino acid Identity (AAI)
+
+To confirm their genetic identity, Mash tree was constructed using 3308 RefSeq genomes from the family _Rhizobiaceae_, which placed all our strains within the genus *Sinorhizobium*, thereby confirming their taxonomic position.
+
+
+![[tree_rhizobiaceae_w_our_strains.png]]
+
+Likewise, whole-genome similarity estimation using Average Nucleotide Identity (ANI) via FastANI revealed the sequence relationships among all genomes. As expected based on the sampling strategy, the Penn State dataset was the least divergent, followed by the Dakota dataset, with the in-house sequenced genomes showing the highest divergence. 
+
+![[ANI_strains.png]]
+
+Further comparative identity analysis using strain Rm1021 as the reference revealed high proteome coverage (>78%) and average nucleotide identity (>98%) across all genomes. _Sinorhizobium meliloti_ is known to possess an open pan-genome, a characteristic that underpins its high genetic variability. This openness results in a vast repertoire of accessory genes, which have been suggested to support the extensive phenotypic diversity observed within the species [ref 1](https://doi.org/10.1186/1471-2164-12-235), [ref2](https://doi.org/10.1371/journal.pcbi.1004478). 
+
+![[AAI_strains_to_ref.png]]
+
+## Accessory Plasmids general description
+
+### Plasmids Counts per dataset
+
+
+The dataset of 258 genomes was filtered for chromosome coverage (30x) or a pSymA circularized. The reason for this filtering is that since I am using a trained model to predict accessory plasmids, a fragment coming from the PsymB or the Chromosome are easier to predict than one coming from the pSymA.
+
+The dataset was split according to the sequencing run for initial plasmids recovery, which corresponds to: two datasets sequenced with PacBio HiFi and one using ONT. 
+
+`seqkit rmdup` was used to remove identical sequences, for a total 378 sequences. Table 1 presents the number of sequences (putative plasmids) retrieved for each dataset. 
+
+| File Name                | Value | # genomes kept |
+| ------------------------ | ----- | -------------- |
+| plasmids_penn_state_hifi | 213   | 118            |
+| plasmids_dakota_nanopore | 125   | 94             |
+| plasmids_in_house_asm    | 40    | 44             |
+| Total                    | 378   | 256            |
+
+
+### Size and GC content distribution
+
+
+![[len_QC_distri_all_datasets_plasmids.png]]
+
+QC values were 57–60%, and plasmid sizes ranged from 35 kb to 700 kb. The 700-kb plasmids exceed the typical threshold for megaplasmids (~300 kb) and are unusually large for accessory elements. Notably, there are two assemblies containing this large plasmid, one of them presented the chromosome, pSymA, pSymB, and the accessory plasmid itself all circularized, however the other one was recognized as a Type I error. This observation is intriguing and may indicate that this replicon represents a mobilizable megaplasmid, or a recently "evolved" element.
+
+>**Assembly graph with 700kb plasmid**
+>/Volumes/projects/jp2992/MOLNG4331/dakota_collab/P9/flye_asm/P9G4/assembly_graph.gfa
+
+>**Assembly graph with False positive**
+>/n/projects/jp2992/MOLNG4331/collaborator_Smeliloti_hifi/flye_asm/m64404e_240531_162148.hifi_reads.bc2049--bc2049/assembly_graph.gfa
+
+### MOB and MPF typing
+
+
+
+
+Our analysis revealed that accessory plasmids in our datasets harbored either MOBP or MOBQ. Interestingly, some plasmids contained both MOB proteins, a rare occurrence for accessory elements. While this initially suggested a possible Type I error (i.e., fragmented sequences from the complete pSymA, which encodes both MOBP and MOBQ), assembly graph inspection confirmed one ~400 kb plasmid with both MOBP and MOBQ as a genuine accessory element, with the pSyms and this plasmid all showing correct assembly and good coverage. A similar case  occurred with a sequence predicted with three MOB proteins (*MOBP,MOBQ,MOBQ*). The assembly graph inspection confirmed It belongs to a ~240kb circular plasmid with a coverage of 240x.
+
+
+>Assembly graph with 400kb plasmid
+>/Volumes/projects/jp2992/MOLNG4331/dakota_collab/P9/flye_asm/P9C10/assembly_graph.gfa
+
+> Assembly graph with 240kb plasmid
+>/Volumes/projects/jp2992/MOLNG4331/dakota_collab/P9/flye_asm/P9E7_R3L_R4X_Y9Q/assembly_graph.gfa
+
+
+> [!QUESTION]
+> Can this be a transitioning plasmid?? like an intermedia evolutionary state between an accessory plasmid and a mega-plasmid. two plasmids merged??
+> 
 
 > [!NOTE]
-> "Because _Ensifer_ was the dominant taxon in all compartments, and MED analysis at the 16S rRNA gene indicated minimal diversity within _Ensifer_ OTUs (see above), we used metagenomic shotgun sequencing to further examine genome-wide similarity of _Ensifer_ populations across different compartments. _Ensifer_ scaffolds reconstructed from root endophyte and nodule communities had, on average, 99% global sequence identity in homologous regions—suggesting that _Ensifer_ are extremely similar throughout an individual plant. Moreover, our estimate of the fraction of _Ensifer_ cells containing each of the two symbiotic megaplasmids did not significantly differ between plant compartments (_W_ = 132, _P_ = 0.10 for pSMED01; _W_ = 151, _P_ = 0.14 for pSMED02; Fig. [4](https://link.springer.com/article/10.1186/s40168-020-00915-9#Fig4))—again suggesting that _Ensifer_ are highly similar throughout the plant, including at the symbiosis megaplasmids."
+> By the way, in the same genome I saw a piece of around 1.5kb with high coverage (~50x), I think it might be a virus. An interesting example of a Genome sequenced when a virus activated. 
 
-A review [5] focused on nonrhizobial bacteria usually found within nitrogen-fixing nodules. 
+| Relaxase Type(s)        | Count | Notes                       |
+| ----------------------- | ----- | --------------------------- |
+| No detected             | 114   |                             |
+| MOBQ                    | 124   |                             |
+| MOBP                    | 113   |                             |
+| MOBQ,MOBQ               | 24    |                             |
+| MOBP,MOBQ               | 2     | ~400kb circular & ~700kb FP |
+| MOBP,MOBQ,MOBQ          | 1     | ~240kb circular             |
+| Total putative plasmids | 378   |                             |
+|                         |       |                             |
 
-`Table 1: Nonrhizobial nodule-inducing bacterial endophytes isolates from legume root nodules`
-
-| Phylum/class             | Bacterial genus  | nod gene similarity                           |
-| ------------------------ | ---------------- | --------------------------------------------- |
-| **Alpha-Proteobacteria** | Agrobacterium    | *Ensifer/Rhizobium*                           |
-| **Alpha-Proteobacteria** | Aminobacter      | *Mesorhizobium symbiovar loti*                |
-| **Alpha-Proteobacteria** | Bosea            | *Mesorhizobium*                               |
-| **Alpha-Proteobacteria** | Devosia          | *Rhizobium tropici*                           |
-| **Alpha-Proteobacteria** | Methylobacterium | *Burkholderia tuberum*                        |
-| **Alpha-Proteobacteria** | Microvirga       | *Rhizobium*, *Bradyrhizobium*, *Burkholderia* |
-| **Alpha-Proteobacteria** | Ochrobactrum     | *Rhizobium*                                   |
-| **Alpha-Proteobacteria** | Phyllobacterium  | *Mesorhizobium*                               |
-| **Alpha-Proteobacteria** | Shinella         | *Rhizobium tropici*                           |
-| **Beta-Proteobacteria**  | Burkholderia     | *Burkholderia*                                |
-| **Beta-Proteobacteria**  | Cupriavidus      | *Burkholderia*                                |
-| **Gamma-Proteobacteria** | Pseudomonas      | *Mesorhizobium*                               |
-| **Actinobacteria**       | Rhodococcus      | *Mesorhizobium*                               |
-
-Additionally, they reported some bacteria nonnodulating found in nodules. I select only reported in Medicago: 
-
-| Phylum                   | Bacterial genus |
-| ------------------------ | --------------- |
-| **Firmicutes**           | Paenibacillus   |
-| **Actinobacteria**       | Micromonospora  |
-| **Alpha-Proteobacteria** | Azospirillum    |
-
-Another study [6] presented the following families for M. truncatula:
-
-However, considering families can be a problem because it will implied a giant number of plasmids which will be problematic to process
-
-| Family              |
-| ------------------- |
-| Bradyrhizobiaceae   |
-| Phyllobacteriaceae  |
-| Rhizobiaceae        |
-| Pseudomonadaceae    |
-| Sphingomonadaceae   |
-| Mycobacteriaceae    |
-| Burkholderiaceae    |
-| Rhodobacteraceae    |
-| Methylobacteriaceae |
-| Alcaligenaceae      |
-| Xanthomonadaceae    |
-| Enterobacteriaceae  |
-| Rhodospirillaceae   |
-| Streptomycetaceae   |
-| Caulobacteraceae    |
-
-Another study [7] proposes the following accessory genuses in M. sativa:
-
-| Genus                |
-| -------------------- |
-| Arthrobacter         |
-| Bacillus             |
-| Brevibacillus        |
-| Enterobacter         |
-| Escherichia_Shigella |
-| Lysinibacillus       |
-| Nocardioides         |
-| Paenibacillus        |
-| Pantoea              |
-| Pseudomonas          |
-| Rhizobium            |
-| Streptococcus        |
-| Streptomyces         |
-| Tumebacillus         |
-|                      |
-
-
-*These results lend support to the idea that in addition to nitrogen fixation, legume root nodules are sites of active antimicrobial production.*
-
-
-in this study [8] using 16S the researches found the following genus:
-
-| Genus/Group             |
-| ----------------------- |
-| Sinorhizobium/Ensifer   |
-| Rhizobium/Agrobacterium |
-| Mesorhizobium           |
-| Hoeflea                 |
-| Nitratireductor         |
-| Phenylobacterium        |
-| Rhizorhabdus            |
-| Shinella                |
-| Aminobacter             |
-| Ochrobactrum            |
-
-Taking into account all the genus collected we can start from the following non-redundant table with genus encomprassing rhizobia and non-rhizobia genus:
-
-| Genus                | Genus                   | Genus            | Genus         |
-| :------------------- | :---------------------- | :--------------- | :------------ |
-| Agrobacterium        | Brevibacillus           | Mesorhizobium    | Rhizorhabdus  |
-| Aminobacter          | Bosea                   | Methylobacterium | Rhodococcus   |
-| Arthrobacter         | Burkholderia            | Micromonospora   | Shewanella    |
-| Azospirillum         | Cupriavidus             | Microvirga       | Shinella      |
-| Bacillus             | Devosia                 | Niastella        | Sinorhizobium |
-| Bradyrhizobium       | Ensifer                 | Nitratireductor  | Solibacillus  |
-| Paenibacillus        | Ohtaekwangia            | Nocardioides     | Streptococcus |
-| Pantoea              | Phenylobacterium        | Ochrobactrum     | Streptomyces  |
-| Phyllobacterium      | Pseudomonas             | Rhizobacter      | Tumebacillus  |
-| Rhizobium            | Rhizobium/Agrobacterium | Halomonas        | Enterobacter  |
-| Escherichia_Shigella | Hoeflea                 | Lysinibacillus   |               |
+| mpf_type | count |
+|----------|-------|
+| MPF_T    | 277   |
+| -        | 101   |
 
 
 
-# Some Plots with Public data
+> [!WARNING]
+> There is a caveat. Remember that I found possibly contamination retrieved by the RFPlasmid. I did not cleaned this for two reasons: 
+> 1. I want to see how it behaves
+> 2. I want to build a tool to replace RFPlasmid in that step.
 
-How many accessory plasmids do we have/know for s. meliloti and related species?
 
-Let's check:
+If we check at the genus level of Sinorhizobium we see that...
 
-1. Total number of plasmids are available for each specie of **Sinorhizobium**.
-2. Total number of plasmids below 500kb for each specie of **Sinorhizobium**.
-3. Total number of small, medium and large plasmids for each specie of **Sinorhizobium**.
-4. Total number of plasmids below 500kb for each genus of **Rhizobiaceae**.
-5. Total number of plasmids below 500kb for each species of **Rhizobiaceae**.
+
+#### TO DO:
+
+**Here I can compare with what MOB proteins has been reported in the genus or even the family (Rhizobiaceae)**
+
+### RepABC
+
+
+> [!WARNING]
+> There is a caveat. Remember that I found possibly contamination retrieved by the RFPlasmid. I did not cleaned this for two reasons: 
+> 1. I want to see how it behaves
+> 2. I want to build a tool to replace RFPlasmid in that step.
+
+Through the annotation of the putative plasmids we could identified the module RepABC for most of the plasmids, just a few could only be annotated for one or two of the Rep proteins.
+
+![[num_repABC_putative_pls.png]]
+
+
+### Toxin-Antitoxin (TA) systems
+
+
+> [!WARNING]
+> There is a caveat. Remember that I found possibly contamination retrieved by the RFPlasmid. I did not cleaned this for two reasons: 
+> 1. I want to see how it behaves
+> 2. I want to build a tool to replace RFPlasmid in that step.
+
+To annotate TA systems, the HMM models from TASmania were used. Currently there are two ways to annotate TA systems, using the highly curated TADB or using the more "discovery-oriented. TASmania present higher sensitivity than TADB, however, TASmania  models were built mining for interpro annotated TA in more than 41k assemblies, therefore it has a higher risk of false positive. Using TASmania models, [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) annotated TA systems for approximately 10k plasmids, subsequently trained a Random Forest model which achieved 95% accuracy predicting PTUs. ParB/RepB/Spo0J, Hok/Gef, RelE/ParE, and PemI coding sequences were found among the most influential features for the model accuracy. Interestingly, RepB is the most common plasmid partitioning protein among our plasmids dataset and the annotation more common associated with an antitoxin hit across our plasmids. Functionality variability has been between the proteins in the RepABC, for example, [Ingmer & Cohen (1993)](https://doi.org/10.1128/jb.175.24.7834-7841.1993) demonstrated that RepA can be involved both in plasmid replication and partitioning. In addition, [Effe *et al.* (2025)](https://doi.org/10.1038/s41467-025-62473-8) investigate the evolutionary advantage provided by the combination of different persistent strategies that can be found in plasmids. The researches found that an active partition system coupled with a TA system provides the greatest fitness advantage, specially for low-copy extrachromosomal elements. This is specially relevant for *Sinorhizobium meloti* given their sizes distributions and high detection of the whole replication module [[#Size and GC content distribution]] involving more than one instance of proteins in the module.
+
+
+Due to the large number of putative plasmids and the observation of highly similar feature profiles, we applied Hierarchical Clustering using the AgglomerativeClustering function from scikit-learn, and employing Ward's linkage method with a distance threshold of 10 allowing us to reduce redundancy by grouping plasmids with nearly identical features and computing the mean at each group. This clustering approach yielded 111 distinct clusters, which were then used for subsequent plotting and analysis.
+
+
+![[hierarchical_clust_TA_systems.png]]
+
+[TA composition per contig Heatmap]( https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/TA_system/annotation_heatmap_clustered.png) z-scored row-wise
+
+![[heatmap_TA_systems_clustered.png]]
+
+Additionally, here is the [big heatmap version z-scored row-wise](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/TA_system/annotation_heatmap_all_datasets.png) and a [version with raw counts](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/TA_system/annotation_heatmap_all_datasets_count.png)
+
+We could noticed the same effect to that reported by [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) analysis, but interestingly our analysis plasmids started with a greater TA frequency and decrease slower starting at 100 kb. [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) suggested that larger plasmids can increase competence by presenting more beneficial accessory genes compared to small plasmids, therefore larger plasmids tends to reach a saturation point where TA systems offer little advantage and this can be overcome with the inclusion of other beneficial genes through HGT. Such effect has been observed in the context of Restriction-Modification (R-M) systems, [Shaw *et al.* (2023)](https://doi.org/10.1093/nar/gkad452) found that the escape from type II R-M system was associated with plasmid size and host range, implying that while small plasmids might adapt by small mutations, large plasmids opted to add additional beneficial genes providing higher vertical transmission at the cost of horizontal transfer.
+
+![[TA_freq_vs_length.png]]
+
+Each point represent a plasmids, they are colored according to the Hierarchical Clustering (I should change it for my PTUs). The x axis is plasmids length and y axis the sqrt of the TA frequency.
+
+
+## Origin of Replication in plasmids
+
+During a [[Comparison of Origin of Replication]] between the 44 strains assembled in house, we observed that the predicted Ori by PlasAnn presented unique k-mer composition to distinguished between accessory plasmids, pSymA, pSymB and the chromosome.
+
+Origin of replication were annotated for all putative accessory plasmids sequences. Below, table summarizes the amount of sequences PlasAnn was abled to identify an oriV. 
+
+| Dataset    | # Annotated | Total |
+| ---------- | ----------- | ----- |
+| Penn State | 145         | 213   |
+| Dakota     | 73          | 125   |
+| In house   | 35          | 40    |
+
+
+Following a annotation a PCA from 6-mer composition of the oriV revealed a higher diversity in oriV 6-mer composition among accessory plasmids compared to the pSymA, pSymB and Chromosome which showed a more conserved composition.
+
+pSymA, pSymB and Chromosome were extracted only from the *in house* dataset. pSymA and pSymB were annotated with PlasAnn, and the Chromosome with BAKTA. So far, this sample can be a good representative dataset since it shows the higher diversity according to the the  [[#Strains Amino acid Identity (AAI)]] analysis, other two dataset possibly due to the isolation experiments might present more related strains.
+
+
+
+![[PCA_6mer_ori.png]]
+
+
+> [!WARNING]
+> There is a caveat. Remember that I found possibly contamination retrieved by the RFPlasmid. I did not cleaned this for two reasons: 
+> 1. I want to see how it behaves
+> 2. I want to build a tool to replace RFPlasmid in that step.
+
+However, once again the oriV is highlighted as an interesting feature to analyze for accessory plasmid sample purity. Inspecting the previous graph looking for *contig_4_m64404e_240531_162148.hifi_reads.bc2049--bc2049* a 700kb contamination described during [[#MOB and MPF typing]], we can noticed it was placed with pSymA group, its most probably source of origin. 
+
+
+![[PCA_6mer_ori_cont_highligth.png]]
+
+
+
+## CDS description
+
+I found the Nod locus annotated on the previous contamination, completely confirmed hahaha.
+
+PlasAnn annotation group genes into 10 categories according to  Gene Ontology (GO), Kyoto Encyclopedia of Genes and Genomes (KEGG) and Gene Orthology Cluster (GOC). The following [heatmap](https://webfs/n/projects/jp2992/stowers-notes/Plasmidome/photos/gene_annotation_heatmap_all_datasets.png) presents the enriched categories for each of the putative plasmids sequences. 
+
+![[gene_annotation_heatmap_all_datasets.png]]
+
+### TO DO
+
+I can add PCA analysis to see how gene content separates them
+
+
+## BioSynthetic Cluster Genes (AntiSmash)
+
+
+
+
+## Plasmid Clustering
+
+Plasmid taxonomy classification is a challenge, different plasmid features have been used to classify plasmids into groups: PlasmidFinder, MOB-Suite, COPLA. The latter introduced the term of Plasmid Taxonomic Unit (PTUs), however COPLA is not maintained software and we could not install the COPLA database needed for PTUs classification. Network-based alternatives to study plasmidome has been proposed [ref](https://doi.org/10.1038/s41467-020-16282-w) [ref](https://doi.org/10.1038/s41396-023-01373-5) [ref](https://doi.org/10.1038/s41467-025-57940-1) [ref](https://doi.org/10.1038/s41467-024-45761-7) [ref](https://doi.org/10.1038/s41396-021-00926-w) [ref](https://doi.org/10.1038/s41467-025-65102-6). Considering the lack of agreement for plasmid clustering, we decided use FastANI for ANI estimation, given that FastANI uses a Mash approach but less sensible to divergent and incomplete draft genomes and The Louvain algorithm for community detection implemented in Python using python-Louvain module
+
+
+I find that comparisons with FastANI are limited for my scenario.
+The image below is an example of a systematic problem that shares several genomes from Penn State. This is an ambiguity that can easily confused since it can represent several scenarios in the genome assembly. However, we know it is an accessory plasmid, confirmed by plasmid features, kmer composition and re-sequenced of two of the samples (Liana_052_1_filtered & Liana_056_3_filtered). Nonetheless, FastANI matches these contigs with the contamination identified before. I need more robust alignments BLAST-based.
+
+![[example_ambiguity_w_acc_pls.png]]
+
+
 
 
 # Methods
 
+## Genome Assembly and Annotation
+
+A total of 258 strains were analyzed with PacBio HiFi and 95 with Oxford Nanopore (ONT) and assembled. Presenting quality metrics (attach GC, length, contig number, distributions, BUSCO or CheckM completeness). As expected, PacBio’s assemblies achieved higher contiguity than ONT as well as higher accuracy at similar average coverage.
+
+PacBio HiFi reads were filtered using Fastp-long v0.4.1 using default options. PacBio Hifi and ONT datasets were assembled using Flye v2.9.6-b1802 using -_-pacbio-hifi_ and -_-nano-hq_, respectively. ONT data was further polished using _medaka_consensus_ from Medaka v2.1.1 with model _r1041_e82_400bps_sup_v5.2.0_. Quality metrics were computed using QUAST v5.3.0. Whole-genome Average Nucleotide Identity (ANI) was calculated with FastANI v1.34. The final assemblies were annotated with BAKTA v1.11.4 and PlasAnn v.1.1.6 in the case of plasmids.
+
+
+## Sequence comparison
+
+Whole genome average nucleotide identity (ANI) using Amino acid identity (AAI) was performed with EzAAI. Tree using Mash distances was built with Mashtree v1.4.6.
+
+
 ## Clustering accessory plasmids
+
+For Clustering there are two approaches to explore:
+1. Pling: This is a new tool to cluster plasmids considering the containment as well as insertions and deletions using the 
+2. Louvain algorithm: This is a simple approach almost to achieve what COPLA was doing. First we perform an all vs all and then we run Louvain to identify communities.
+
+**This was replaced** it is kept to remember: 
 
 For clustering accessory plasmids I used ***MGE-Cluster***. 
 
@@ -201,15 +331,10 @@ I am using 1,775 plasmids belonging to species classified in the core genus from
 In this [notebook](https://webfs/n/projects/jp2992/MOLNG4331/code/plots_for_grant.ipynb) I made some plots to visualize *Sinorhizobium* plasmids inter and intra species
 
 
-# The ambiguity hidden in the short reads assembly
+
+# The plasmids hidden in the short reads assembly
  
  One of the reasons this project needs to invest in long read technology is that PsymA is not the only hotspot for horizontal gene transfer in *Ensifer* species,   accessory plasmids are also be part of the mobilome, exchanging genes between each other.
-
-Here I would like to explore 2 plots:
-1. Homology between accessory plasmids and PsymA
-2. Pan-genome changes between core and accessory plasmids.
-
-
 
 *Soil origin and plant genotype structure distinct microbiome compartments in the model legume Medicago truncatula*
 
