@@ -1,0 +1,10 @@
+Here I sum up some of the interesting papers I have read to guide my paper construction.
+
+
+1. [plasX and MobMess](https://doi.org/10.1038/s41564-024-01610-3) MobMess is the tool I will use to decontaminate and cluster my plasmids. I like its strategy to handle fragmentation cases. **It can help me establish clusters resistant to plasmid fragmentation.**
+2. [Phage-plasmids promote recombination and emergence of phages and plasmids](https://doi.org/10.1038/s41467-024-45757-3) They studied the gene flow between phages, phages-plasmids and plasmids. in previous studies they established an interesting metric to measure the similarity between MGEs called wGRR (weighed Gene Repertoire Relatedness) and **it can help me to track HGT events**.
+3. [A widespread group of large plasmids in methanotrophic _Methanoperedens_ archaea](https://doi.org/10.1038/s41467-022-34588-9): Description of two new plasmids (~150kb) for methane archaea. 
+	1. They described large plasmids, limited to a specific specie of archaea and with low information available. Additionally, Borgs are thought to expand metabolic capacity, check next paper.
+	2. they are like a chromid, where the plasmid acquire some host's DNA, however they decided to called them **Borgs**, maybe cuz it does not imply a dependance on them, however one of the plasmids carried tRNA missing in the host, so they inferred dependance. 
+	3. One of the plasmids encoded for a nucleoid protein MC1, interesting... 
+4. [Borgs are giant genetic elements with potential to expand metabolic capacity](https://doi.org/10.1038/s41586-022-05256-1) *We can neither prove that they are archaeal viruses or plasmids or minichromosomes, nor prove that they are not. Although they may ultimately be classified as megaplasmids, they are clearly different from anything that has been previously reported.* Borgs presents low GC, no plasmids replication-conjugation system, no viral proteins. As I see it, they are like megaplasmids but chromosome related

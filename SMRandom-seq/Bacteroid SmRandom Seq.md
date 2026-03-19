@@ -87,4 +87,10 @@ Although the processing with Seurat has been quite easier than I was exprected i
 1. **IntegrateData is different from IntegrateLayer.** This is the main reason I had so different results between LogNormalize and SCTransform and I thought that the problem was this normalization. But the problem is in summary that Integrate make a correction to the reductional space (PCA) of the whole dataset and IntegrateData does the correction on the counts creating a integrated assay (read this [issue](https://github.com/satijalab/seurat/issues/8653)) Using an integration like the CCA-based consist on finding anchors between variable features in each dataset so it reduces my dataset to a subset of common variable features 
 2. **CCA-based integration may also lead to overcorrection between Free-living and Nodules hiding biological difference.** When I use this method that represent the default normalization method. I suspect it overcorrects the free-living data, as in nodule I have a lot less genes, and I end up with free-living being mixed with Nodule."CCA is well-suited for identifying anchors when cell types are conserved, but there are very substantial differences in gene expression across experiments."
 3. **LogNormalize with Harmony differentiate between free-living and nodule, but it hides differences between nodule.** We know the nodule has different differential states and mix of states, so we should see these differences.
-4. 
+
+# Result
+
+I create this ShinyApp that contains the analysis: [http://shiny:3441/jp2992/shinyApp_integrated/](http://shiny:3441/jp2992/shinyApp_integrated/ "http://shiny:3441/jp2992/shinyApp_integrated/") 
+
+code
+> /n/projects/jp2992/sergio/SMrandom_seq/sergio.R

@@ -43,7 +43,14 @@ Each document present each processing: Assembly, filtering and plasmid retrieval
 
 ### Completeness 
 
+I considered the Single-copy Orthologous maker genes searched by checkM, the number of contigs and the number of circular contigs.
+
 ![[compleness_all_datasets.png]]
+
+So far there are no linear contigs reported for *Sinorhizobium meliloti*, therefore I expect most of the contigs to be circular, however, due to the low depth (check below) for some genomes, there is a high level of fragmentation especially of the mega-plasmids and putative accessory plasmids.
+
+
+![[number_circular_contigs_per_dataset.png]]
 
 
 ### Contamination
@@ -109,8 +116,90 @@ Likewise, whole-genome similarity estimation using Average Nucleotide Identity (
 Further comparative identity analysis using strain Rm1021 as the reference revealed high proteome coverage (>78%) and average nucleotide identity (>98%) across all genomes. _Sinorhizobium meliloti_ is known to possess an open pan-genome, a characteristic that underpins its high genetic variability. This openness results in a vast repertoire of accessory genes, which have been suggested to support the extensive phenotypic diversity observed within the species [ref 1](https://doi.org/10.1186/1471-2164-12-235), [ref2](https://doi.org/10.1371/journal.pcbi.1004478). 
 
 ![[AAI_strains_to_ref.png]]
+#### TO DO 📋
+
+⚠️ I have to repeat this using Chromosome.
+
 
 ## Accessory Plasmids general description
+
+### *De novo* Accessory Plasmid contigs identification
+
+Considering the high level of genome fragmentation and the low database representation of *S. meliloti* accessory plasmids, in order to use as much data as possible, a de novo approach to identify accessory plasmids was considered. Sequence Bray-Curtis distances using 3-mer composition were computed with pdist from Scipy package, followed by a PCoA dimensional reduction KMeans Clustering algorithm from scikit-learn was used to establish clusters for further analysis. 
+
+
+
+![[de_novo_plasmids_contig_identi.png]]
+
+We observed a clear separation among sequences classified as Chromosome, pSymA, pSymB, and Other—the latter encompassing fragmented sequences or accessory plasmids. Clusters 2, 3, and 0 corresponded clearly to Chromosome, pSymA, and pSymB, respectively. However, the remaining clusters did not consistently align with accessory plasmids. To further investigate, we examined the GC content and length distributions of these clusters using sequences greater than 10kb. The analysis suggested that only cluster 1 likely contains biologically relevant information, nonetheless, cluster 4 was retained in the analysis to account for the possible presence of small plasmids.
+
+![[de_novo_len_gc.png]]
+
+
+
+### Plasmid de-replication
+
+MobMess was used for containment-based de-replication. Due to the sequence similarity observed between the megaplasmids—particularly pSymA—and accessory plasmids, the megaplasmids were retained in the analysis to prevent false positives that could arise from fragmented sequences and lead to ambiguous plasmid assignments. 
+
+MobMess is a tool for pan-genome study of plasmidome, it tries to identify *plasmids systems* by establishing containment relationships between plasmids. This strategy allows to handle complex scenario where we have to distinguish between fragments and complete plasmids while keeping as much data as possible. 
+
+Using MobMess, we successfully de-replicated our accessory plasmids. The tool correctly identified points of fragmentation that resulted from sequence ambiguity between the accessory plasmids and mega-plasmids. For example, cluster 129 (red) corresponds to fragments between 12kb-15kb that causes assemblies ambiguities between pSymA (big points) and a group of accessory plasmids (small green points)
+
+![[cluster129.png]]
+ caption: size points correspond to sequences binary > 1MB (likely pSym). the color of the edge is the ANI (min. possible value is 90%) 
+
+> [!QUESTION]
+> What is that 12kb-15kb fragment?
+> 
+
+in MobMess, as expected I am interested in backbone, maximal and compound clusters, but in fragments cluster as well, since due to the use of long reads I expect the plasmids being near-complete but due to the coverage they could not be circularize. So now I have to apply a congruent filter to keep a sample of non-redundant/non-ambiguous plasmids. the following image presents what I call a simple in high level but complex on its details.
+
+![[simple_but_complex.png]]
+
+we have two backbones (light green) connected by a compound cluster (dark green), and one of the backbones is uniquely connected to a maximal cluster (purple). The latter are connected to 3 different fragments cluster coming from the same assembly, that likely is the same plasmid, but it is very fragmented due to a low assembly coverage (mean 10x). The compound cluster is a very interesting point of decision. Probably with other parameters using similarity clustering (check fastaANI below) these plasmids would be clustered together into the same cluster and probably same PTUs by COPLA (I could not install it nor even the database), however here we can see that only two plasmids create the connection between two different plasmid identities.
+
+Fragmented clusters are useful as well, for example, the cluster in the image below shows a group of plasmids that due to low coverage were fragmented down to half of the backbone (light green).
+
+![[example_fragment_cluster.png]]
+
+From this, I can can conclude that MobMess output can help me answer two questions: What is the diversity (backbone and compound)? and What is the distribution (backbone, compound and fragmented)? 
+
+### Plasmid Diversity in S. melolti 
+
+
+### Plasmid Clustering
+
+Plasmid taxonomy classification is a challenge, different plasmid features have been used to classify plasmids into groups: PlasmidFinder, MOB-Suite, COPLA. The latter introduced the term of Plasmid Taxonomic Unit (PTUs), however COPLA is not maintained software and we could not install the COPLA database needed for PTUs classification. Network-based alternatives to study plasmidome has been proposed [ref](https://doi.org/10.1038/s41467-020-16282-w) [ref](https://doi.org/10.1038/s41396-023-01373-5) [ref](https://doi.org/10.1038/s41467-025-57940-1) [ref](https://doi.org/10.1038/s41467-024-45761-7) [ref](https://doi.org/10.1038/s41396-021-00926-w) [ref](https://doi.org/10.1038/s41467-025-65102-6). Considering the lack of agreement for plasmid clustering, we decided use FastANI for ANI estimation, given that FastANI uses a Mash approach but less sensible to divergent and incomplete draft genomes and The Louvain algorithm for community detection implemented in Python using python-Louvain module
+
+
+> [!NOTE]
+> FastANI looks like a good approach, however, Given that clustering these large plasmids is a challenge as they might represent the fusion of smaller plasmids, I want to create a containment network where distances can give me evolutionary relations between plasmids. I found MobMess, it is a super interesting tool proposal that applies this approach and establish plasmids systems discerning between plasmids backbone genes and cargo genes. These two categories combine to form different plasmids structures. 
+> 
+> The other aspect to consider is the clustering algorithm. Louvain is popular algorithm for community discovery, however, it has been described that it can produce internally disconnected communities, and an alternative was proposed, the Leiden algorithm.
+> 
+> Next it is a comparison between: in the left, Vclust + Leiden (resolution=1), and in the right, FastANI + Louvain (resolution=1). In this case Louvain and Leiden produce similar result. I used louvain since it is easier to run in python. they are both using tANI to filter >0.9 however I am plotting every edge with AF>0.7. only 10 clusters are colored.
+> ![[fastANI_vs_Vclust.png]]
+> 
+> We can see that FastANI might be overestimating the ANI. whereas Vclust is underestimating it in some cases.
+> 
+
+ 
+
+
+
+
+The image below is an example of a systematic problem that shares several genomes from Penn State. This is an ambiguity that can easily confused since it can represent different scenarios in the genome assembly. However, we know it is an accessory plasmid, confirmed by plasmid features, kmer composition and re-sequenced of two of the samples (Liana_052_1_filtered & Liana_056_3_filtered). Additionally, it systematically has a coverage inferior to the chromosome and the symbiotic plasmids. This makes me think of a thought I had before with these large plasmids; low-copy number plasmids that restricted even in the same population. This corresponds to isolates, so either cells started losing them or the plasmid are restricted to subpopulations, vertical domination over horizontal has been mentioned in some paper (I lost them, look for them)
+
+With *S. meliloti* something curious happen, their plasmids are very large > 50kb up to 700kb (WHY???), even more interesting during sequencing of isolates for example for the case of the common ~350kb plasmid *contig_4_m64404e_240531_162148.hifi_reads.bc2049--bc2049* all their strains presents reduction in coverage (around halve total), however Liana_052_1_filtered & Liana_056_3_filtered which were part of the re-sequenced strains are very similar and presents coverage as high as chromosome. Also, they presented another plasmid of 75kb.
+
+![[example_ambiguity_w_acc_pls.png]]
+
+
+
+I am trying Vclust and MobMess!: Vclust allows me to achieve similar result as the pipeline used in this [soil plasmidome study](https://doi.org/10.1038/s41467-025-65102-6) . whereas MobMess is an interesting proposal that uses containment network to establish what they call "plasmids systems"
+
+Vclust results are very clustering algorithm dependent. I tried all of them, and Leiden and complete linkage are my favorite. Let's compare it with MobMess.
+
 
 ### Plasmids Counts per dataset
 
@@ -191,7 +280,7 @@ Our analysis revealed that accessory plasmids in our datasets harbored either MO
 If we check at the genus level of Sinorhizobium we see that...
 
 
-#### TO DO:
+#### TO DO
 
 **Here I can compare with what MOB proteins has been reported in the genus or even the family (Rhizobiaceae)**
 
@@ -216,10 +305,13 @@ Through the annotation of the putative plasmids we could identified the module R
 > 1. I want to see how it behaves
 > 2. I want to build a tool to replace RFPlasmid in that step.
 
-To annotate TA systems, the HMM models from TASmania were used. Currently there are two ways to annotate TA systems, using the highly curated TADB or using the more "discovery-oriented. TASmania present higher sensitivity than TADB, however, TASmania  models were built mining for interpro annotated TA in more than 41k assemblies, therefore it has a higher risk of false positive. Using TASmania models, [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) annotated TA systems for approximately 10k plasmids, subsequently trained a Random Forest model which achieved 95% accuracy predicting PTUs. ParB/RepB/Spo0J, Hok/Gef, RelE/ParE, and PemI coding sequences were found among the most influential features for the model accuracy. Interestingly, RepB is the most common plasmid partitioning protein among our plasmids dataset and the annotation more common associated with an antitoxin hit across our plasmids. Functionality variability has been between the proteins in the RepABC, for example, [Ingmer & Cohen (1993)](https://doi.org/10.1128/jb.175.24.7834-7841.1993) demonstrated that RepA can be involved both in plasmid replication and partitioning. In addition, [Effe *et al.* (2025)](https://doi.org/10.1038/s41467-025-62473-8) investigate the evolutionary advantage provided by the combination of different persistent strategies that can be found in plasmids. The researches found that an active partition system coupled with a TA system provides the greatest fitness advantage, specially for low-copy extrachromosomal elements. This is specially relevant for *Sinorhizobium meloti* given their sizes distributions and high detection of the whole replication module [[#Size and GC content distribution]] involving more than one instance of proteins in the module.
+To annotate TA systems, the HMM models from TASmania were used. Currently there are two ways to annotate TA systems, using the highly curated TADB or using the more "discovery-oriented. TASmania present higher sensitivity than TADB, however, TASmania  models were built mining for interpro annotated TA in more than 41k assemblies, therefore it has a higher risk of false positive. Using TASmania models, [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) annotated TA systems for approximately 10k plasmids, subsequently trained a Random Forest model which achieved 95% accuracy predicting PTUs. ParB/RepB/Spo0J, Hok/Gef, RelE/ParE, and PemI coding sequences were found among the most influential features for the model accuracy. Interestingly, RepB is the most common plasmid partitioning protein among our plasmids dataset and the annotation more common associated with an antitoxin hit across our plasmids. Functionality variability has been between the proteins in the RepABC, for example, [Ingmer & Cohen (1993)](https://doi.org/10.1128/jb.175.24.7834-7841.1993) demonstrated that RepA can be involved both in plasmid replication and partitioning. Likewise, [Yu *et al.* 2020](https://doi.org/10.1101/2020.11.01.361691) trained PlasX, a logistic regression model, using the gene families to identified plasmid sequences from chromosomal ones. Authors reported PlasX often assigned higher model coefficients to genes strongly associated with plasmid biology, such as the genes for plasmid replication, *repL*, and partitioning, *parA*.
 
+In addition, [Effe *et al.* (2025)](https://doi.org/10.1038/s41467-025-62473-8) investigate the evolutionary advantage provided by the combination of different persistent strategies that can be found in plasmids. The researches found that an active partition system coupled with a TA system provides the greatest fitness advantage, specially for low-copy extrachromosomal elements. This is specially relevant for *Sinorhizobium meloti* given their sizes distributions and high detection of the whole replication module [[#Size and GC content distribution]] involving more than one instance of proteins in the module.
 
-Due to the large number of putative plasmids and the observation of highly similar feature profiles, we applied Hierarchical Clustering using the AgglomerativeClustering function from scikit-learn, and employing Ward's linkage method with a distance threshold of 10 allowing us to reduce redundancy by grouping plasmids with nearly identical features and computing the mean at each group. This clustering approach yielded 111 distinct clusters, which were then used for subsequent plotting and analysis.
+![[TA_type_vs_length.png]]
+
+**(IT WILL BE REPLACE BY PTUs)** Due to the large number of putative plasmids and the observation of highly similar feature profiles, we applied Hierarchical Clustering using the AgglomerativeClustering function from scikit-learn, and employing Ward's linkage method with a distance threshold of 10 allowing us to reduce redundancy by grouping plasmids with nearly identical features and computing the mean at each group. This clustering approach yielded 111 distinct clusters, which were then used for subsequent plotting and analysis.
 
 
 ![[hierarchical_clust_TA_systems.png]]
@@ -234,7 +326,15 @@ We could noticed the same effect to that reported by [Bethke *et al.* (2023)](ht
 
 ![[TA_freq_vs_length.png]]
 
-Each point represent a plasmids, they are colored according to the Hierarchical Clustering (I should change it for my PTUs). The x axis is plasmids length and y axis the sqrt of the TA frequency.
+Each point represent a plasmids, they are colored according to the Hierarchical Clustering (I should change it for my PTUs). The x axis is plasmids length and y axis the **sqrt** of the TA frequency.
+
+
+#### TO DO
+
+1. Replace the hierachical clustering by the PTUs.
+2. I could use https://github.com/liampshaw/rmsFinder to look for type II R-M system and predict target. 
+
+
 
 
 ## Origin of Replication in plasmids
@@ -264,7 +364,7 @@ pSymA, pSymB and Chromosome were extracted only from the *in house* dataset. pSy
 > 1. I want to see how it behaves
 > 2. I want to build a tool to replace RFPlasmid in that step.
 
-However, once again the oriV is highlighted as an interesting feature to analyze for accessory plasmid sample purity. Inspecting the previous graph looking for *contig_4_m64404e_240531_162148.hifi_reads.bc2049--bc2049* a 700kb contamination described during [[#MOB and MPF typing]], we can noticed it was placed with pSymA group, its most probably source of origin. 
+However, once again the oriV is highlighted as an interesting feature to analyze for accessory plasmid sample purity. Inspecting the previous graph looking for *contig_7_m64404e_240531_162148.hifi_reads.bc2049--bc2049* a 700kb contamination described during [[#MOB and MPF typing]], we can noticed it was placed with pSymA group, its most probably source of origin. 
 
 
 ![[PCA_6mer_ori_cont_highligth.png]]
@@ -288,17 +388,23 @@ I can add PCA analysis to see how gene content separates them
 
 
 
+## Gene exchanges between plasmids
 
-## Plasmid Clustering
-
-Plasmid taxonomy classification is a challenge, different plasmid features have been used to classify plasmids into groups: PlasmidFinder, MOB-Suite, COPLA. The latter introduced the term of Plasmid Taxonomic Unit (PTUs), however COPLA is not maintained software and we could not install the COPLA database needed for PTUs classification. Network-based alternatives to study plasmidome has been proposed [ref](https://doi.org/10.1038/s41467-020-16282-w) [ref](https://doi.org/10.1038/s41396-023-01373-5) [ref](https://doi.org/10.1038/s41467-025-57940-1) [ref](https://doi.org/10.1038/s41467-024-45761-7) [ref](https://doi.org/10.1038/s41396-021-00926-w) [ref](https://doi.org/10.1038/s41467-025-65102-6). Considering the lack of agreement for plasmid clustering, we decided use FastANI for ANI estimation, given that FastANI uses a Mash approach but less sensible to divergent and incomplete draft genomes and The Louvain algorithm for community detection implemented in Python using python-Louvain module
+For this I could use the wGRR as describe [here](https://doi.org/10.1038/s41467-024-45757-3) 
 
 
-I find that comparisons with FastANI are limited for my scenario.
-The image below is an example of a systematic problem that shares several genomes from Penn State. This is an ambiguity that can easily confused since it can represent several scenarios in the genome assembly. However, we know it is an accessory plasmid, confirmed by plasmid features, kmer composition and re-sequenced of two of the samples (Liana_052_1_filtered & Liana_056_3_filtered). Nonetheless, FastANI matches these contigs with the contamination identified before. I need more robust alignments BLAST-based.
+# What makes *Sinorhizobium meliloti* plasmids large plasmids?
 
-![[example_ambiguity_w_acc_pls.png]]
 
+The low acquisition of TA systems, the high prevalence of partition proteins among them, the reduced coverage observed during isolates sequencing, goes directly into a classic question: What is making *S. meliloti*'s plasmids so large? I like the image below retrieved from [Hall *et al.* (2022)](https://doi.org/10.1098/rstb.2020.0472) which presented an interesting overview of the features that makes a plasmid a mega-plasmid.
+
+![[What_makes_megaplasmid.png]]
+
+
+
+#### TO DO
+
+With 
 
 
 
