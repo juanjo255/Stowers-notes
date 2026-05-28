@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "898003e163df59a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CompBio ToDo Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CompBio ToDo Notes"
-            }
-          },
-          {
             "id": "30884cc546571517",
             "type": "leaf",
             "state": {
@@ -36,7 +22,7 @@
             }
           },
           {
-            "id": "0bf2cbc6a01f5bc8",
+            "id": "d97896f70f06b364",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,7 +36,21 @@
             }
           },
           {
-            "id": "18805ae9cc422f30",
+            "id": "eaa4db8abb4b6568",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CompBio ToDo Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CompBio ToDo Notes"
+            }
+          },
+          {
+            "id": "68b918691a1b0dbe",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -61,20 +61,6 @@
               },
               "icon": "lucide-file",
               "title": "Plasmidome"
-            }
-          },
-          {
-            "id": "e00653168d5c60f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plasmidome/Accessory Plasmid prediction tool.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Accessory Plasmid prediction tool"
             }
           }
         ],
@@ -143,7 +129,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5
+    "width": 211.5
   },
   "right": {
     "id": "7a61529cf0aab50e",
@@ -159,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CompBio ToDo Notes.md",
+                "file": "Plasmidome/Plasmidome.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +155,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CompBio ToDo Notes"
+              "title": "Backlinks for Plasmidome"
             }
           },
           {
@@ -231,56 +217,56 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "bases:Create new base": false,
-      "command-palette:Open command palette": false,
-      "webpage-html-export:Export as HTML": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "18805ae9cc422f30",
+  "active": "68b918691a1b0dbe",
   "lastOpenFiles": [
-    "Plasmidome/Accessory Plasmid prediction tool.md",
-    "Project-report-cbio.mm2883.102.md",
-    "Plasmidome/Plasmidome.md",
-    "Plasmidome/photos/example_fragment_cluster.png",
-    "Plasmidome/photos/af_vs_ani_mobmess.png",
-    "Plasmidome/photos/simple_but_complex.png",
-    "Plasmidome/photos/cluster129.png",
-    "Plasmidome/Tasks plasmidome.md",
-    "Plasmidome/Literature Summary.md",
+    "Plasmidome/Microbiome Medicago truncatula-sativa.md",
     "Plasmidome/photos/de_novo_len_gc.png",
-    "Plasmidome/photos/number_circular_contigs_per_dataset.png",
     "Plasmidome/photos/de_novo_plasmids_contig_identi.png",
-    "NCR_prediction/NCR_prediction_Fenugreek_and_Sainfoin.md",
-    "SMRandom-seq/Bacteroid SmRandom Seq.md",
-    "Plasmidome/Microbiome M. truncatula-sativa.md",
-    "Plasmidome/photos/fastANI_vs_Vclust.png",
-    "Plasmidome/photos/What_makes_megaplasmid.png",
-    "Plasmidome/photos/TA_type_vs_length.png",
-    "AMP mining/AMP mining in T. molitor.md",
-    "n/projects/jp2992/stowers-notes/Plasmidome/photos/gene_annotation_heatmap_all_datasets.png.md",
-    "n/projects/jp2992/stowers-notes/Plasmidome/photos",
-    "n/projects/jp2992/stowers-notes/Plasmidome",
-    "n/projects/jp2992/stowers-notes",
-    "n/projects/jp2992",
-    "n/projects",
-    "n",
-    "Plasmidome/Comparison of Origin of Replication.md",
-    "POP-seq/pop-seq Report.md",
-    "POP-seq/pop-seq Report.pdf",
-    "CompBio ToDo Notes.md",
-    "AMP mining/photos",
-    "AMP mining",
-    "Plasmidome/Comparison of Origin of Replication.pdf",
-    "Plasmidome/Penn State Strains (Liana).md",
-    "Plasmidome/Processing 48 Sinorhizobium meliloti Strains.md",
-    "Taurine_and_Nickel/Taurine_and_Nickel search.md",
-    "Plasmidome/Plasmid prediction in illumina MAG strains.md",
-    "Methylation/Methylation Analysis.md",
-    "Methylation/Methylation Calling PacBio HiFi.md",
-    "README.md",
-    "Min. coverage to get S. meliloti plasmids.md",
-    "Hunting-a-plasmid.md",
-    "Pan-genome analysis.md",
-    "Plasmidome/Dakota Collab Assembly Report.md",
-    "Plasmidome/List of plasmids to re-sequence.md"
+    "Plasmidome/Plasmidome.md",
+    "Plasmidome/Plasmidome_figures.pptx.sb-b8283980-ZZLCQe/Plasmidome_figures.pptx",
+    "Plasmidome/Plasmidome_figures.pptx.sb-b8283980-ZZLCQe",
+    "Plasmidome/~$Plasmidome_figures.pptx",
+    "Plasmidome/Plasmidome_figures.pptx",
+    "Plasmidome/photos/repl_group_each_strain_heatmap.png",
+    "Plasmidome/photos/HGT_net_FR_layout_by_dataset.png",
+    "Plasmidome/photos/HGT_net_FR_layout.png",
+    "free_sequencing",
+    "Plasmidome/photos/pie_genus_connections_uniq_pls.png",
+    "Plasmidome/academic-research-skills.plugin",
+    "Plasmidome/academic-research-skills/academic-paper/agents/visualization_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/structure_architect_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/socratic_mentor_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/revision_coach_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/peer_reviewer_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/literature_strategist_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/intake_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/formatter_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/draft_writer_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/citation_compliance_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/argument_builder_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents/abstract_bilingual_agent.md",
+    "Plasmidome/academic-research-skills/academic-paper/SKILL.md",
+    "Plasmidome/academic-research-skills/academic-paper/agents",
+    "Plasmidome/academic-research-skills/academic-paper",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates/revision_response_template.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates/peer_review_report_template.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates/editorial_decision_template.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/top_journals_by_field.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/statistical_reporting_standards.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/sprint_contract_protocol.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/review_quality_thinking.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/review_criteria_framework.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/re_review_mode_protocol.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/quality_rubrics.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references/integration_guide.md",
+    "Plasmidome/academic-research-skills/academic-paper-reviewer/references",
+    "Plasmidome/photos/Len_pls_lt500kb_per_genus.png",
+    "Plasmidome/photos/num_pls_per_genus_lt500kb.png",
+    "Plasmidome/photos/antismash_pred_type_freq_genome.png",
+    "Plasmidome/photos/antismash_pred_type_frequency.png"
   ]
 }

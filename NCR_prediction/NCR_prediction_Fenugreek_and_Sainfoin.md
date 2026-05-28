@@ -1,4 +1,3 @@
-# Sumner 
 
 
 # Background

@@ -1,6 +1,8 @@
 
 # To Do (Ordered by priority)
 
+- [ ]  Organize all data into powerpoint to send to siva.
+- [ ] Continue with plasmidome.
 
 ## Plasmidome description
 

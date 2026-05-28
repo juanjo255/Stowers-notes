@@ -4,7 +4,8 @@
 **Authors:** Andrew Price and Juan Jose Picon Cossio
 
 
-
+```table-of-contents
+```
 
 
 # Objective 
@@ -85,7 +86,7 @@ The table below presents descriptive stats of the nine *S. meliloti* assembled g
 | G01_asm_flye.fasta     | DNA     | 4      | 6,922,790     | 166,347     | 1,730,697.5     | 3,544,365     |
 | H01_asm_flye.fasta     | DNA     | 4      | 6,864,704     | 192,654     | 1,716,176       | 3,654,821     |
 |                        |         |        |               |             |                 |               |
-33
+
 
 > [!NOTE]
 > 

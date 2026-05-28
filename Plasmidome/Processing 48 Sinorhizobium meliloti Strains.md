@@ -26,4 +26,4 @@ However, there was one contamination from pseudomonas:
 
 ![[marker_lineage_in_house.png]]
 
-**MAG154_2_filtered** was the responsable and therefore it was removed
+**MAG154_2_filtered** was the reason and therefore it was removed
