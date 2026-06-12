@@ -42,3 +42,13 @@ Here I sum up some of the interesting papers I have read to guide my paper const
 12. [Mobility of Plasmids](https://doi.org/10.1128/mmbr.00020-10)  discussed the mobility in plasmids. how plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts.
 
 13. [Ecological dynamics and complex interactions of _Agrobacterium_ megaplasmids](https://doi.org/10.3389/fpls.2014.00635) 
+14. **Can Phages drive specialization?** (this was a presentation in the symbiosis conference, Canada).  phage drive tradeoff in symbiotic traits. experimental evolution of R. leguminosorum with 3 different phages. similarly, when in nodule they are more susceptible to phage infection. 
+
+
+| ![[IMG_3744.jpeg\|200]] | ![[IMG_3745.jpeg \| 200]] |
+| ----------------------- | ------------------------- |
+
+
+
+
+

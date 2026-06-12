@@ -40,8 +40,7 @@ I considered the Single-copy Orthologous maker genes searched by checkM, the num
 
 So far there are no linear contigs reported for *Sinorhizobium meliloti*, therefore I expect most of the contigs to be circular, however, due to the low depth (check below) for some genomes, there is a high level of fragmentation especially of the mega-plasmids and putative accessory plasmids.
 
-
-![[number_circular_contigs_per_dataset.png|600]]
+![[number_circular_contigs_per_dataset.png|685]]
 
 
 ### Contamination
@@ -55,6 +54,8 @@ So far there are no linear contigs reported for *Sinorhizobium meliloti*, theref
 ### Length, GC and Depth Per Chromosome
 
 ![[len_QC_distri_all_datasets.png]]
+
+[genome_qc.ipynb](/n/projects/jp2992/Plasmidome_project_MOLNG_4509/code/genome_qc.ipynb)
 
 Notice that for some genomes inside the Penn and Dakota datasets if I filtered base on 30x coverage based on my "Other" sequences which represent everything that could be an accessory plasmids, I would lose most of the data, however if I consider, for example, only the chromosome, I lose less than 25% of my data.
 
@@ -113,10 +114,10 @@ Further comparative identity analysis using strain Rm1021 as the reference revea
 
 ### *De novo* Accessory Plasmid contigs identification
 
-Considering the high level of genome fragmentation and the low database representation of *S. meliloti* accessory plasmids, in order to use as much data as possible, a de novo approach to identify accessory plasmids was considered. Sequence Bray-Curtis distances using 3-mer composition were computed with pdist from Scipy package, followed by a PCoA dimensional reduction KMeans Clustering algorithm from scikit-learn was used to establish clusters for further analysis. 
+Considering the high level of genome fragmentation and the low database representation of *S. meliloti* accessory plasmids, in order to use as much data as possible, a de novo approach to identify accessory plasmids was considered. Sequence Bray-Curtis distances using 3-mer composition were computed with pdist from Scipy package, followed by a PCoA dimensional reduction KMeans Clustering algorithm from scikit-learn was used to establish clusters for further analysis. A similar approach was taken by [Wong, Finan & Golding (2002)](https://doi.org/10.1007/s10142-002-0068-0) when trying to discern the biology of the pSymB replicon and its relationship with the chromosome and megaplasmids using dinucleotide signatures.
 
+![[trinucleotide_comp_contigs.png]]
 
-![[de_novo_plasmids_contig_identi.png|400]]
 
 We observed a clear separation among sequences classified as Chromosome, pSymA, pSymB, and Other—the latter encompassing fragmented sequences or accessory plasmids. Clusters 2, 3, and 0 corresponded clearly to Chromosome, pSymA, and pSymB, respectively. However, the remaining clusters did not consistently align with accessory plasmids. To further investigate, we examined the GC content and length distributions of these clusters using sequences greater than 10kb. The analysis suggested that only cluster 1 likely contains biologically relevant information, nonetheless, cluster 4 was retained in the analysis to account for the possible presence of small plasmids.
 
@@ -134,21 +135,24 @@ MobMess is a tool for pan-genome study of plasmidome, it tries to identify *plas
 ![[mobmess_all_plsdb.png | 800]]
 [mobmess_network.html](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/mobmess_all_plsdb/mobmess_network.html)
 
+After filtering *fragment* cluster (coloring top 20 clusters):
+![[mobmess_clusters_filtfragments.png|453]]
+![[mobmess_cluster_types_pre_post_filter.png]]
 Using MobMess, we successfully de-replicated our accessory plasmids. The tool correctly identified points of fragmentation that resulted from sequence ambiguity between the accessory plasmids and mega-plasmids. For example, cluster 129 (red) corresponds to fragments between 12kb-15kb that causes assemblies ambiguities between pSymA (big points) and a group of accessory plasmids (small green points)
 
-![[cluster129.png|223]]
+![[cluster129.png|145]]
  caption: size points correspond to sequences binary > 1MB (likely pSym). the color of the edge is the ANI (min. possible value is 90%) 
 
 
-The following image presents what I call a simple in high level but complex on its details. which I think might help me track relevant genes been transferred across strains.
+The following image presents what I call a simple in high level but complex on its details. which I think might help me track relevant genes been transferred across strains (this represent possible plasmid fusion, check plasmid fusion part).
 
-![[simple_but_complex.png]]
+![[simple_but_complex.png|210]]
 
 We have two backbones (light green) connected by a compound cluster (dark green), and one of the backbones is uniquely connected to a maximal cluster (purple). The latter are connected to 3 different fragments cluster coming from the same assembly, that likely is the same plasmid, but it is fragmented due to a low assembly coverage (mean 10x). The compound cluster is a very interesting point of decision. Probably with other parameters using similarity clustering (check fastaANI below) these plasmids would be gathered together into the same cluster and probably same PTUs by COPLA (I could not install it nor even the database), however here we can see that only two plasmids create the connection between two different plasmid identities.
 
 From MobMess output, as expected, I am interested in backbone, maximal and compound clusters, but in fragments cluster as well, since it will help me track distribution, i.e.  what the strains presents a type of plasmids. For example, the cluster in the image below shows a group of plasmids that due to low coverage were fragmented down to half of the closer backbone (light green). However, it can also represent a incomplete backbone.  
 
-![[example_fragment_cluster.png|245]]
+![[example_fragment_cluster.png|161]]
 
 However, in maximal cluster all non-circular plasmids were filtered out to remove ambiguity. Unfortunately, this leads to the loss of some plasmid information, for example, 
 *contig_5_m64404e_240531_162148.hifi_reads.bc2053--bc2053* and *contig_7_m64404e_240423_150118.hifi_reads.bc2055--bc2055* are two large plasmids that belongs to the same cluster, but its assembly is fragmented. See assembly below colored by depth. The next image shows the maximal cluster in the Mobmess network. All the elements connected are fragments below 20kb.
@@ -181,7 +185,7 @@ The following kdeplots were plotted using the maximum plasmid length (plot 1) an
 **Plot 2**
 ![[plot1_kdeplot_ani_vs_af.png|300]]
 
-
+[uniq_pls_ANI.ipynb](/n/projects/jp2992/Plasmidome_project_MOLNG_4509/code/uniq_pls_ANI.ipynb)
 ### Plasmid Diversity in *Sinorhizobium meliloti* 
 
 To measure plasmid diversity in the dataset, we determine unique plasmid identities from the MobMess output by considering three categories: backbone plasmids (complete plasmids), compound plasmids (the maximal size of a plasmid system), and maximal clusters where all members are below 1 Mb and present at least one sequence circular.
@@ -224,7 +228,7 @@ Plasmid classification is challenging due to high rates of genetic gain and loss
 > Next it is a comparison between: in the left, Vclust + Leiden (resolution=1), and in the right, FastANI + Louvain (resolution=1). In this case Louvain and Leiden produce similar result. I used louvain since it is easier to run in python. they are both using tANI to filter >0.9 however I am plotting every edge with AF>0.7. **Only 10 clusters are colored.**
 > ![[fastANI_vs_Vclust.png]]
 > 
-> We can see that FastANI might be overestimating the ANI.
+> We can see that FastANI might be overestimating the ANI. **Vclust + leiden can replicate MobMess, yet the latter provide extra relationship information**.
 > 
 
  
@@ -333,9 +337,10 @@ We found that 36 and 52 plasmid sequences belonged to the Rh07 and Rh08 replicon
 ![[replicon_groups.png| 800]]
 Based on this classification scheme, we further explored the Replicon group composition of the different strains. We observed that
 
-![[replicon_groups_each_strain.png]]
 
+![[repl_group_each_strain_heatmap.png]]
 
+[replicon_groups.ipynb](/n/projects/jp2992/Plasmidome_project_MOLNG_4509/code/replicon_groups.ipynb) 
 
 
 ##### Origin of Replication (oriV)
@@ -360,9 +365,13 @@ We investigated the gene content sharing between accessory plasmids and the main
 We can see that pSymB shares more genes with the chromosome, whereas pSymA shares more genes with the accessory plasmids, reflecting their evolutionary differences where megaplamid pSymB reach a status of chromid and the megaplasmid pSymA keeps more  plasmid-like features. Interestingly, the chromosome shares more genes with the accessory plasmids than the pSymA.
 
 ![[gene_share_pls_and_chromosomes.png|400]]
+![[gene_sharing_upset.png]]
 
+[gene_redundacy.ipynb](/n/projects/jp2992/Plasmidome_project_MOLNG_4509/code/gene_redundacy.ipynb)
 
+### To DO
 
+Described the most common genes shared with the main replicons
 
 
 
@@ -407,9 +416,11 @@ Large accessory plasmid are thought to provide fitness improvement in complex ec
 
 To further investigate the biological differences between these accessory plasmids, we used EggNOG-mapper to assign Clusters of Orthologous Genes (COGs), and a COG frequency matrix was computed and normalized by number of genes, finally a distance matrix was calculated using Bray-Curtis and plotted in PCoA. 
 
-We found that gene functions in plasmids are not limited to the dataset of origin (right) let alone the replicon group (left), where we can see overlapping between plasmids from different dataset, and replicon type presenting a closer gene functions relation to different replicon groups. This is consistent with other studies that have suggested that classification of plasmids by replicon or MOB types have poor resolution and does not capture information about the gene content of plasmids [Douarre et. al (2020)](https://doi.org/10.3389/fmicb.2020.00483) [Orlek at. al (2017)](https://doi.org/10.3389/fmicb.2017.00182) [Redondo-Salvo et. al (2020)](https://doi.org/10.1038/s41467-020-17278-2). 
+We found that gene functions in plasmids are not limited to the dataset of origin (right) let alone the replicon group (left), where we can see overlapping between plasmids from different dataset, and replicon type presenting a closer gene functions relation to different replicon groups. This is consistent with other studies that have suggested that classification of plasmids by replicon or MOB types have poor resolution and does not capture information about the gene content of plasmids [Douarre et. al (2020)](https://doi.org/10.3389/fmicb.2020.00483) [Orlek at. al (2017)](https://doi.org/10.3389/fmicb.2017.00182) [Redondo-Salvo et. al (2020)](https://doi.org/10.1038/s41467-020-17278-2).  After clustering with HDBSCAN and using Fisher Exact Test with BH correction, we found only differences between Defense mechanism, Nucleotide transport and metabolism, and Cell mobility. 
 
 ![[COGs_feq_matrix_pcoa.png]]
+
+![[COG_enrich_unq_pls.png]]
 
 ![[COG_plasmids.png]]
 
@@ -420,7 +431,7 @@ Nonetheless, we observed that there are cluster of plasmids presenting endemic g
 MDS analysis yielded three main insights. First, plasmid clustering is not determined to individual datasets, as some overlap between datasets was observed. Second, clear differences exist among plasmids from the same dataset—most notably within the Penn State dataset. Third, the stress value of 0.36 indicates that two-dimensional space is insufficient to accurately represent plasmid distance relationships.
 
 
-## Mobile Genetic Elements Promote Megaplasmid Formation in _Sinorhizobium meliloti_
+## Mobile Genetic Elements Cointegrate Promote Megaplasmid Formation in _Sinorhizobium meliloti_
 
 Plasmids carrying antibiotic resistance genes have been reported harboring multiple replicons, and MGE-mediated plasmids fusions have been proposed as one important mechanism for plasmids diversity, protecting against plasmids incompatibility, enabling cross-host transfer of non-conjugative plasmids and even amplifying antimicrobial resistance by creating multidrug resistant megaplasmids [Wang et al. (2021)](https://doi.org/10.3389/fmicb.2021.754931) [Liu et al. (2025)](https://doi.org/10.1093/jac/dkaf309) [Ipoutcha et al. (2026)](https://doi.org/10.64898/2026.01.09.696371) 
 
@@ -430,20 +441,23 @@ Therefore, we investigate the number of Rep proteins in each plasmids. Interesti
 ![[num_repABC_per_pls_plasAnn.png]]
 ![[num_repABC_per_pls.png]]
 
- Using MobMess, we can observed several such events. For example, *contig_4_m64404e_240531_162148.hifi_reads.bc2042--bc2042* is a ~314kb plasmid product of the fusion of two plasmids (~158kb and ~146kb) mediated by transposases from the Tn3 family. [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/2_contained_in_one.html). Similarly, *contig_3_m64404e_240423_150118.hifi_reads.bc2012--bc2012* represent a ~149kb plasmid that contains a 73kb plasmids flanked also by a Tn3 transposase family [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/contig_4_bc295_vs_contig_13_bc2012.html)
+ Using MobMess, we can observed several such events. For example, *contig_4_m64404e_240531_162148.hifi_reads.bc2042--bc2042* is a ~314kb plasmid product of the fusion of two plasmids (~158kb and ~146kb) mediated by transposases from the Tn3 family. [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/2_contained_in_one.html). Similarly, *contig_3_m64404e_240423_150118.hifi_reads.bc2012--bc2012* represent a ~149kb plasmid that contains a 73kb plasmids flanked also by a Tn3 transposase family [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/contig_4_bc295_vs_contig_13_bc2012.html) 
 
-![[pls_fusion_example.png|300]]
+**Image below shows both plasmids cointegrates**: plasmid fusion, and plasmid and MGE cointegrate (possibly an ICE).
 
-![[pls_fusion_2.png | 300]] 
-
+![[inset_image_pls_fusion.png|531]]
 
 Indeed, Tn3-family transposons belong to class 2 transposons which along with the Tn7-family and are a class of complex transposition elements associated with a high influence in the generation of co-integrates between plasmids and other MGEs [Szuplewska et al. (2014)](https://doi.org/10.1080/2159256X.2014.998537) This observations lead us to ask if accessory plasmids were presenting IS composition differences which might involve in the gene exchange between accessory plasmids. 
 
 We found that accessory plasmids indeed seems to have specific enrich of certain IS families. 
 
-![[IS_comp_per_cluster.png|800]]
 
-![[IS_comp_per_pls.png]]
+|                                   |                               |
+| --------------------------------- | ----------------------------- |
+| ![[IS_comp_per_cluster.png\|400]] | ![[IS_comp_per_pls.png\|400]] |
+|                                   |                               |
+
+
 
 ### Curiosity in pSymA
 
@@ -457,17 +471,37 @@ I have not concluded nothing this is curiosity to see if we can map plasmids fus
 
 Check this on chromosome and psym in each strain might be interesting to see if there is sharing of transposition elements. I would like to think of these plasmids a sponges 
 
-## Accessory Plasmids Present Unique Genomic Structure 
+## Accessory Plasmids Present Unique Genomic Arrangements Possibly  Indicating Specialized Ecological Pressures
 
-To determine whether the unique accessory plasmid clusters exhibit specific proteins or structural variations that characterize their ecological niche—or confer traits that enhance survival in their host—we used a simple linear model combined with Fisher’s exact test. This allowed us to identify, from the plasmidome pan-genome, whether the clusters defined by (MobMess/HDBSCAN) possess distinct functional features.
+To determine whether the unique accessory plasmid clusters exhibit specific proteins or structural variations that characterize their ecological niche—or confer traits that enhance survival in their host—we leveraged the pan-genome of the plasmidome built with Panaroo. Panaroo, in addition to protein families, reports structural variations based on annotating triplets for each sample as long as min_edge_support_sv is support (3), subsequently, we cluster plasmids using HDBSCAN using a precomputed jaccard distance matrix, then we used a simple linear model followed by Fisher Exact Test and BH correction. This approach allowed us to identify important structural  that could possess distinct functional features relevant for the symbiosis under specific ecological pressures.
+
+![[SV_MDS_uniq_pls.png]]
+
+We can recover several gene organization related with transcriptional regulators, and membrane proteins possibly related with metabolism optimization and adaptation to stress, as well as proteins involved in plasmid stabilization through postsegregational killing or partitioning systems. For example:
+
+**Cluster 1:**  hypothetical protein, Dienelactone hydrolase-related enzyme and RcgA family putative transporter/Transmembrane protein.  Dienelactone hydrolase-related enzyme catalyzes the breakdown of cyclic ester, and it has been reported with the potential to degraded PET. On the other hand, RcgA was described as a transmembrane protein important for the conjugation of plasmids in *Rhizobium favelukesii* [Castellani et al. (2026)](https://doi.org/10.1128/spectrum.03242-25) 
+
+**Cluster 4**: 'Peptidase C14 caspase catalytic subunit p20', 'Alpha/beta hydrolase', 'DDE superfamily endonuclease;IS630 family transposase;transposase;Tc1-like transposase DDE domain-containing protein' --- 'Peptidase C14 caspase catalytic subunit p20' -> found in Caspases (Cystein ASPartate-specific proteASES), 'Alpha/beta hydrolase' -> diverse bond catalytic.
+
+**Cluster 10:** 'Peptidase;insulinase family protein;pitrilysin family protein;Peptidase M16 domain protein', 'hypothetical protein', 'Transposase;Transposase IS110;IS110 family transposase'
+
+**Cluster 11:** 'MFS transporter', 'aminotransferase class I/II-fold pyridoxal phosphate-dependent enzyme', 'SDR family NAD(P)-dependent oxidoreductase;Alcohol dehydrogenase;SDR family oxidoreductase'
+
+**Cluster 12:** 'hypothetical protein', 'Uncharacterized conserved small protein', 'type II toxin-antitoxin system RelE/ParE family toxin;XRE family transcriptional regulator;Phage-related protein' --- 
+
+**Cluster 13:** 'hypothetical protein;response regulator transcription factor;Helix-turn-helix transcriptional regulator;LuxR family transcriptional regulator', 'Transcriptional regulator MucR family;hypothetical protein;MucR family transcriptional regulator;MucR', 'magnesium/cobalt transporter CorA;Magnesium transporter;magnesium and cobalt transport protein CorA;Magnesium and cobalt transport protein CorA;hypothetical protein' --- 
+
+**Cluster 15** 'PLP-dependent aminotransferase family protein;Aminotransferase class I/II-fold pyridoxal phosphate-dependent enzyme', 'LysR family transcriptional regulator', 'MFS transporter' --- 'Lipocalin-like domain-containing protein', 'cyclophilin-like fold protein', 'hypothetical protein'
+
+**Cluster 16**: 'Heavy metal-binding protein', 'Periplasmic heavy metal sensor', 'Crp/Fnr family transcriptional regulator'  **---**  'efflux RND transporter permease subunit;Copper/silver efflux system membrane component', 'Transmembrane protein', 'Transmembrane protein' **---** 'copper chaperone CopZ', 'Cu(I)-responsive transcriptional regulator', 'hypothetical protein;TetR/AcrR family transcriptional regulator'
+
+
 
 > [!question]
-> I find the  structural variation approach interesting to find mobile element. The problem is that because panaroo relies on the protein families established, in addition to structures based on 3 proteins, then it generates paths like: ['hypothetical protein', 'IS630 family transposase', 'Reverse transcriptase domain-containing protein;Reverse transcriptase/maturase family protein;group II intron reverse transcriptase/maturase'] So I cannot know if in this case the IS630 is flanking the hypothetical protein. so here we have different interpretations. it could be:
-> 1. hypothetical -> IS630 -> group II maturase
-> 2.  IS630 -> hypothetical -> group II maturase
-> 3.  IS630 -> hypothetical  -> IS630 -> group II maturase
+> I find the  structural variation approach interesting to find mobile element. I am sure if relationships are correctly established. So far, it seems that transposons could be treated as paralogs as long as they have different neighbors 
 > 
-> Any of these relationships imply that hypothetical and the IS630 are found in the group, however the relationship itself might artificial produced by just one event of insertion of the IS630
+> ![[panaroo_gene_fam_collap.png|200]]
+> *"Panaroo uses context and a lower clustering threshold to combine diverse gene families into a single gene"*
 
 
 
@@ -532,7 +566,7 @@ Out of pyAMPA predictions only 88 proteins presented a signal peptide (Signalp6)
 ![[amp_pyamp_w_signalp_uniq_pls.png | 500]]
 
 
-## Horizontal Gene Transfer Between Non-pSyms Plasmids  (missing)
+## Horizontal Gene Transfer Between Accessory Plasmids And Plasmids in the PLSDB
 
 To investigate horizontal gene transfer (HGT), first, all plasmids that had at least a 500 bp match were retrieved from the PLSDB using Minimap2. Subsequently, the weighted Gene Repertoire Relatedness (wGRR) as describe in [Pfeir et al. (2024)](https://doi.org/10.1038/s41467-024-45757-3) was used. Briefly, wGRR take into account the number and identity of the bi-directional best hits (BBH) between all pair of plasmids. It return values between 0 and 1. It will be high when BBH are a large fraction of the smallest element and the proteins are very similar. wGRR is particularly useful to extract proteins related with HGT looking for low global wGRR values and high identity values.  
 
@@ -643,4 +677,4 @@ For Clustering there are two approaches to explore:
 
 [7] *Cooperation, Competition, and Specialized Metabolism in a Simplified Root Nodule Microbiome*
 
-[8] *Medicago root nodule microbiomes: insights into a complex ecosystem with potential candidates for plant growth promotion*
+[8] *Medicago root nodule microbiomes: insights into a complex ecosystem with potential candidates for plant growth promotion**

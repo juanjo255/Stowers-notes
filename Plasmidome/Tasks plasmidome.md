@@ -45,23 +45,23 @@
 	* Assign GOCs to plasmids and plot in PCA.✅
 	* Plot PCA with GOCs.✅
 	* Annotate defenses system with defense finder. Any defense enriched in accessory plasmids?
-		* annotate in chromosome
-		* annotate in psymA
-		* annotate in psymB
-		* annotate in acc. pls
+		* annotate in chromosome.✅
+		* annotate in psymA.✅
+		* annotate in psymB.✅
+		* annotate in acc. pls.✅
 	* Map IS in pan-genome.
 	* Create single-version of networks with LIONESS. This might help us visualize how the samples interactions differ when plasmids are removed. In this case I do not have phenotypic outcomes, so everything would be just function-based. 
 
 
 * For each cluster:
-	* Number of genes overlapping between plasmid groups, and plasmids groups with pSymAB and chromosomes.
+	* Number of genes overlapping between plasmid groups, and plasmids groups with pSymAB and chromosomes..✅
 
 + Describe plasmids
 	- Presence of TA systems. ✅
-	- CDS 
-	- Antismash (secondary metabolite biosynthetic) 
+	- CDS .✅
+	- Antismash (secondary metabolite biosynthetic) .✅
 	- CAZymes 
-	- AMPs 
+	- AMPs .✅
 
 
 
