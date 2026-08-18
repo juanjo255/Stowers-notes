@@ -8,6 +8,20 @@
         "type": "tabs",
         "children": [
           {
+            "id": "66fd033455f74c5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UppAF_podJ/UppA-F and podJ Bradyrhizobium and Sinorhizobium.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "UppA-F and podJ Bradyrhizobium and Sinorhizobium"
+            }
+          },
+          {
             "id": "30884cc546571517",
             "type": "leaf",
             "state": {
@@ -36,63 +50,21 @@
             }
           },
           {
-            "id": "eaa4db8abb4b6568",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CompBio ToDo Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CompBio ToDo Notes"
-            }
-          },
-          {
             "id": "86e99c8e0ee92140",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Plasmidome/Plasmidome.md",
+                "file": "CompBio Projects ToDo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Plasmidome"
-            }
-          },
-          {
-            "id": "c8f3cb443aa5c2de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plasmidome/Plasmidome_paper_draft.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Plasmidome_paper_draft"
-            }
-          },
-          {
-            "id": "aa52d286aefc9a8f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UppAF_podJ/UppA-F and podJ Bradyrhizobium and Sinorhizobium.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "UppA-F and podJ Bradyrhizobium and Sinorhizobium"
+              "title": "CompBio Projects ToDo"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -137,7 +109,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -248,23 +222,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fba0439d34130a70",
+  "active": "86e99c8e0ee92140",
   "lastOpenFiles": [
-    "UppAF_podJ",
-    "UppAF_podJ/UppA-F and podJ Bradyrhizobium and Sinorhizobium.md",
+    "FISH.md",
+    "CompBio Projects ToDo.md",
+    "Project-report-cbio.mm2883.102.md",
     "Plasmidome/Plasmidome.md",
+    "NCR_prediction/NCR PLM.md",
+    "NCR_prediction/NCR_prediction_Fenugreek_and_Sainfoin.md",
+    "Plasmidome w extra dakota.md",
+    "Plasmidome/Dakota Collab Assembly Report.md",
+    "Plasmidome/photos/SV_tSNE_uniq_pls_mobmess.svg",
+    "Plasmidome/photos/GF_tSNE_uniq_pls_mobmess.svg",
+    "Plasmidome/photos/cog_comp_acc_pls_enriched.svg",
+    "Plasmidome/photos/cog_comp_acc_pls_all_clusters.svg",
+    "Plasmidome/photos/cog_comp_acc_pls.svg",
+    "Plasmidome/photos/cog_enrich_per_cluster_HDBSCAN_dotplot.svg",
+    "Plasmidome/photos/cog_enrich_per_cluster_dotplot.svg",
+    "Plasmidome/photos/COG_plasmids.svg",
+    "Plasmidome/Plasmidome paper draft.md",
     "Plasmidome/Plasmidome_paper_draft.md",
-    "Plasmidome/photos/mobmess_cluster_types_pre_post_filter.png",
-    "Plasmidome/photos/trinucleotide_comp_contigs.png",
-    "Plasmidome/photos/example_low_cov.png",
-    "Plasmidome/photos/example_high_cov.png",
-    "Plasmidome/photos/inset_image_pls_fusion.png",
-    "Plasmidome/photos/pls_fusion_example.png",
-    "Plasmidome/photos/pls_fusion_example 1.png",
-    "Plasmidome/photos/pls_fusion_2.png",
-    "Plasmidome/photos/mobmess_clusters_filtfragments.png",
+    "Plasmidome/photos/pls_features_stackbar.svg",
+    "Plasmidome/photos/num_repABC_per_pls_heatmap.svg",
+    "UppAF_podJ/UppA-F and podJ Bradyrhizobium and Sinorhizobium.md",
     "Plasmidome/Tasks plasmidome.md",
-    "Screenshot 2026-06-02 at 11.26.31 AM.png",
+    "Hunting a Plasmid (pMAG215).md",
+    "UppAF_podJ",
     "Plasmidome/Literature Summary.md",
     "n/projects/jp2992/stowers-notes/Plasmidome/Plasmidome_paper_draft.md",
     "n/projects/jp2992/stowers-notes/Plasmidome",
@@ -272,14 +255,12 @@
     "n/projects/jp2992",
     "n/projects",
     "n",
-    "CompBio ToDo Notes.md",
     "Microbiome in clouds with ONT.md",
     "IMG_3745.heic",
     "IMG_3744.heic",
     "Plasmidome/Microbiome Medicago truncatula-sativa.md",
     "Plasmidome/Plasmidome_figures.pptx.sb-b8283980-ZZLCQe/Plasmidome_figures.pptx",
     "Plasmidome/Plasmidome_figures.pptx.sb-b8283980-ZZLCQe",
-    "Plasmidome/~$Plasmidome_figures.pptx",
     "Plasmidome/academic-research-skills/academic-paper/agents/visualization_agent.md",
     "Plasmidome/academic-research-skills/academic-paper/agents/structure_architect_agent.md",
     "Plasmidome/academic-research-skills/academic-paper/agents/socratic_mentor_agent.md",
@@ -288,13 +269,6 @@
     "Plasmidome/academic-research-skills/academic-paper/agents/literature_strategist_agent.md",
     "Plasmidome/academic-research-skills/academic-paper/agents/intake_agent.md",
     "Plasmidome/academic-research-skills/academic-paper/agents/formatter_agent.md",
-    "Plasmidome/academic-research-skills/academic-paper/agents/draft_writer_agent.md",
-    "Plasmidome/academic-research-skills/academic-paper/agents/citation_compliance_agent.md",
-    "Plasmidome/academic-research-skills/academic-paper/agents/argument_builder_agent.md",
-    "Plasmidome/academic-research-skills/academic-paper/agents/abstract_bilingual_agent.md",
-    "Plasmidome/academic-research-skills/academic-paper/SKILL.md",
-    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates/revision_response_template.md",
-    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates/peer_review_report_template.md",
-    "Plasmidome/academic-research-skills/academic-paper-reviewer/templates/editorial_decision_template.md"
+    "Plasmidome/academic-research-skills/academic-paper/agents/draft_writer_agent.md"
   ]
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="170" viewBox="0 0 300 170">
+<defs><style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:bold;fill:#000}
+.text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#000}
+.link{fill:#2A6FDB}
+</style></defs>
+<rect width="300" height="170" fill="white"/>
+<text x="12" y="24" class="title">Node colors</text>
+<text x="12" y="47" class="text"><tspan class="link">cluster_type</tspan><tspan> attribute as a</tspan></text>
+<text x="12" y="66" class="text">category:</text>
+<rect x="16" y="82" width="12" height="12" fill="#1F77B4"/><text x="42" y="93" class="text">backbone</text>
+<rect x="16" y="104" width="12" height="12" fill="#FF9900"/><text x="42" y="115" class="text">maximal_not_in_system</text>
+<rect x="16" y="126" width="12" height="12" fill="#D81B8A"/><text x="42" y="137" class="text">fragment</text>
+<rect x="16" y="148" width="12" height="12" fill="#17BECF"/><text x="42" y="159" class="text">compound</text>
+</svg>

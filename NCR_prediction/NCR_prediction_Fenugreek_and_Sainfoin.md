@@ -34,11 +34,15 @@ Siva collaborated in an interesting [paper](https://doi.org/10.1101/2025.09.09.6
 
 # Data
 
-The Sainfoin genome was retrieved from its [paper](https://doi.org/10.1038/s42003-023-05754-6) (as of 17-nov-2025 it is not in the NCBI)
 
-The Fenugreek genome was assembled with Spades with the DNA data generated in this [paper](https://doi.org/10.1016/j.fochms.2021.100044) and saved under the SRA code [ERR5639085](https://trace.ncbi.nlm.nih.gov/Traces?run=ERR5639085) 
+* The *Sainfoin* genome was retrieved from its [paper](https://doi.org/10.1038/s42003-023-05754-6) (as of 17-nov-2025 it is not in the NCBI)
 
-The Fenugreek transcriptome was assembled with RNA_Spades using the following public data: SRR14721915, SRR14721912, SRR14721913, SRR14721911, SRR14721914, SRR14721916
+* The *Fenugreek* genome was assembled with Spades with the DNA data generated in this [paper](https://doi.org/10.1016/j.fochms.2021.100044) and saved under the SRA code [ERR5639085](https://trace.ncbi.nlm.nih.gov/Traces?run=ERR5639085) 
+
+* The *Fenugreek*'s transcriptome was described in a [paper](https://doi.org/10.1038/s41598-022-17779-8) , however, it had to be assembled in house with *RNASpades* using the following public data: **SRR14721915, SRR14721912, SRR14721913, SRR14721911, SRR14721914, SRR14721916** associated to [PRJNA734905](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA734905/) bioproject
+
+* *Trigonella corniculata* genome was retrieved from its [paper](https://doi.org/10.1038/s41597-025-04858-4) saved in the NCBI with [JBLEBM000000000.1](https://www.ncbi.nlm.nih.gov/nuccore/JBLEBM000000000.1/) code
+
 
 
 
@@ -60,9 +64,6 @@ The workflows are for editing in [Miro](https://miro.com/app/board/uXjVJaFw9G8=/
 To validate the methods, Medicago truncatula was annotated and the curated list ([ref_mtruncatula_NCRs.csv](https://webfs/n/projects/jp2992/NCR_screening/ref_truncatula/NCR_screening/ref_mtruncatula_NCRs.csv) of NCR (715 NCRs) from M. truncatula taken from [Morphotype of bacteroids in different legumes correlates with the number and type of symbiotic NCR peptides](https://www.pnas.org/doi/pdf/10.1073/pnas.1704217114) used to confirm the results using MMseqs2 as aligner.
 
 
-> [!QUESTION]
-> Siva asked: Is it possible to predict anything with a signal? Yes, but the false positive are high. I have seen that just getting ORFs. Thousands get signal peptide. 
-> 
 
 ****
 
@@ -98,15 +99,14 @@ RBH=Reciprocal Best Hit
 | Sainfoin                  | 1614           | 56                                |
 | Fenugreek (transcriptome) | 427            | 169                               |
 
-****
 
 ## Curious fact
 
 I tried to confirmed the NCRs using the proteome. Only 13 NCRs were detected (cov. and id. 0.9 ). Confirming that even 12 year after SPADA pipeline, current annotators are still not ready to annotate CRPs.
 
-****
 
-## ESM
+
+## ESM (experimental)
 
 In this case, I am gonna try the ESM model which is a protein language models that predict protein structure. It can be trained on NCR peptides to see how good it is at predicting peptides. 
 

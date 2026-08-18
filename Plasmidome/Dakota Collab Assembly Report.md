@@ -29,3 +29,8 @@ In the picture the helicopter propeller is probably the two psymA/B and there ar
 
 <img src="https://webfs/n/projects/jp2992/stowers-notes/photos/plassembler_asm_P9A10.png" height=400 > 
 		Plassembler in this case reported no circular plasmids. 
+
+
+# Some Updates
+
+After the author's submission to the NCBI we were able to capture more strains. Initially, we had 96 now we count with 184.

@@ -243,7 +243,7 @@ The vast majority of HGT connections were to plasmids from other *Rhizobiales* /
 
 The accessory plasmidome of *S. meliloti* has remained largely uncharacterized despite decades of research on its two megaplasmids. By applying long-read sequencing to 256 strains and combining containment-based de-replication with broad functional annotation, we provide the first systematic description of this plasmid reservoir. Three themes emerge.
 
-**Large size as a defining characteristic.** *S. meliloti* accessory plasmids are unusually large, with a rightward-skewed size distribution concentrated above 60 kb. The prevalence of multiple RepABC modules per plasmid, specific Tn3-mediated fusion events, and IS family enrichment per plasmid cluster collectively argue that cointegrate formation is a recurring process. The largest element (749 kb) approaches the size of small chromids and may represent a transitional state in the trajectory from accessory plasmid to megaplasmid — a trajectory the *S. meliloti* system appears to facilitate through successive fusion events. The combination of low-copy number maintenance (inferred from reduced sequencing coverage), active partition systems (high prevalence of complete RepABC operons), and size-dependent reduction in TA system accumulation are consistent with the theoretical framework for megaplasmid emergence from large accessory elements [Hall *et al.* (2022)](https://doi.org/10.1098/rstb.2020.0472).
+**Large size as a defining characteristic.** *S. meliloti* accessory plasmids are unusually large, with a rightward-skewed size distribution concentrated above 60 kb. The prevalence of multiple RepABC modules per plasmid, specific Tn3-mediated fusion events, and IS family enrichment per plasmid cluster collectively argue that cointegrate formation is a recurring process. th
 
 **Functional specialization and ecological differentiation.** Gene content analysis revealed that accessory plasmid clusters carry functionally distinct repertoires not predicted by replicon type or collection origin. The enrichment of NRPS-type BGCs (particularly solanimycin-like gene clusters), heavy metal resistance operons (cluster 16), MucR-associated regulators (cluster 13), and diverse transport genes in distinct plasmid clusters suggests that *S. meliloti* uses accessory plasmids to expand its adaptive capacity across heterogeneous soil environments. The presence of symbiosis-relevant lipoproteins (ExoI, LppA homologs) on accessory plasmids raises the possibility that accessory elements contribute to competitive nodulation ability beyond the canonical pSymA-encoded pathway.
 
@@ -279,7 +279,7 @@ Accessory plasmid sequences from all three in-house datasets were combined with 
 
 ### MOB and MPF Typing
 
-Relaxase (MOB) and mate pair formation (MPF) types were assigned using MOB-Suite.
+Relaxase (MOB) and mate pair formation (MPF) types were assigned using mob_type MOB-Suite.
 
 ### Replicon Typing
 

@@ -5,14 +5,14 @@ Find UppA-F cluster and podJ in *Bradyrhizobium* and *Sinorhizobium meliloti*
 # Method
 
 1. All sequences were downloaded using `datasets` command line tool from the NCBI
-* For *Bradyrhizobium* references genomes were downloaded for each specie
+	* For *Bradyrhizobium* references genomes were downloaded for each specie
 	`datasets download genome taxon "Bradyrhizobium" --include gbff --assembly-source "RefSeq" --reference`
-*  For *Sinorhizobium meliloti* genomes were downloaded using RefSeq to include strains 
+	*  For *Sinorhizobium meliloti* genomes were downloaded using RefSeq to include strains 
 	`datasets download genome taxon "Sinorhizobium meliloti" --include gbff --assembly-source "RefSeq"`
-	
-1. Sequences were searched using `Cblaster` 
+2. Gene UppA-F and podJ were extracted from `GCA_000011365.1__b_diazoefficiens_USDA110` and ``
+3. Sequences were searched using `Cblaster` 
 	`/n/projects/jp2992/aleja/code/search_genes.sh`
-	
+3.   
 
 # Result
 

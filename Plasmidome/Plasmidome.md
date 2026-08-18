@@ -255,7 +255,7 @@ With *S. meliloti* something curious happen, their plasmids are very large > 50k
 
 ![[len_QC_distri_all_datasets_plasmids.png | 400 ]]
 
-After MobMess clustering, QC values were 48–65%, and plasmid sizes ranged from 12 kb to 700 kb. The 700-kb plasmids exceed the typical threshold for megaplasmids (~300 kb) and are unusually large for accessory elements. Notably, there are two assemblies containing this large plasmid, one of them presented the chromosome, pSymA, pSymB, and the accessory plasmid itself all circularized, however the other one was recognized as a Type I error. This observation is intriguing and may indicate that this replicon represents a mobilizable megaplasmid, or a recently "evolved" element.
+After MobMess clustering, QC values were 48–65%, and plasmid sizes ranged from 34 kb to 700 kb. The 700-kb plasmids exceed the typical threshold for megaplasmids (~300 kb) and are unusually large for accessory elements. Notably, there are two assemblies containing this large plasmid, one of them presented the chromosome, pSymA, pSymB, and the accessory plasmid itself all circularized, however the other one was recognized as a Type I error. This observation is intriguing and may indicate that this replicon represents a mobilizable megaplasmid, or a recently "evolved" element.
 
 >**Assembly graph with 700kb plasmid**
 >/Volumes/projects/jp2992/MOLNG4331/dakota_collab/P9/flye_asm/P9G4/assembly_graph.gfa
@@ -342,7 +342,6 @@ Based on this classification scheme, we further explored the Replicon group comp
 
 [replicon_groups.ipynb](/n/projects/jp2992/Plasmidome_project_MOLNG_4509/code/replicon_groups.ipynb) 
 
-
 ##### Origin of Replication (oriV)
 
 During a [[Comparison of Origin of Replication]] between the 44 strains assembled in house, we observed that the predicted oriV by PlasAnn presented different k-mer composition between accessory plasmids, pSymA, pSymB and the chromosome. Origin of replication were annotated for 225 out of 304 putative accessory plasmids sequences. The discrepancy between the amount of predicted oriV and RepABC might be because it depends on finding a RepA and matching an intergenic Spacer (IGS) sequence in proximity to the RepA hit.
@@ -386,7 +385,7 @@ Sinorhizobium meliloti accessory plasmids have been referred as *cryptic plasmid
 ![[heatmap_TA_systems_clustered.png|600]]
 ![[heatmap_TA_systems_mean_clustered.png|600]]
 
-Thus, to annotate TA systems, the HMM models from TASmania were used. Currently there are two ways to annotate TA systems, using the highly curated TADB or using the more "discovery-oriented. TASmania presents higher sensitivity than TADB, however, TASmania  models were built mining for interpro annotated TA in more than 41k assemblies, therefore it has a higher risk of false positive. [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) annotated TA systems for approximately 10k plasmids using TASmania models, and they subsequently trained a Random Forest model which achieved 95% accuracy predicting PTUs. 
+Thus, to annotate TA systems, the HMM models from TASmania were used. Currently there are two ways to annotate TA systems, using the highly curated TADB or using the more "discovery-oriented". TASmania presents higher sensitivity than TADB, however, TASmania  models were built mining for interpro annotated TA in more than 41k assemblies, therefore it has a higher risk of false positive. [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) annotated TA systems for approximately 10k plasmids using TASmania models, and they subsequently trained a Random Forest model on TA systems frequency which achieved 95% accuracy predicting PTUs. 
 
 However, TASmania models due to its discovery approach and the difficulty to assess the its predictions, it is likely to produce a high false positive rate [Akarsu et al. (2019)](https://doi.org/10.1371/journal.pcbi.1006946) . Interestingly,  [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) reported that ParB/RepB/Spo0J, Hok/Gef, RelE/ParE, and PemI coding sequences were found among the most influential features for the model accuracy. Our plasmids replicated the same effect to that reported by [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) analysis, where there is a decreasing in the accumulation of TA systems along plasmids sizes. [Bethke *et al.* (2023)](https://doi.org/10.1093/molbev/msae206) suggested that larger plasmids can increase competence by presenting more beneficial accessory genes compared to small plasmids, therefore larger plasmids tends to reach a saturation point where TA systems offer little advantage and this can be overcome with the inclusion of other beneficial genes through HGT. Such effect has been observed in the context of Restriction-Modification (R-M) systems, [Shaw *et al.* (2023)](https://doi.org/10.1093/nar/gkad452) found that the escape from type II R-M system was associated with plasmid size and host range, implying that while small plasmids might adapt by small mutations, large plasmids opted to add additional beneficial genes providing higher vertical transmission at the cost of horizontal transfer.
 
@@ -441,7 +440,7 @@ Therefore, we investigate the number of Rep proteins in each plasmids. Interesti
 ![[num_repABC_per_pls_plasAnn.png]]
 ![[num_repABC_per_pls.png]]
 
- Using MobMess, we can observed several such events. For example, *contig_4_m64404e_240531_162148.hifi_reads.bc2042--bc2042* is a ~314kb plasmid product of the fusion of two plasmids (~158kb and ~146kb) mediated by transposases from the Tn3 family. [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/2_contained_in_one.html). Similarly, *contig_3_m64404e_240423_150118.hifi_reads.bc2012--bc2012* represent a ~149kb plasmid that contains a 73kb plasmids flanked also by a Tn3 transposase family [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/contig_4_bc295_vs_contig_13_bc2012.html) 
+ Using MobMess, we can observed several such events. For example, *contig_4_m64404e_240531_162148.hifi_reads.bc2042--bc2042* is a ~314kb plasmid product of the fusion of two plasmids (~158kb and ~146kb) mediated by transposases from the Tn3 family. [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/plasmids_fusions/2_contained_in_one.html). Similarly, *contig_3_m64404e_240423_150118.hifi_reads.bc2012--bc2012* represent a ~149kb plasmid that contains a 73kb plasmids flanked also by a Tn3 transposase family [Check protein alignment >90% of three representatives](https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/plasmids_decontamination/plasmids_fusions/contig_4_bc295_vs_contig_13_bc2012.html) 
 
 **Image below shows both plasmids cointegrates**: plasmid fusion, and plasmid and MGE cointegrate (possibly an ICE).
 
@@ -508,9 +507,9 @@ We can recover several gene organization related with transcriptional regulators
 
 ## *Sinorhizobium meliloti* Can Acquire Defenses Systems Through Accessory Plasmids
 
-The annotation of ArdC during Toxin-Antitoxin system, which has been linked to protection against (RM) systems [Belogurov et al., 2000], led us to investigated whether _S. meliloti_ strains can acquire defense systems, including RM systems. As observed previously, accessory plasmids can carry TA systems, which promote plasmid addiction through post‑segregational killing. Similarly, plasmids can harbor type II RM systems, which can enhance stability via an analogous mechanism: methylation of host DNA prevents endonuclease cleavage [Tsang et al., 2017]. Beyond metabolic genes, plasmids may also carry determinants of antibiotic resistance, phage protection, and interspecies competition.
+The annotation of ArdC during Toxin-Antitoxin system, which has been linked to protection against (RM) systems [Belogurov et al., 2000](), led us to investigated whether _S. meliloti_ strains can acquire defense systems, including RM systems. As observed previously, accessory plasmids can carry TA systems, which promote plasmid addiction through post‑segregational killing. Similarly, plasmids can harbor type II RM systems, which can enhance stability via an analogous mechanism: methylation of host DNA prevents endonuclease cleavage [Tsang et al., 2017](). Beyond metabolic genes, plasmids may also carry determinants of antibiotic resistance, phage protection, and interspecies competition.
 
-Interestingly, most defense systems were concentrated on pSymA and the chromosome, with only a few strains harboring defense systems on pSymB. SoFIC, RM Gabija, and SanaTA were the most common defense systems. Similarly, the accessory plasmids most frequently carried Gabija, RM, and CBASS. The presence of RM systems suggests that _S. meliloti_ can acquire them via horizontal gene transfer (HGT), for example through accessory plasmids.
+Interestingly, most defense systems were concentrated on pSymA and the chromosome, with only a few strains harboring defense systems on pSymB. SoFIC, RM, Gabija, and SanaTA were the most common defense systems. Similarly, the accessory plasmids most frequently carried Gabija, RM, and CBASS. The presence of RM systems suggests that _S. meliloti_ can acquire them via horizontal gene transfer (HGT), for example through accessory plasmids.
 
 Among RM types, we found type I, II, and IV, with type II being the most common (13/100). Likewise, on the chromosome and megaplasmids, type II RM was also the most frequent (78/256). This contrasts with the prevailing view that _S. meliloti_—and perhaps the entire genus—carries only type I RM. Notably, 15 genomes and two plasmids harbored a type IV RM system, which functions oppositely by cleaving methylated DNA. Type III and type IV were the rarest overall.
 
@@ -576,7 +575,10 @@ To investigate horizontal gene transfer (HGT), first, all plasmids that had at l
 
 In order to explore HGT, having computed the wGRR between all-vs-all plasmids, we filtered for plasmids with 0.01 < wGRR < 0.1 as suggested by [Pfeir et al. (2024)](https://doi.org/10.1038/s41467-024-45757-3). The pie below plots the top 10 mean percentage of connections per plasmids in our dataset. We observed that most HGT recovered by this metric are between members of the same order Rhizobiales/Hyphomicrobiales with 7 out of 10 belonging to the Rhizobiaceae family. This reflects that accessory plasmids presents highly host-linage restriction to the family and even to genus level. Interestingly, this is in line with recent experimental and bioinformatics analyses suggesting that plasmid conjugation is biased toward host kin, where plasmid transfer is limited by the host defense systems [Dimitriu et al. (2019)](https://doi.org/10.1098/rspb.2019.1110)  and molecular compatibility, for example, studies in the conjugable plasmids IncF demonstrated that their conjugation is heavily mediated by the interaction between outer membrane proteins encoded by the plasmid's donor and the recipient [He et al. (2026)](https://doi.org/10.1128/jb.00536-25) [Low et. al (2022)](https://doi.org/10.1038/s41564-022-01146-4) 
 
-![[pie_genus_connections_uniq_pls.png|600]]
+![[pie_genus_connections_uniq_pls.png|400]]
+
+![[HGT_top10genus_per_cluster.png]]
+![[HGT_rare_connection_per_cluster.png]]
 We can observe the top 20 plasmid clusters ranked by number of plasmids in the group.
 
 ![[HGT_net_FR_layout.png|600]]
@@ -592,6 +594,88 @@ Create single-version of networks with LIONESS. This might help us visualize how
 
 LIONESS does not reconstruct networks. It integrates existing reconstructions to estimate. A common scenario are Pearson correlation network using transcriptomic data, which turns out to be relevant for us, as we can create gene correlations.
 
+
+
+## Strains With Only 2 Replicons Greater than 1 Mb
+
+
+Let's check on the strains previouslyI reported that had a notably big chromosome > 4 Mb, and 4 strains only had 2 replicons greater than 1 Mb; corresponding to the chromosome and the pSymA. 
+
+| sample_id                                       | # contigs > 1Mb |
+| ----------------------------------------------- | --------------- |
+| P9E10_R3L_R4X                                   | 2               |
+| P9F10_G8T_R4X                                   | 2               |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010 | 2               |
+| m64404e_240531_162148.hifi_reads.bc2076--bc2076 | 2               |
+
+
+Check the following dotplots created using command:
+	```minimap2 -c -x asm5 /n/analysis/genomes/Sinorhizobium_meliloti/GCF_000006965.1_ASM696v1_refseq/GCF_000006965.1_ASM696v1_genomic.fna assembly.fasta -o assembly_vs_B02.paf && conda run -n paf2dotplot paf2dotplot.r -m 10000 -q 0 -r 0  assembly_vs_B02.paf```
+
+> [!question]
+> Notice that the pSymB was assembled inside the Chromosome. Is this natural or a missassembly?
+
+https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/asm_w_big_chr/P9E10_R3L_R4X_vs_B02.paf.pdf
+
+https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/asm_w_big_chr/P9F10_G8T_R4X_vs_B02.paf.pdf
+
+https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/asm_w_big_chr/m64404e_240423_150118.hifi_reads.bc2010--bc2010_vs_B02.paf.pdf
+
+https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/asm_w_big_chr/m64404e_240531_162148.hifi_reads.bc2076--bc2076_vs_B02.paf.pdf
+
+### Penn state strains 
+
+There are two strains in penn state that presented this fusion (bold in table below). Below a table with a group of strains that are also similar.
+
+The strains listed are very similar and most of them present 3 accessory plasmids and a pSymA as big as the pSymB. 
+
+Here it is a IGV session loading the reads, the annotations and assembly alignemnt with the Rm1021 and *m64404e_240531_162148.hifi_reads.bc2088--bc2088* a closely related strain below. 
+
+https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/asm_w_big_chr/bc2010_psymB_fussion_inspection_igv_session.xml
+
+> [!warning]
+> We can observed the fusion seems to be the product of a 5kb homologous region between the two strains. It can represent an assembly error, however there are a couple of reasons why it might not be:
+> 	1. **Reads coverage:** There is not a big increment or decrease in reads in the fusion regions.
+> 	2. **Read lengths:** According to the related strain, the homologous region in of about 5kb, N50 and N70 are 5kb and 7kb, respectively.
+> 	3. **Read alignment:** I do not see clipping in reads. if the fusion was an artifact, I should see severa reads with right or left clipping.
+> 	4. **Re-assemble**: I re-assembled in three ways: 1) Flye using higher min. overlap value (5 and 6kb), 2) Flye using meta option which is sensible to coverage fluctuation, and 3) Hifiasm. 
+
+| q                                                   | t                                                   | ANI         |
+| --------------------------------------------------- | --------------------------------------------------- | ----------- |
+| **m64404e_240423_150118.hifi_reads.bc2010--bc2010** | **m64404e_240531_162148.hifi_reads.bc2076--bc2076** | **99.9994** |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010     | m64404e_240531_162148.hifi_reads.bc2088--bc2088     | 99.9813     |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010     | m64404e_240531_162148.hifi_reads.bc2066--bc2066     | 99.979      |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010     | m64404e_240531_162148.hifi_reads.bc2033--bc2033     | 99.9777     |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010     | m64404e_240531_162148.hifi_reads.bc2057--bc2057     | 99.9775     |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010     | m64404e_240531_162148.hifi_reads.bc2063--bc2063     | 99.9774     |
+| m64404e_240423_150118.hifi_reads.bc2010--bc2010     | m64404e_240423_150118.hifi_reads.bc2072--bc2072     | 99.9771     |
+
+
+
+### Dakota strains
+
+Similarly, dakota dataset presented two strains with the fusion (bold below). The table below shows closely related strains 
+
+Here it is a IGV session loading the reads, the annotations and assembly alignemnt with the Rm1021 and *P9D9* a closely related strain below. 
+
+https://webfs/n/projects/jp2992/Plasmidome_project_MOLNG_4509/asm_w_big_chr/P9E10_R3L_R4X_psymB_fussion_inspection_igv_session.xml
+
+Strains down to P9G3 the strains have 3 accessory plasmids. The rest present one or two of them.
+
+This case was reviewed in the same way as penn state (see above), however this case is slightly different to penn state, here we have strains that are less similar between them compared to the latter which could explain why I do not see the homologous regions found in penn state or perhaps it is the product of IS.
+
+
+| q                 | t                 | ANI         |
+| ----------------- | ----------------- | ----------- |
+| **P9E10_R3L_R4X** | **P9F10_G8T_R4X** | **99.9931** |
+| P9E10_R3L_R4X     | P9D9              | 99.9806     |
+| P9E10_R3L_R4X     | P9G3              | 99.9788     |
+| P9E10_R3L_R4X     | P9B6              | 99.9787     |
+| P9E10_R3L_R4X     | P9A11             | 99.9702     |
+| P9E10_R3L_R4X     | P9B11             | 99.966      |
+| P9E10_R3L_R4X     | P9B10             | 99.961      |
+| P9E10_R3L_R4X     | P9D10             | 99.9555     |
+| P9E10_R3L_R4X     | P9C9_R3L_Y9Q      | 99.9547     |
 
 
 

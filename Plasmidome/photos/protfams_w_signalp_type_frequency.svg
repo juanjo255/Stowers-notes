@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="699.779846pt" height="437.822423pt" viewBox="0 0 699.779846 437.822423" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-12T14:02:01.479228</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.5, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 437.822423 
+L 699.779846 437.822423 
+L 699.779846 0 
+L 0 0 
+L 0 437.822423 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 26.87625 241.72 
+L 569.37625 241.72 
+L 569.37625 10.72 
+L 26.87625 10.72 
+L 26.87625 241.72 
+z
+" style="fill: none"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 28.2325 241.72 
+L 39.0825 241.72 
+L 39.0825 21.72 
+L 28.2325 21.72 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 41.795 241.72 
+L 52.645 241.72 
+L 52.645 55.857931 
+L 41.795 55.857931 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 55.3575 241.72 
+L 66.2075 241.72 
+L 66.2075 91.26023 
+L 55.3575 91.26023 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 68.92 241.72 
+L 79.77 241.72 
+L 79.77 92.524598 
+L 68.92 92.524598 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 82.4825 241.72 
+L 93.3325 241.72 
+L 93.3325 102.63954 
+L 82.4825 102.63954 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 96.045 241.72 
+L 106.895 241.72 
+L 106.895 105.168276 
+L 96.045 105.168276 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 109.6075 241.72 
+L 120.4575 241.72 
+L 120.4575 110.225747 
+L 109.6075 110.225747 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 123.17 241.72 
+L 134.02 241.72 
+L 134.02 111.490115 
+L 123.17 111.490115 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 136.7325 241.72 
+L 147.5825 241.72 
+L 147.5825 112.754483 
+L 136.7325 112.754483 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 150.295 241.72 
+L 161.145 241.72 
+L 161.145 117.811954 
+L 150.295 117.811954 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 163.8575 241.72 
+L 174.7075 241.72 
+L 174.7075 120.34069 
+L 163.8575 120.34069 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 177.42 241.72 
+L 188.27 241.72 
+L 188.27 122.869425 
+L 177.42 122.869425 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 190.9825 241.72 
+L 201.8325 241.72 
+L 201.8325 131.72 
+L 190.9825 131.72 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 204.545 241.72 
+L 215.395 241.72 
+L 215.395 145.628046 
+L 204.545 145.628046 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 218.1075 241.72 
+L 228.9575 241.72 
+L 228.9575 149.421149 
+L 218.1075 149.421149 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 231.67 241.72 
+L 242.52 241.72 
+L 242.52 151.949885 
+L 231.67 151.949885 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 245.2325 241.72 
+L 256.0825 241.72 
+L 256.0825 153.214253 
+L 245.2325 153.214253 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 258.795 241.72 
+L 269.645 241.72 
+L 269.645 153.214253 
+L 258.795 153.214253 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 272.3575 241.72 
+L 283.2075 241.72 
+L 283.2075 155.742989 
+L 272.3575 155.742989 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 285.92 241.72 
+L 296.77 241.72 
+L 296.77 155.742989 
+L 285.92 155.742989 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 299.4825 241.72 
+L 310.3325 241.72 
+L 310.3325 158.271724 
+L 299.4825 158.271724 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 313.045 241.72 
+L 323.895 241.72 
+L 323.895 188.616552 
+L 313.045 188.616552 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 326.6075 241.72 
+L 337.4575 241.72 
+L 337.4575 188.616552 
+L 326.6075 188.616552 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 340.17 241.72 
+L 351.02 241.72 
+L 351.02 189.88092 
+L 340.17 189.88092 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 353.7325 241.72 
+L 364.5825 241.72 
+L 364.5825 189.88092 
+L 353.7325 189.88092 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 367.295 241.72 
+L 378.145 241.72 
+L 378.145 191.145287 
+L 367.295 191.145287 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 380.8575 241.72 
+L 391.7075 241.72 
+L 391.7075 193.674023 
+L 380.8575 193.674023 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 394.42 241.72 
+L 405.27 241.72 
+L 405.27 198.731494 
+L 394.42 198.731494 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 407.9825 241.72 
+L 418.8325 241.72 
+L 418.8325 198.731494 
+L 407.9825 198.731494 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 421.545 241.72 
+L 432.395 241.72 
+L 432.395 198.731494 
+L 421.545 198.731494 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 435.1075 241.72 
+L 445.9575 241.72 
+L 445.9575 199.995862 
+L 435.1075 199.995862 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 448.67 241.72 
+L 459.52 241.72 
+L 459.52 201.26023 
+L 448.67 201.26023 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 462.2325 241.72 
+L 473.0825 241.72 
+L 473.0825 203.788966 
+L 462.2325 203.788966 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 475.795 241.72 
+L 486.645 241.72 
+L 486.645 203.788966 
+L 475.795 203.788966 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 489.3575 241.72 
+L 500.2075 241.72 
+L 500.2075 203.788966 
+L 489.3575 203.788966 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 502.92 241.72 
+L 513.77 241.72 
+L 513.77 203.788966 
+L 502.92 203.788966 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 516.4825 241.72 
+L 527.3325 241.72 
+L 527.3325 205.053333 
+L 516.4825 205.053333 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 530.045 241.72 
+L 540.895 241.72 
+L 540.895 206.317701 
+L 530.045 206.317701 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 543.6075 241.72 
+L 554.4575 241.72 
+L 554.4575 206.317701 
+L 543.6075 206.317701 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="patch_42">
+    <path d="M 557.17 241.72 
+L 568.02 241.72 
+L 568.02 206.317701 
+L 557.17 206.317701 
+z
+" clip-path="url(#p3b79046377)" style="fill: #c14a43"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="ma395592a0d" d="M 0 0 
+L 0 2 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma395592a0d" x="33.6575" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="29.359175" y="249.018325" transform="rotate(-315 29.359175 249.018325)">hypothetical protein</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#ma395592a0d" x="47.22" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="42.921675" y="249.018325" transform="rotate(-315 42.921675 249.018325)">Carbonic anhydrase</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#ma395592a0d" x="60.7825" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="56.484175" y="249.018325" transform="rotate(-315 56.484175 249.018325)">ABC transporter permease protein</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#ma395592a0d" x="74.345" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="70.046675" y="249.018325" transform="rotate(-315 70.046675 249.018325)">putative ABC transporter binding protein</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#ma395592a0d" x="87.9075" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="83.609175" y="249.018325" transform="rotate(-315 83.609175 249.018325)">Nuclear transport factor 2 family protein</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#ma395592a0d" x="101.47" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="97.171675" y="249.018325" transform="rotate(-315 97.171675 249.018325)">Protein virD4</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#ma395592a0d" x="115.0325" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="110.734175" y="249.018325" transform="rotate(-315 110.734175 249.018325)">Succinoglycan biosynthesis protein exoI</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#ma395592a0d" x="128.595" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="124.296675" y="249.018325" transform="rotate(-315 124.296675 249.018325)">TNase-like domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#ma395592a0d" x="142.1575" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="137.859175" y="249.018325" transform="rotate(-315 137.859175 249.018325)">TNase-like domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#ma395592a0d" x="155.72" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="151.421675" y="249.018325" transform="rotate(-315 151.421675 249.018325)">Lipoprotein</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#ma395592a0d" x="169.2825" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="164.984175" y="249.018325" transform="rotate(-315 164.984175 249.018325)">Calcium/proton exchanger</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#ma395592a0d" x="182.845" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="178.546675" y="249.018325" transform="rotate(-315 178.546675 249.018325)">transporter substrate-binding domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#ma395592a0d" x="196.4075" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="192.109175" y="249.018325" transform="rotate(-315 192.109175 249.018325)">Secreted protein</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#ma395592a0d" x="209.97" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="205.671675" y="249.018325" transform="rotate(-315 205.671675 249.018325)">ABC transporter substrate-binding protein</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#ma395592a0d" x="223.5325" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="219.234175" y="249.018325" transform="rotate(-315 219.234175 249.018325)">Ferrichrome-iron receptor</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#ma395592a0d" x="237.095" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="232.796675" y="249.018325" transform="rotate(-315 232.796675 249.018325)">alpha/beta fold hydrolase</text>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#ma395592a0d" x="250.6575" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="246.359175" y="249.018325" transform="rotate(-315 246.359175 249.018325)">Laccase</text>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma395592a0d" x="264.22" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="259.921675" y="249.018325" transform="rotate(-315 259.921675 249.018325)">Transmembrane protein</text>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#ma395592a0d" x="277.7825" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="273.484175" y="249.018325" transform="rotate(-315 273.484175 249.018325)">transporter substrate-binding domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_20">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma395592a0d" x="291.345" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="287.046675" y="249.018325" transform="rotate(-315 287.046675 249.018325)">PhoPQ-activated pathogenicity</text>
+     </g>
+    </g>
+    <g id="xtick_21">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#ma395592a0d" x="304.9075" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="300.609175" y="249.018325" transform="rotate(-315 300.609175 249.018325)">hypothetical protein</text>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#ma395592a0d" x="318.47" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="314.171675" y="249.018325" transform="rotate(-315 314.171675 249.018325)">Outer membrane protease</text>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#ma395592a0d" x="332.0325" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="327.734175" y="249.018325" transform="rotate(-315 327.734175 249.018325)">Transporter substrate-binding domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_24">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#ma395592a0d" x="345.595" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="341.296675" y="249.018325" transform="rotate(-315 341.296675 249.018325)">carbohydrate ABC transporter permease</text>
+     </g>
+    </g>
+    <g id="xtick_25">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#ma395592a0d" x="359.1575" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="354.859175" y="249.018325" transform="rotate(-315 354.859175 249.018325)">hypothetical protein</text>
+     </g>
+    </g>
+    <g id="xtick_26">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#ma395592a0d" x="372.72" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="368.421675" y="249.018325" transform="rotate(-315 368.421675 249.018325)">ABC transporter permease</text>
+     </g>
+    </g>
+    <g id="xtick_27">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#ma395592a0d" x="386.2825" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="381.984175" y="249.018325" transform="rotate(-315 381.984175 249.018325)">Ferrichrome ABC transporter permease</text>
+     </g>
+    </g>
+    <g id="xtick_28">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#ma395592a0d" x="399.845" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="395.546675" y="249.018325" transform="rotate(-315 395.546675 249.018325)">ABC transporter permease</text>
+     </g>
+    </g>
+    <g id="xtick_29">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#ma395592a0d" x="413.4075" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="409.109175" y="249.018325" transform="rotate(-315 409.109175 249.018325)">Peptidase M16 domain protein</text>
+     </g>
+    </g>
+    <g id="xtick_30">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#ma395592a0d" x="426.97" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="422.671675" y="249.018325" transform="rotate(-315 422.671675 249.018325)">ABC transporter substrate-binding protein</text>
+     </g>
+    </g>
+    <g id="xtick_31">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#ma395592a0d" x="440.5325" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="436.234175" y="249.018325" transform="rotate(-315 436.234175 249.018325)">Ferrichrome ABC transporter permease</text>
+     </g>
+    </g>
+    <g id="xtick_32">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#ma395592a0d" x="454.095" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="449.796675" y="249.018325" transform="rotate(-315 449.796675 249.018325)">Dipeptide/oligopeptide ABC transporter, permease component</text>
+     </g>
+    </g>
+    <g id="xtick_33">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#ma395592a0d" x="467.6575" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="463.359175" y="249.018325" transform="rotate(-315 463.359175 249.018325)">spore coat U domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_34">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#ma395592a0d" x="481.22" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="476.921675" y="249.018325" transform="rotate(-315 476.921675 249.018325)">fimbria/pilus outer membrane usher protein</text>
+     </g>
+    </g>
+    <g id="xtick_35">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#ma395592a0d" x="494.7825" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="490.484175" y="249.018325" transform="rotate(-315 490.484175 249.018325)">spore coat U domain-containing protein</text>
+     </g>
+    </g>
+    <g id="xtick_36">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#ma395592a0d" x="508.345" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="504.046675" y="249.018325" transform="rotate(-315 504.046675 249.018325)">molecular chaperone</text>
+     </g>
+    </g>
+    <g id="xtick_37">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#ma395592a0d" x="521.9075" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="517.609175" y="249.018325" transform="rotate(-315 517.609175 249.018325)">Dipeptide/oligopeptide ABC transporter, permease component</text>
+     </g>
+    </g>
+    <g id="xtick_38">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#ma395592a0d" x="535.47" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="531.171675" y="249.018325" transform="rotate(-315 531.171675 249.018325)">TraB</text>
+     </g>
+    </g>
+    <g id="xtick_39">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#ma395592a0d" x="549.0325" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="544.734175" y="249.018325" transform="rotate(-315 544.734175 249.018325)">TrbC</text>
+     </g>
+    </g>
+    <g id="xtick_40">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#ma395592a0d" x="562.595" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="558.296675" y="249.018325" transform="rotate(-315 558.296675 249.018325)">entry exclusion protein TrbK</text>
+     </g>
+    </g>
+    <g id="text_41">
+     <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="298.12625" y="435.53282" transform="rotate(-0 298.12625 435.53282)">Protein</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_41">
+      <defs>
+       <path id="m1f6782abe3" d="M 0 0 
+L -2 0 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="241.72" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="244.379453" transform="rotate(-0 23.87625 244.379453)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="210.110805" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="212.770258" transform="rotate(-0 23.87625 212.770258)">25</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="178.501609" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="181.161062" transform="rotate(-0 23.87625 181.161062)">50</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="146.892414" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="149.551867" transform="rotate(-0 23.87625 149.551867)">75</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="115.283218" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="117.942672" transform="rotate(-0 23.87625 117.942672)">100</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="83.674023" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_47">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="86.333476" transform="rotate(-0 23.87625 86.333476)">125</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="52.064828" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_48">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="54.724281" transform="rotate(-0 23.87625 54.724281)">150</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m1f6782abe3" x="26.87625" y="20.455632" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_49">
+      <text style="font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="23.87625" y="23.115085" transform="rotate(-0 23.87625 23.115085)">175</text>
+     </g>
+    </g>
+    <g id="text_50">
+     <text style="font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="6.85125" y="126.22" transform="rotate(-90 6.85125 126.22)">Number of Accessory Plasmids</text>
+    </g>
+   </g>
+   <g id="patch_43">
+    <path d="M 26.87625 241.72 
+L 26.87625 10.72 
+" style="fill: none; stroke: #000000; stroke-width: 0.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_44">
+    <path d="M 26.87625 241.72 
+L 569.37625 241.72 
+" style="fill: none; stroke: #000000; stroke-width: 0.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="33.6575" y="18.680156" transform="rotate(-0 33.6575 18.680156)">174.0</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="47.22" y="52.818087" transform="rotate(-0 47.22 52.818087)">147.0</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="60.7825" y="88.220386" transform="rotate(-0 60.7825 88.220386)">119.0</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="74.345" y="89.484754" transform="rotate(-0 74.345 89.484754)">118.0</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="87.9075" y="99.599696" transform="rotate(-0 87.9075 99.599696)">110.0</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="101.47" y="102.128432" transform="rotate(-0 101.47 102.128432)">108.0</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="115.0325" y="107.185903" transform="rotate(-0 115.0325 107.185903)">104.0</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="128.595" y="108.450271" transform="rotate(-0 128.595 108.450271)">103.0</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="142.1575" y="109.714639" transform="rotate(-0 142.1575 109.714639)">102.0</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="155.72" y="114.77211" transform="rotate(-0 155.72 114.77211)">98.0</text>
+   </g>
+   <g id="text_61">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="169.2825" y="117.300846" transform="rotate(-0 169.2825 117.300846)">96.0</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="182.845" y="119.829582" transform="rotate(-0 182.845 119.829582)">94.0</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="196.4075" y="128.680156" transform="rotate(-0 196.4075 128.680156)">87.0</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="209.97" y="142.588202" transform="rotate(-0 209.97 142.588202)">76.0</text>
+   </g>
+   <g id="text_65">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="223.5325" y="146.381306" transform="rotate(-0 223.5325 146.381306)">73.0</text>
+   </g>
+   <g id="text_66">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="237.095" y="148.910041" transform="rotate(-0 237.095 148.910041)">71.0</text>
+   </g>
+   <g id="text_67">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="250.6575" y="150.174409" transform="rotate(-0 250.6575 150.174409)">70.0</text>
+   </g>
+   <g id="text_68">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="264.22" y="150.174409" transform="rotate(-0 264.22 150.174409)">70.0</text>
+   </g>
+   <g id="text_69">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="277.7825" y="152.703145" transform="rotate(-0 277.7825 152.703145)">68.0</text>
+   </g>
+   <g id="text_70">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="291.345" y="152.703145" transform="rotate(-0 291.345 152.703145)">68.0</text>
+   </g>
+   <g id="text_71">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="304.9075" y="155.23188" transform="rotate(-0 304.9075 155.23188)">66.0</text>
+   </g>
+   <g id="text_72">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="318.47" y="185.576708" transform="rotate(-0 318.47 185.576708)">42.0</text>
+   </g>
+   <g id="text_73">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="332.0325" y="185.576708" transform="rotate(-0 332.0325 185.576708)">42.0</text>
+   </g>
+   <g id="text_74">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="345.595" y="186.841076" transform="rotate(-0 345.595 186.841076)">41.0</text>
+   </g>
+   <g id="text_75">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="359.1575" y="186.841076" transform="rotate(-0 359.1575 186.841076)">41.0</text>
+   </g>
+   <g id="text_76">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="372.72" y="188.105444" transform="rotate(-0 372.72 188.105444)">40.0</text>
+   </g>
+   <g id="text_77">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="386.2825" y="190.634179" transform="rotate(-0 386.2825 190.634179)">38.0</text>
+   </g>
+   <g id="text_78">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="399.845" y="195.691651" transform="rotate(-0 399.845 195.691651)">34.0</text>
+   </g>
+   <g id="text_79">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="413.4075" y="195.691651" transform="rotate(-0 413.4075 195.691651)">34.0</text>
+   </g>
+   <g id="text_80">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="426.97" y="195.691651" transform="rotate(-0 426.97 195.691651)">34.0</text>
+   </g>
+   <g id="text_81">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="440.5325" y="196.956018" transform="rotate(-0 440.5325 196.956018)">33.0</text>
+   </g>
+   <g id="text_82">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="454.095" y="198.220386" transform="rotate(-0 454.095 198.220386)">32.0</text>
+   </g>
+   <g id="text_83">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="467.6575" y="200.749122" transform="rotate(-0 467.6575 200.749122)">30.0</text>
+   </g>
+   <g id="text_84">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="481.22" y="200.749122" transform="rotate(-0 481.22 200.749122)">30.0</text>
+   </g>
+   <g id="text_85">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="494.7825" y="200.749122" transform="rotate(-0 494.7825 200.749122)">30.0</text>
+   </g>
+   <g id="text_86">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="508.345" y="200.749122" transform="rotate(-0 508.345 200.749122)">30.0</text>
+   </g>
+   <g id="text_87">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="521.9075" y="202.01349" transform="rotate(-0 521.9075 202.01349)">29.0</text>
+   </g>
+   <g id="text_88">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="535.47" y="203.277857" transform="rotate(-0 535.47 203.277857)">28.0</text>
+   </g>
+   <g id="text_89">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="549.0325" y="203.277857" transform="rotate(-0 549.0325 203.277857)">28.0</text>
+   </g>
+   <g id="text_90">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="562.595" y="203.277857" transform="rotate(-0 562.595 203.277857)">28.0</text>
+   </g>
+   <g id="text_91">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="298.12625" y="6.72" transform="rotate(-0 298.12625 6.72)">Count of Proteins with Predicted Signal-Peptide</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3b79046377">
+   <rect x="26.87625" y="10.72" width="542.5" height="231"/>
+  </clipPath>
+ </defs>
+</svg>
